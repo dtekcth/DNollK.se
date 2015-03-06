@@ -1,0 +1,9 @@
+<div class="content"
+	<article class="newsitem">
+		<header>
+			<h2><%= @news.heading.gsub(/_/, " ") %></h2>
+			<h3 class="date"><%= @news.date.strftime("%-e/%-m")%></h3>
+		</header>
+		<%= @news.data %>
+	</article>
+</div>

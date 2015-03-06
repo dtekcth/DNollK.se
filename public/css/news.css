@@ -1,0 +1,41 @@
+#news {
+	left: -0.5em;
+}
+
+#content {
+	background: transparent;
+	box-shadow: none;
+	padding: 2%;
+	min-height: 50%;
+	margin: 2%;
+}
+
+.newsitem article {
+	background-color: white;
+	padding: 2%;
+	margin: 2%;
+	margin-bottom: 5%;
+	box-shadow:5px 5px 10px 0px #888888;
+	border-radius: 2px;
+}
+
+.newsitem a {
+	text-decoration: none;
+	color: #222222;
+}
+
+.newsitem header, article header {
+	font-size: 2em;
+}
+
+.heading {
+	left: 0;
+}
+
+.date {
+	float: right;
+}
+
+.snippet {
+	font-size: 0.9em;
+}

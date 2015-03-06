@@ -1,0 +1,95 @@
+/* Hämta fonterna */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+/*import "reset";*/
+
+/* Mixins för alla olika webbläsare */
+@mixin border-radius($radius) { 
+  -webkit-border-radius: $radius;
+  -moz-border-radius:    $radius;
+  -ms-border-radius:     $radius;
+  border-radius:         $radius;
+}
+
+/* Variabler */
+$font-stack: Helvetica, 'Open Sans', sans-serif;
+$dark-text-color: #333;
+
+h1 {
+	font-size: 1.2em;
+}
+
+html {
+  background-repeat: repeat;
+  background-image: url("/img/background.png");
+}
+  
+body {
+  font: 100% $font-stack;
+  font-size: 1em;
+  color: $dark-text-color;
+}
+  
+header {
+  position: relative;
+  
+  img {
+    margin-top: 5px;
+    width: 106%;
+    position: relative;
+    left: -3%;
+    @include border-radius(7px);
+  }
+}
+  
+footer {
+  margin-top: 3%;
+  text-align: center;
+
+  a {
+    color: black;
+  }
+}
+    
+aside {
+  position: absolute;
+  left: 100%;
+
+  div p {
+    position: relative;
+    right: 30px;
+    font-weight: bold;
+  }
+	nav {
+		
+	}
+}
+
+#page {
+	background-image: url("/img/content_background.png");
+	position: relative;
+	min-width: 500px;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	box-shadow: 0 1px 5px #111111;
+
+	margin: auto 5%;
+}
+
+.newsitem {
+	h2 {
+		font-size: 1.1em;
+	}
+	h3 {
+		font-size: 0.8em;
+	}
+	> p {
+		font-size: 0.6em;
+	}
+
+	blockquote p {
+		font-size: 0.6em;
+	}
+}
+
+
+@import "shame";
