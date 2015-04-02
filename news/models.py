@@ -51,15 +51,16 @@ class Post(models.Model):
     To interact with this object, make sure that it is imported, one can simply
     let the ORM do all the heavy lifing.
     Examples:
-       >>> from news.models import Post
-       # Imports the object
 
-       >>> allPosts = Post.objects.all() 
-       # Gets all posts
-       >>> allPublished = Post.objects.filter(published=True) 
-       # Gets all published posts
-       >>> post14 = Post.objects.get(id=14)
-       # Gets the fourteenth post                                             
+    >>> from news.models import Post
+    # Imports the object
+
+    >>> allPosts = Post.objects.all() 
+    # Gets all posts
+    >>> allPublished = Post.objects.filter(published=True) 
+    # Gets all published posts
+    >>> post14 = Post.objects.get(id=14)
+    # Gets the fourteenth post                                             
     """
     
     # Title of post
