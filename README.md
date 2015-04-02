@@ -11,7 +11,9 @@ För de olika branches som finns så leder
  * design till en ren html/css implementation av designen
  * ruby till en eventuell ruby/sinatra/rails-implementation
  * haskell till en eventuell haskell/yesod-implementation
- * python till en eventuell python/django-implementation
+ * [python](https://github.com/Jassob/DNollK.se/tree/python) till en python/django-implementation
  
+
+OBS, python-branchen är troligen den som vi kommer koda på (därav länken).
  
 För mer information på de olika implementationerna hänvisas man till respektive branch.
