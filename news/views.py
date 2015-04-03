@@ -24,7 +24,7 @@ def index(request):
     TODO: Use a template to presents the posts
     """
 
-    allPublishedPosts = Post.objects.filter(published=True)
+    allPublishedPosts = Post.publishedPosts()
     return HttpResponse("Index of posts application")
 
 def item(request, post_id):
@@ -41,7 +41,7 @@ def item(request, post_id):
     """
 
     try:
-        post = Post.objects.filter(published=True).get(id=post_id)
+        post = Post.publishedPosts().get(id=post_id)
         content = "Posts article: %s<br> %s"
         return HttpResponse(content % (post_id,post.content))
     except Post.DoesNotExist:
@@ -59,8 +59,7 @@ def latest(request):
     """
 
     try:
-        latestPost = Post.objects.filter(published=True).latest('pub_date')
+        latestPost = Post.publishedPosts().latest('pub_date')
         return HttpResponse("%s <br> %s" % (latestPost.title, latestPost.content))
     except Post.DoesNotExist:
         return HttpResponse("No posts yet!")
-    
