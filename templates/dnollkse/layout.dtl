@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>
+    {% block title %}DNollK 2015{% endblock title%}
+  </title>
+  <meta name="description"
+        content="{% block description %} 
+                 DataNollans hem trygga hamn under mottagningen 2015 
+                 {% endblock description %}"
+  <meta name="author" content="human.txt">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  {% load staticfiles %}
+  {% block css %}
+  <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+  <link rel="stylesheet" href="{% static "css/skeleton.css" %}">
+  <link rel="stylesheet" href="{% static "dnollkse/css/layout.css" %}">
+  <link rel="stylesheet" href="{% static "css/shame.css" %}">
+  {% endblock css %}
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+
+      <!-- Left sidebar, contains links to various social networks and what not
+      ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+      {% block main_layout %}
+        <div class="three columns u-pull-left" id="sidebar">
+          {% block sidebar %}
+            <div class="card" id="important">
+            </div>
+            <div class="card" id="facebook">
+            </div>
+            <div class="card" id="twitter">
+            </div>
+            <div class="card" id="instagram">
+            </div>
+          {% endblock sidebar %}
+        </div> <!-- end sidebar -->
+
+        <!-- header container
+        ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+        <div class="nine columns card" id="header">
+          {% block header  %}
+            
+              <img class="two columns u-pull-left" id="logo" src="{% static "dnollkse/images/logo.png" %}" alt="DNollK '15's logga">
+              
+              <nav style="margin: 0;" class="ten columns u-pull-right">
+                {% block navigation %}
+                <ul>
+                  <li>Startsida</li>
+                  <li>Nollenkät</li>
+                  <li>Schema</li>
+                  <li>Arr</li>
+                  <li>Dokument</li>
+                  <li>Länkar</li>
+                  <li>Om...</li>
+                  <li>FAQ</li>
+                  <li>Kontakt</li>
+                </ul>
+                {% endblock navigation %} 
+              </nav>
+
+              <img class="u-max-full-width" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar" id="header-img">
+              {% endblock header %}
+        </div> <!-- end header -->
+
+        <!-- content container
+        ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+        <section class="nine columns card content">
+            {% block content %}
+            {% endblock content %}
+        </section> <!-- end content -->
+        
+        <!-- footer container
+        ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+        <footer class="nine columns card">
+          {% block footer %}
+          {% endblock footer %}
+        </footer>
+      {% endblock main_layout %}
+    </div>
+  </div>
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
