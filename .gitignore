@@ -3,3 +3,10 @@
 
 # Django files
 *migrations
+
+# Databases
+db.*
+
+# PyCharm
+.idea/*
+
