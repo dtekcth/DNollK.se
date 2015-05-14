@@ -15,14 +15,28 @@
 <!-- Sidebar to the left of the page
 ——————————————————————————————————————————————-->
 {% block sidebar %}
-      <div class="card" id="important">
-            </div>
-            <div class="card" id="facebook">
-            </div>
-            <div class="card" id="twitter">
-            </div>
-            <div class="card" id="instagram">
-            </div>
+  <section class="card" id="important">
+    <header><h2>Viktigt</h2></header>
+    <dl>
+      <dt>telefon</dt>
+      <dd>070 00 00 00</dd>
+      <dt>mail</dt>
+      <dd><a href="mailto://dnollk@dtek.se">dnollk@dtek.se</a></dd>
+      <dt>adress</dt>
+      <dd>Rännvägen 6, Göteborg</dd>
+    </dl>
+    <p><a href="http://change.me">Bra länkar och viktig information</a></p>
+  </section>
+  
+  <div class="card social" id="facebook">
+    <a href="http://facebook.com/Dnollk2014">Facebook</a>
+  </div>
+  <div class="card social" id="twitter">
+    <a href="http://twitter.com/DNollK">Twitter</a>
+  </div>
+  <div class="card social" id="instagram">
+    <a href="https://instagram.com/dnollk">Instagram</a>
+  </div>
 {% endblock sidebar %}
 
 <!-- Header of the content part of the page

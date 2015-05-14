@@ -137,11 +137,30 @@ nav.primary ul li a {
 Styling for the sidebar
 */
 #sidebar {
-    background: #0e0e0e;
-
     height: 800px;
     
     width: 200px;
+}
+
+#sidebar dl dt,
+#sidebar #important p {
+    margin-left: 1.2rem;    
+}
+
+
+
+
+#sidebar .card {
+    margin: 1.8rem  0;
+}
+
+#sidebar .social.card {
+    height: 15rem;
+}
+
+#sidebar .social.card a {
+    vertical-align: middle;
+    height: inherit;
 }
 
 footer {
