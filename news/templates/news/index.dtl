@@ -1,0 +1,34 @@
+{% extends 'dnollkse/layout.dtl' %}
+
+{% block title %} Nyheter - DNollK 2015 {% endblock title %}
+
+{% block content %}
+  <!-- Start of news content -->
+  
+  {% if posts_list %}
+
+    
+    <section class="newssection">
+
+      <!-- creates an article element of every post -->
+      {% for post in posts_list %}
+
+        <!-- start of a news article / post -->
+        <article id="post-{{ post.id }}" class="post">
+          <header>
+            <h3>{{ post.title }}</h3>
+            <p class="pub_date">{{ post.pub_date }}</p>
+          </header>
+          <p class="content">{{ post.content }}</p>
+          <p class="post-footer">Skrivet av {{ post.author }}</p>
+        </article> <!-- end of article -->
+        
+      {% endfor %} <!-- ends the for each -->
+    </section> <!-- end of newssection -->
+    
+  {% else %}
+    <h3>Det finns inga nyheter att visa :/</h3>
+  {% endif %}
+
+<!-- end of news content -->
+{% endblock content %}
