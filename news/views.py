@@ -24,8 +24,9 @@ def index(request):
     TODO: Use a template to presents the posts
     """
 
-    allPublishedPosts = Post.publishedPosts()
-    return HttpResponse("Index of posts application")
+    allPublishedPosts = Post.publishedPosts().order_by('-pub_date')[:10]
+    context = {'posts_list' : allPublishedPosts}
+    return render(request, 'news/index.dtl', context)
 
 def item(request, post_id):
     """
