@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Geomancy-Hairline';
+    src:url('../../fonts/Geomancy-Hairline.ttf.woff') format('woff'),
+        url('../../fonts/Geomancy-Hairline.ttf.svg#Geomancy-Hairline') format('svg'),
+        url('../../fonts/Geomancy-Hairline.ttf.eot'),
+        url('../../fonts/Geomancy-Hairline.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geomancy-Extra-Bold';
+    src:url('../../fonts/Geomancy-Extra-Bold.ttf.woff') format('woff'),
+        url('../../fonts/Geomancy-Extra-Bold.ttf.svg#Geomancy-Extra-Bold') format('svg'),
+        url('../../fonts/Geomancy-Extra-Bold.ttf.eot'),
+        url('../../fonts/Geomancy-Extra-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
