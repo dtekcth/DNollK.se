@@ -10,9 +10,9 @@
   </title>
   <meta name="description"
         content="{% block description %}                 
-                 {% endblock description %}">
+        {% endblock description %}">
   <meta name="author" content="human.txt">
-
+  
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,44 +38,54 @@
 </head>
 <body>
 
+  
+  <!-- Left sidebar, contains links to various social networks and what not
+  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+  <div class="u-pull-left" id="sidebar">
+    {% block sidebar %}
+    {% endblock sidebar %}
+  </div>
+  
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-
-      <!-- Left sidebar, contains links to various social networks and what not
-      ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
-      <div class="three columns u-pull-left" id="sidebar">
-        {% block sidebar %}
-        {% endblock sidebar %}
-      </div>
-
-      <!-- Content container -->
-      <div class="nine columns u-pull-right">
+  <div class="band">
+    <!-- header container -->
+    <div class="container header">
+      <!-- header row -->
+      <section class="row">
         
         <!-- header container
         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-        <header class="u-full-width card header">
+        <header class="u-full-width header">
           {% block header %}
           {% endblock header %}
         </header> <!-- end header -->
 
-        <!-- content container
-        ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-        <section class="card content">
-          {% block content %}
-          {% endblock content %}
-        </section> <!-- end content -->
-        
-        <!-- footer container
-        ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-        <footer class="card">
-          {% block footer %}
-          {% endblock footer %}
-        </footer>
-      </div> <!-- end content container -->
-    </div> <!-- end row -->
-  </div> <!-- end root container -->
+      </section> <!-- end header row -->
+    </div> <!-- end container -->
+  </div> <!-- end header band -->
+
+  <div class="band">
+    <div class="container content">
+      <!-- content container
+      ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+      <section class="row content">
+        {% block content %}
+        {% endblock content %}
+      </section> <!-- end content -->
+    </div> <!-- end container -->
+  </div> <!-- end content band -->
+  
+  <div class="band">
+    <!-- footer container
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <div class="footer">
+      <footer class="container">
+        {% block footer %}
+        {% endblock footer %}
+      </footer>
+    </div> <!-- end footer -->
+  </div> <!-- end footer band -->
     
     <!-- End Document
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->

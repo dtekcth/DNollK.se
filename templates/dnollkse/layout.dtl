@@ -48,6 +48,8 @@
 
   <!-- navbar -->
   <nav style="margin: 0;" class="ten columns u-pull-right primary">
+    <img src="{% static "dnollkse/images/menu.svg"  %}" alt="meny"/>
+    <p id="nav-btn">Navigation</p>
     {% block navigation %}
       <ul>
         <li><a href="#">Startsida</a></li>
