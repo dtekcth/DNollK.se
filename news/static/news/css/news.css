@@ -64,6 +64,7 @@ article.post {
 article.post header h3,
 article.post header p {
     position: relative;
+
     display: inline;
 }
 
@@ -75,6 +76,7 @@ article.post header h3 {
 
 article.post header .pub_date {
     float: right;
+
     margin: 1.2rem;
 }
 
