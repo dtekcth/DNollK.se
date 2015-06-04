@@ -47,27 +47,28 @@
   <img class="two columns u-pull-left logo" src="{% static "dnollkse/images/logo.png" %}" alt="DNollK '15's logga">
 
   <!-- navbar -->
-  <nav style="margin: 0;" class="ten columns u-pull-right primary">
+  <nav class="ten columns u-pull-right primary">
     <img src="{% static "dnollkse/images/menu.svg"  %}" alt="meny"/>
     <p id="nav-btn">Navigation</p>
     {% block navigation %}
       <ul>
-        <li><a href="#">Startsida</a></li>
-        <li><a href="#">Nollenkät</a></li>
-        <li><a href="#">Schema</a></li>
-        <li><a href="#">Arr</a></li>
-        <li><a href="#">Dokument</a></li>
-        <li><a href="#">Länkar</a></li>
-        <li><a href="#">Om...</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">startsida</a></li>
+        <li><a href="#">nollenkät</a></li>
+        <li><a href="#">schema</a></li>
+        <li><a href="#">arr</a></li>
+        <li><a href="#">dokument</a></li>
+        <li><a href="#">länkar</a></li>
+        <li><a href="#">om...</a></li>
+        <li><a href="#">faq</a></li>
+        <li><a href="#">kontakt</a></li>
       </ul>
     {% endblock navigation %} 
   </nav>
-
+  </section> <!-- end navigation row -->
+  <div class="row">
   <!-- Header image -->
   <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
-  
+  </div> <!-- end image row -->
 {% endblock header %}
 
 <!-- Footer of the content part of the page

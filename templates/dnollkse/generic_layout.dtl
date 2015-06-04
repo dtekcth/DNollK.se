@@ -27,10 +27,10 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="{% static "css/normalize.css" %}">
   <link rel="stylesheet" href="{% static "css/skeleton.css" %}">
-  <link rel="stylesheet" href="{% static "css/shame.css" %}">
+  <link rel="stylesheet" href="{% static "dnollkse/css/layout.css" %}">
   {% block css %}
-    <link rel="stylesheet" href="{% static "dnollkse/css/layout.css" %}">
   {% endblock css %}
+  <link rel="stylesheet" href="{% static "css/shame.css" %}">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
@@ -63,9 +63,7 @@
 
       </section> <!-- end header row -->
     </div> <!-- end container -->
-  </div> <!-- end header band -->
 
-  <div class="band">
     <div class="container content">
       <!-- content container
       ––––––––––––––––––––––––––––––––––––––––––––––––––-->
@@ -74,9 +72,7 @@
         {% endblock content %}
       </section> <!-- end content -->
     </div> <!-- end container -->
-  </div> <!-- end content band -->
   
-  <div class="band">
     <!-- footer container
     ––––––––––––––––––––––––––––––––––––––––––––––––––-->
     <div class="footer">
@@ -85,7 +81,7 @@
         {% endblock footer %}
       </footer>
     </div> <!-- end footer -->
-  </div> <!-- end footer band -->
+  </div> <!-- end band -->
     
     <!-- End Document
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
