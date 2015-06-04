@@ -54,19 +54,21 @@ h6 { font-size: 1.5rem; line-height: 1.8;  letter-spacing: 0; }
 /* Backgrounds and body styling
 —————————————————————————————————————————————————— */
 
-body {
+.band {
     background: url("../images/bg_main.png"),
                 #DD5227;
 }
 
-.container {
+.container  {
     background: #f8f8f8;
 }
+
+
 /* Container styling (card)
-——————————————————————————————————————————————————
-The card class, is represented by a light background 
-and sharp edges with a box shadow around.
-*/
+   ——————————————————————————————————————————————————
+   The card class, is represented by a light background 
+   and sharp edges with a box shadow around.
+ */
 
 .container {
     box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
@@ -84,7 +86,7 @@ and sharp edges with a box shadow around.
 }
 
 .container.content {
-    overflow: hidden;
+    /* overflow: hidden; */
 
     margin: 2.6rem auto;
 }
@@ -95,13 +97,11 @@ and sharp edges with a box shadow around.
 
 /* Header
 ——————————————————————————————————————————————————
-Styling for the header card
+Styling for the  card
 */
-
-
 .header {
 
-    color: #FC6626;
+    color: #fa6607;
 
     font-weight: 600;
 }
@@ -116,13 +116,14 @@ Styling for the header card
 
 .header .image {
     margin-top: 10px;
-    box-shadow: 0rem -0.6rem 2rem 0.1rem rgba(0, 0, 0, 0.69);
-}
+    
+    /*box-shadow: 0rem -0.6rem 2rem 0.1rem rgba(0, 0, 0, 0.69);*/
+}    
 
 /* Navigation
 —————————————————————————————————————————————————— */
 header nav.primary {
-    background: #FC6626;
+    background: #fa6607;
     
     color: #f8f8f8;
 
@@ -149,10 +150,17 @@ header nav.primary ul {
 header nav.primary ul li {
     position: relative;
     list-style: inside none none;
+    border-left: transparent solid 1px;
+    border-right: transparent solid 1px;
+}
+
+header nav.primary ul li:hover {
+    border-left: black solid 1px;
+    border-right: black solid 1px;
 }
 
 header nav.primary ul li a {
-    color: #FC6626;
+    color: #fa6607;
     text-decoration: none;
     font-family: 'Geomancy-Extra-Bold', sans-serif;
 }
@@ -203,20 +211,37 @@ footer {
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-    nav.primary ul,
-    nav.primary ul li {
-        margin: 0px 0.6rem;
-        margin-top: 1.8rem;
+    .header nav.primary {
+        background: inherit;
+        padding-top: 1.2rem;
+    }
+    
+    .header nav.primary ul {
+        visibility: visible;
+        height: inherit;
+        padding-top: 0px;
+        margin-top: 0px;
+                        
+    }
+
+    .header nav.primary p,
+    .header nav.primary img {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        position: absolute;    
     }
     
     nav.primary ul li {
         display: inline;
         float: left;
+        padding: 0px 0.6rem;
+        /*margin-top: 1.8rem;*/
     }
     
     nav.primary ul li a {
         display: inline-block;
-        color: #FC6626;
+        color: #fa6607;
         font-size: 1.3rem;
     }
 }
