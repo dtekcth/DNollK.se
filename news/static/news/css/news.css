@@ -84,6 +84,8 @@ article.post hr.header {
     border: #fa6607 1px solid;
 
     margin-bottom: 2rem;
+
+    width: 100%;
 }
 
 article.post .post-footer {
