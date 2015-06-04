@@ -12,7 +12,6 @@
   
   {% if posts_list %}
 
-    
     <section class="newssection">
 
       <!-- creates an article element of every post -->
