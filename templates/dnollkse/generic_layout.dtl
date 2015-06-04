@@ -52,7 +52,7 @@
     <!-- header container -->
     <div class="container header">
       <!-- header row -->
-      <section class="row">
+      <div class="row">
         
         <!-- header container
         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
@@ -61,7 +61,7 @@
           {% endblock header %}
         </header> <!-- end header -->
 
-      </section> <!-- end header row -->
+      </div> <!-- end header row -->
     </div> <!-- end container -->
 
     <div class="container content">
