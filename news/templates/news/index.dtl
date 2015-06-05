@@ -2,12 +2,16 @@
 
 {% block title %} Nyheter - DNollK 2015 {% endblock title %}
 
+{% block css %}
+{% load staticfiles %}
+  <link href="{% static "news/css/news.css" %}" rel="stylesheet">
+{% endblock css %}
+
 {% block content %}
   <!-- Start of news content -->
   
   {% if posts_list %}
 
-    
     <section class="newssection">
 
       <!-- creates an article element of every post -->
@@ -16,11 +20,12 @@
         <!-- start of a news article / post -->
         <article id="post-{{ post.id }}" class="post">
           <header>
-            <h3>{{ post.title }}</h3>
-            <p class="pub_date">{{ post.pub_date }}</p>
+            <h3 class="title">{{ post.title }}</h3>
+            <p class="pub_date">{{ post.pub_date.date }}</p>
           </header>
+          <hr class="header">
           <p class="content">{{ post.content }}</p>
-          <p class="post-footer">Skrivet av {{ post.author }}</p>
+          <p class="post-footer">Skrivet av {{ post.author }}, {{ post.pub_date }}</p>
         </article> <!-- end of article -->
         
       {% endfor %} <!-- ends the for each -->

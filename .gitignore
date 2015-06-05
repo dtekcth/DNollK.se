@@ -10,3 +10,12 @@ db.*
 # PyCharm
 .idea/*
 
+# Emacs temp files
+\#*
+.\#*
+*\#*
+
+# Vim temp files
+*~
+.*~
+

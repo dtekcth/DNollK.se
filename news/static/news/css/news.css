@@ -1,0 +1,99 @@
+/*
+ * DNollK.se Layout
+ * Copyright 2015, Jacob Jonsson
+ * www.github.com/Jassob/DNollK.se.git
+ * Free to use under the BSD 2-clause license.
+ * http://http://opensource.org/licenses/BSD-2-Clause
+ */
+
+
+/* 
+ * Table of contents
+ ——————————————————————————————————————————————————
+ * 1. Normalize content container (and children)
+ * 2. News list
+ * 2.1 Posts 
+ */
+
+/*
+ * 1. Normalize content container
+ * ——————————————————————————————————————————————————
+ * Clears the styles from layout.css in dnollkse app.
+ * Makes it easier to start from scratch in the following items
+ */
+/* Clear the content container from its style */
+.content.container {
+    background: inherit;
+
+    box-shadow: none;
+
+    margin: 0px auto;
+}
+
+.content.row {
+    margin: 0px;
+}
+
+/*
+ * 2. News list
+ * ——————————————————————————————————————————————————
+ * This is the main view in the news app, the one that displays 
+ * all news in a list.
+ */
+.content.container .newssection article {
+    background: #f8f8f8;
+
+    box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
+}
+
+.content.container .newssection {
+    margin-top: 2.6rem;
+}
+
+/*
+ * 2.1 Posts
+ * ——————————————————————————————————————————————————
+ * This part is setting the style of the news posts.
+ */
+article.post {
+    padding: 1.2rem;
+
+    margin-bottom: 2.4rem;
+}
+
+article.post header h3,
+article.post header p {
+    position: relative;
+
+    display: inline;
+}
+
+article.post header h3 {
+    font-family: "Geomancy-Extra-Bold", sans-serif;
+
+    color: #0e0e0e;
+}
+
+article.post header .pub_date {
+    float: right;
+
+    margin: 1.2rem;
+}
+
+article.post hr.header {
+    margin: 0px auto;
+    
+    border: #fa6607 1px solid;
+
+    margin-bottom: 2rem;
+
+    width: 100%;
+}
+
+article.post .post-footer {
+    font-size: 1.1rem;
+
+    color: #444;
+
+    margin-bottom: 0px;
+}

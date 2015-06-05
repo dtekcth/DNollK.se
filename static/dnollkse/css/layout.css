@@ -18,6 +18,7 @@
 - Content
 - Sidebar
 - Footer
+- Media queries (responsive design)
 
 /* Box sizing
 ——————————————————————————————————————————————————
@@ -53,27 +54,30 @@ h6 { font-size: 1.5rem; line-height: 1.8;  letter-spacing: 0; }
 /* Backgrounds and body styling
 —————————————————————————————————————————————————— */
 
-body {
+.band {
     background: url("../images/bg_main.png"),
                 #DD5227;
-
-    font: 
 }
 
-/* Card styling
-——————————————————————————————————————————————————
-The card class, is represented by a light background 
-and sharp edges with a box shadow around.
-*/
-
-.card {
+.container  {
     background: #f8f8f8;
-
-    padding: 5px 0 5px 0;
-
-    box-shadow: 0px 0px 10px 2px #0e0e0e
 }
 
+
+/* Container styling (card)
+   ——————————————————————————————————————————————————
+   The card class, is represented by a light background 
+   and sharp edges with a box shadow around.
+ */
+
+.container {
+    box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
+}
+
+
+.container h1,
+.container h2,
+.container h3,
 .card h1,
 .card h2,
 .card h3 {
@@ -81,55 +85,84 @@ and sharp edges with a box shadow around.
     margin-right: 1rem;
 }
 
+.container.content {
+    /* overflow: hidden; */
+
+    margin: 2.6rem auto;
+}
+
+.content.row {
+    margin: 1.2rem 1.2rem;
+}
+
 /* Header
 ——————————————————————————————————————————————————
-Styling for the header card
+Styling for the  card
 */
-
 .header {
-    padding: 10px 0 5px 0;
 
-    color: #FC6626;
+    color: #fa6607;
 
     font-weight: 600;
 }
 
+.header row {
+    padding-top: 2.4rem;
+}
+
 .header .logo {
-    margin-left: 1.0rem;
-    margin-top: -0.6rem;
+    padding: 1.2rem;
 }
 
 .header .image {
     margin-top: 10px;
-    box-shadow: 0rem -0.6rem 2rem 0.1rem rgba(0, 0, 0, 0.69);
-}
-
-.card.content {
-    margin-top: 26px;
-
-    overflow: hidden;
-}
+    
+    /*box-shadow: 0rem -0.6rem 2rem 0.1rem rgba(0, 0, 0, 0.69);*/
+}    
 
 /* Navigation
 —————————————————————————————————————————————————— */
-nav.primary ul,
-nav.primary ul li {
-    margin: 0px 0.6rem;
-    margin-top: 1.8rem;
+header nav.primary {
+    background: #fa6607;
+    
+    color: #f8f8f8;
+
+    height: 3.6rem;
+
+    margin-top: 1.6rem;
 }
 
-nav.primary ul li {
+header nav.primary p {
     display: inline;
-    float: left;
-    position: relative;
 }
 
-nav.primary ul li a {
-    display: inline-block;
-    color: #FC6626;
+header nav.primary img {
+    margin: 0 1.6rem;    
+}
+
+header nav.primary ul {
+    position: relative;
+    height: 0px;
+    padding: 1.2rem;
+    visibility: hidden;
+}
+
+header nav.primary ul li {
+    position: relative;
+    list-style: inside none none;
+    border-left: transparent solid 1px;
+    border-right: transparent solid 1px;
+}
+
+header nav.primary ul li:hover {
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+}
+
+header nav.primary ul li a {
+    color: #fa6607;
     text-decoration: none;
     font-family: 'Geomancy-Extra-Bold', sans-serif;
-    font-size: 1.3rem;
 }
 
 /* Sidebar
@@ -140,15 +173,16 @@ Styling for the sidebar
     height: 800px;
     
     width: 200px;
+
+    position: absolute;
+
+    left: -250px;
 }
 
 #sidebar dl dt,
 #sidebar #important p {
     margin-left: 1.2rem;    
 }
-
-
-
 
 #sidebar .card {
     margin: 1.8rem  0;
@@ -169,3 +203,54 @@ footer {
     margin-top: 70px;
 
 }
+
+/* Media queries (responsive design)
+——————————————————————————————————————————————————
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    .header nav.primary {
+        background: inherit;
+        padding-top: 1.2rem;
+    }
+    
+    .header nav.primary ul {
+        visibility: visible;
+        height: inherit;
+        padding-top: 0px;
+        margin-top: 0px;
+                        
+    }
+
+    .header nav.primary p,
+    .header nav.primary img {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        position: absolute;    
+    }
+    
+    nav.primary ul li {
+        display: inline;
+        float: left;
+        padding: 0px 0.6rem;
+        /*margin-top: 1.8rem;*/
+    }
+    
+    nav.primary ul li a {
+        display: inline-block;
+        color: #fa6607;
+        font-size: 1.3rem;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
