@@ -1,0 +1,78 @@
+{% extends 'dnollkse/generic_layout.dtl' %}
+
+{% load staticfiles %}
+
+<!-- Site
+————————————————————————————————————————————————-->
+{% block title %}DNollK 2015{% endblock title %}
+
+<!-- Description, shows up as a snippet in search engine results, I think
+———————————————————————————————————————————————————————————————————————-->
+{% block description %}
+  DataNollans hem trygga hamn under mottagningen 2015 
+{% endblock description %}
+
+<!-- Sidebar to the left of the page
+——————————————————————————————————————————————-->
+{% block sidebar %}
+  <section class="card" id="important">
+    <header><h2>Viktigt</h2></header>
+    <dl>
+      <dt>telefon</dt>
+      <dd>070 00 00 00</dd>
+      <dt>mail</dt>
+      <dd><a href="mailto://dnollk@dtek.se">dnollk@dtek.se</a></dd>
+      <dt>adress</dt>
+      <dd>Rännvägen 6, Göteborg</dd>
+    </dl>
+    <p><a href="http://change.me">Bra länkar och viktig information</a></p>
+  </section>
+  
+  <div class="card social" id="facebook">
+    <a href="http://facebook.com/Dnollk2014">Facebook</a>
+  </div>
+  <div class="card social" id="twitter">
+    <a href="http://twitter.com/DNollK">Twitter</a>
+  </div>
+  <div class="card social" id="instagram">
+    <a href="https://instagram.com/dnollk">Instagram</a>
+  </div>
+{% endblock sidebar %}
+
+<!-- Header of the content part of the page
+——————————————————————————————————————————————-->
+{% block header  %}
+
+  <!-- Logo -->
+  <img class="two columns u-pull-left logo" src="{% static "dnollkse/images/logo.png" %}" alt="DNollK '15's logga">
+
+  <!-- navbar -->
+  <nav class="ten columns u-pull-right primary">
+    <img src="{% static "dnollkse/images/menu.svg"  %}" alt="meny"/>
+    <p id="nav-btn">Navigation</p>
+    {% block navigation %}
+      <ul>
+        <li><a href="#">startsida</a></li>
+        <li><a href="#">nollenkät</a></li>
+        <li><a href="#">schema</a></li>
+        <li><a href="#">arr</a></li>
+        <li><a href="#">dokument</a></li>
+        <li><a href="#">länkar</a></li>
+        <li><a href="#">om...</a></li>
+        <li><a href="#">faq</a></li>
+        <li><a href="#">kontakt</a></li>
+      </ul>
+    {% endblock navigation %} 
+  </nav>
+  </section> <!-- end navigation row -->
+  <div class="row">
+  <!-- Header image -->
+  <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
+  </div> <!-- end image row -->
+{% endblock header %}
+
+<!-- Footer of the content part of the page
+———————————————————————————————————————-->
+{% block footer %}
+  
+{% endblock footer %}

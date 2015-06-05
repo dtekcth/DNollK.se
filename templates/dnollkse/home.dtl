@@ -1,0 +1,24 @@
+{% extends "dnollkse/layout.dtl" %}
+
+{% block title %}Start - DNollK 2015{% endblock title %}
+
+{% block content %}
+  <div class="eight columns">
+    <header>
+      <h2>Vänstra kolumnen</h2>
+      <h3>Innehåller fräsig lorem ipsum</h3>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae arcu nec metus lobortis egestas sit amet in augue. Aliquam ante nisi, imperdiet id imperdiet ac, ultrices a dolor. In a vulputate sem. Pellentesque ut lorem ornare, placerat justo vel, mattis nibh. In vulputate massa id rhoncus tincidunt. In sed tristique quam. Integer erat est, sollicitudin et elit ac, tempor elementum diam. Curabitur sit amet nunc ligula. Maecenas nec dolor at magna tempor interdum quis sed ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Proin id dui nec ex sollicitudin lacinia vehicula id velit. Morbi sodales turpis eget augue viverra gravida. Sed efficitur porttitor mauris, et commodo erat. Sed sed sem sed ligula volutpat aliquam non vitae diam. Sed in libero vitae tortor condimentum blandit. In quis nunc interdum, ornare mi ut, aliquam justo. Morbi dapibus metus nulla, consectetur malesuada arcu venenatis at. Vestibulum imperdiet nunc quis nunc bibendum, id rhoncus lectus finibus. Duis vitae auctor quam. Mauris molestie, libero at tristique imperdiet, tortor augue convallis nunc, tincidunt fermentum dolor nisl id diam. In arcu urna, dapibus eu ultrices nec, scelerisque at lacus. Ut commodo suscipit dui, eget mollis lectus condimentum eu. Proin sed sapien pellentesque, molestie arcu nec, posuere est. Nullam sit amet est nec quam ultrices placerat at sit amet magna.</p>
+    <p>Etiam semper nibh convallis metus placerat accumsan. In a dolor sit amet dui viverra blandit. Maecenas et ipsum ac ligula semper mollis eget nec sem. Donec posuere tortor vel fringilla finibus. Ut risus est, auctor semper mollis ut, mattis a ante. Morbi tincidunt lectus et nunc suscipit, quis blandit risus tempus. Aenean id condimentum urna, eget egestas felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam egestas cursus suscipit. Integer leo turpis, fermentum ut metus quis, laoreet pellentesque enim. Vestibulum ligula arcu, consequat in sollicitudin quis, semper sit amet ipsum. Curabitur maximus dictum ex ac pretium. Sed condimentum turpis a augue hendrerit dignissim. Ut vehicula varius ipsum, nec eleifend nibh fringilla non. Etiam feugiat est leo, eu mattis ex posuere vitae. Praesent sit amet sodales justo.</p>
+    <p>Integer eu pharetra nulla. Donec vitae nisl a quam iaculis lobortis at eget nisi. Duis eget porttitor erat. Nullam sollicitudin, felis ut placerat accumsan, purus orci suscipit nunc, at ornare sem orci fringilla ex. Ut hendrerit eu ipsum finibus molestie. Maecenas leo ipsum, rhoncus et elit nec, lobortis blandit elit. Etiam vel semper ligula, vel lobortis massa. Donec porttitor feugiat sem malesuada semper.</p>
+  </div>
+  <div class="four columns">
+    <header>
+      <h2>Höger kolumn</h2>
+      <h3>Mer cool lorem ipsum</h3>
+    </header>
+    <p> Integer eu pharetra nulla. Donec vitae nisl a quam iaculis lobortis at eget nisi. Duis eget porttitor erat. Nullam sollicitudin, felis ut placerat accumsan, purus orci suscipit nunc, at ornare sem orci fringilla ex. Ut hendrerit eu ipsum finibus molestie. Maecenas leo ipsum, rhoncus et elit nec, lobortis blandit elit. Etiam vel semper ligula, vel lobortis massa. Donec porttitor feugiat sem malesuada semper.</p>
+    <p>Morbi ac lorem eu libero dictum vestibulum. Ut convallis nisl ut neque commodo, ut volutpat dolor euismod. Nulla ut lorem sapien. Aenean viverra turpis in mattis volutpat. Nullam laoreet nibh sem, eget hendrerit libero pharetra ac. Mauris vel nibh non nisl fermentum pharetra non sed nisi. Nunc scelerisque lobortis ex ac consectetur. Proin mi arcu, pharetra sit amet enim eget, tempus porta justo. Duis quam libero, fringilla rutrum consectetur eget, egestas eu velit. Quisque eget pretium nulla. Sed egestas augue erat, in lacinia quam porttitor id. Maecenas condimentum suscipit lacus, sed fringilla nisl molestie nec. Cras hendrerit metus venenatis justo rutrum, maximus consectetur justo tincidunt.</p>
+  </div>
+{% endblock content %}
