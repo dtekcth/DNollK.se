@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Jassob/DNollK.se.png?label=ready&title=Ready)](https://waffle.io/Jassob/DNollK.se)
 DNollK.se
 ====================
 DNollK Chalmers hemsida
