@@ -59,10 +59,15 @@ h6 { font-size: 1.5rem; line-height: 1.8;  letter-spacing: 0; }
                 #DD5227;
 }
 
+body,
 .container  {
     background: #f8f8f8;
 }
 
+/* Set top of body to top of screen */
+body {
+    margin-top: -1rem;
+}
 
 /* Container styling (card)
    ——————————————————————————————————————————————————
