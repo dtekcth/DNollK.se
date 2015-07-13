@@ -1,0 +1,11 @@
+{% extends "dnollkse/layout.dtl" %}
+
+{% block title %}Om DNollK 2015{% endblock title %}
+
+{% block content %}
+        <h1>{{committee.name}}</h1>
+        <p>{{committee.text}}</p>
+        {% for member in members%}
+            <p>{{member.name}} : {{member.position}}</p>
+        {% endfor %}
+{% endblock content %}
