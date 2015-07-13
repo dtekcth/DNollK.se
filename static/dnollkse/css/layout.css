@@ -113,9 +113,7 @@ h6 { font-size: 1.5rem; line-height: 1.8;  letter-spacing: 0; }
 }
 
 .header .image {
-    margin-top: 10px;
-    
-    /*box-shadow: 0rem -0.6rem 2rem 0.1rem rgba(0, 0, 0, 0.69);*/
+    display: none;
 }    
 
 /* Navigation
@@ -205,10 +203,21 @@ footer {
 /* Media queries (responsive design)
 ——————————————————————————————————————————————————
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 400px) {
+
+    .content.row {
+        margin: 1.2rem 1.2rem;
+    }
+
+}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+    .header .image {
+        margin-top: 10px;
+        /*box-shadow: 0rem -0.6rem 2rem 0.1rem rgba(0, 0, 0, 0.69);*/
+    }
+
     .header nav.primary {
         background: inherit;
         padding-top: 1.2rem;
@@ -219,7 +228,6 @@ footer {
         height: inherit;
         padding-top: 0px;
         margin-top: 0px;
-                        
     }
 
     .header nav.primary p,
