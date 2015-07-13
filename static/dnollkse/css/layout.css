@@ -209,15 +209,8 @@ footer {
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-
-    .header .logo {
-        padding: 0.5rem;
-    }
-    
     .header .image {
         margin-top: 10px;
-        display: inline-block;
-        /*box-shadow: 0rem -0.6rem 2rem 0.1rem rgba(0, 0, 0, 0.69);*/
     }
 
     .header nav.primary {
