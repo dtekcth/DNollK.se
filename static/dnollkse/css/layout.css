@@ -214,12 +214,13 @@ footer {
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-    .container .header {
-    margin: 1rem;
+    .header .logo {
+        padding: 0.5rem;
     }
 
     .header .image {
         margin-top: 10px;
+        display: inline-block;
     }
 
     .header nav.primary {
