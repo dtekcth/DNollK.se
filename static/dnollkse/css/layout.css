@@ -12,7 +12,7 @@
 - Box sizing
 - Typography (baseline correction)
 - Backgrounds and body styling
-- Card styling
+- Container styling (card)
 - Header
 - Navigation
 - Content
@@ -68,7 +68,7 @@ h6 { font-size: 1.5rem; line-height: 1.8;  letter-spacing: 0; }
    ——————————————————————————————————————————————————
    The card class, is represented by a light background 
    and sharp edges with a box shadow around.
- */
+*/
 
 .container {
     box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
@@ -86,21 +86,19 @@ h6 { font-size: 1.5rem; line-height: 1.8;  letter-spacing: 0; }
 }
 
 .container.content {
-    /* overflow: hidden; */
-
     margin: 2.6rem auto;
 }
 
-.content.row {
-    margin: 1.2rem 1.2rem;
+.container .header {
+    margin: 1rem;
 }
 
 /* Header
-——————————————————————————————————————————————————
-Styling for the  card
+   ——————————————————————————————————————————————————
+   Styling for the header card
 */
-.header {
 
+.header {
     color: #fa6607;
 
     font-weight: 600;
