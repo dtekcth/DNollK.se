@@ -27,7 +27,8 @@
 
     box-shadow: none;
 
-    margin: 0px auto;
+    margin: 0px;
+    padding: 0px;
 }
 
 .content.row {
@@ -96,4 +97,15 @@ article.post .post-footer {
     color: #444;
 
     margin-bottom: 0px;
+}
+
+/* Media queries (responsive design)
+——————————————————————————————————————————————————
+/* Larger than mobile */
+@media (min-width: 400px) {
+    /* Make content container centered */
+    .content.container {
+        padding: 0px auto;
+        margin: 0px auto;
+    }
 }
