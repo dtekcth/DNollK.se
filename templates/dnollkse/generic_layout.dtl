@@ -35,6 +35,8 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
 
+  {% block js %}
+  {% endblock js  %}
 </head>
 <body>
 

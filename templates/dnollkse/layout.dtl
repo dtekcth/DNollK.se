@@ -6,6 +6,10 @@
 ————————————————————————————————————————————————-->
 {% block title %}DNollK 2015{% endblock title %}
 
+{% block js %}
+  <script src="{% static "dnollkse/js/navbar.js" %}"></script>
+{% endblock js %}
+
 <!-- Description, shows up as a snippet in search engine results, I think
 ———————————————————————————————————————————————————————————————————————-->
 {% block description %}
