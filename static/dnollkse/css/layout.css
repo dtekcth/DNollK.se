@@ -128,24 +128,37 @@ header nav.primary {
     
     color: #f8f8f8;
 
-    height: 3.6rem;
+    height: 4.8rem;
+    font-size: 2.4rem;
 
     margin-top: 1.6rem;
+
+    position: relative;
 }
 
 header nav.primary p {
     display: inline;
+    margin: 0.6rem 6.4rem;
+
+    position: absolute;
 }
 
 header nav.primary img {
-    margin: 0 1.6rem;    
+    margin: 1.2rem 1.6rem;
+    height: 2.4rem;
+
+    position: absolute;
 }
 
 header nav.primary ul {
     position: relative;
-    height: 0px;
     padding: 1.2rem;
-    visibility: hidden;
+    display: none;
+}
+
+header nav.primary ul.expand {
+    height: 20rem;
+    display: inline-block;
 }
 
 header nav.primary ul li {
@@ -163,7 +176,6 @@ header nav.primary ul li:hover {
 header nav.primary ul li a {
     color: #fa6607;
     text-decoration: none;
-    font-family: 'Geomancy-Extra-Bold', sans-serif;
 }
 
 /* Sidebar
@@ -253,8 +265,11 @@ footer {
     
     nav.primary ul li a {
         display: inline-block;
-        color: #fa6607;
+
         font-size: 1.3rem;
+        font-family: 'Geomancy-Extra-Bold', sans-serif;
+
+        text-decoration: none;
     }
 }
 
