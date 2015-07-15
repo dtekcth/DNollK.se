@@ -2,10 +2,27 @@
 
 {% block title %}Om DNollK 2015{% endblock title %}
 
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static "about/css/dnollk.css" %}"/>
+{% endblock css %}
+
 {% block content %}
-        <h1>{{committee.name}}</h1>
+        <h1 class="committee-name">{{committee.name}}</h1>
         <p>{{committee.text}}</p>
+        {% with image_url="about/img/"|add:committee.image %}
+            <img src="{% static image_url %}" alt="Profilbild för {{ committee.name }}" class="committee-img"/>
+        {% endwith %}
         {% for member in members%}
-            <p>{{member.name}} : {{member.position}}</p>
+            <div class="member six columns">
+                <h3><b>{{ member.name }}</b> <br><i>{{ member.position }}</i></h3>
+                <p>{{ member.text }}</p>
+
+                {# Concatenate 'about/img' and member.image #}
+                {% with image_url="about/img/"|add:member.image %}
+                    <img src="{% static image_url %}" alt="Profilbild för {{ member.name }}"/>
+                {% endwith %}
+            </div>
         {% endfor %}
 {% endblock content %}
