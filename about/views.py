@@ -12,7 +12,12 @@ def index(request):
     return render(request, "about/index.dtl", {})
 
 def foreningar(request):
-    return HttpResponse("Föreningar")
+    committees = Committee.objects.all().exclude(name="DNollK")
+    f = {}
+    for com in committees:
+        f[com] = Member.getByCommittee(com)
+    
+    return render(request, "about/foreningar.dtl", {'committees' : committees, 'members_dict' : f})
 
 def karen(request):
     return HttpResponse("Kåren")
