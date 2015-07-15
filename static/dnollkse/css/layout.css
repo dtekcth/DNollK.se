@@ -152,29 +152,30 @@ header nav.primary img {
 
 header nav.primary ul {
     position: relative;
-    padding: 1.2rem;
-    display: none;
-}
+    margin: 0;
 
-header nav.primary ul.expanded {
-    display: block;
+    padding: 1.2rem;
+
+    display: none;
 }
 
 header nav.primary ul li {
     position: relative;
     list-style: inside none none;
-    border-left: transparent solid 1px;
-    border-right: transparent solid 1px;
+
+    padding: 1.2rem;
+
+    text-align: center;
 }
 
 header nav.primary ul li:hover {
-    border-left: black solid 1px;
-    border-right: black solid 1px;
 }
 
 header nav.primary ul li a {
     color: #fa6607;
     text-decoration: none;
+
+    font-size: 2.4rem;
 }
 
 /* Sidebar
