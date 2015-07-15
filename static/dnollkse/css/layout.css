@@ -123,7 +123,7 @@ body,
 
 /* Navigation
 —————————————————————————————————————————————————— */
-header nav.primary {
+header nav.primary .mobile-nav {
     background: #fa6607;
     
     color: #f8f8f8;
@@ -156,9 +156,8 @@ header nav.primary ul {
     display: none;
 }
 
-header nav.primary ul.expand {
-    height: 20rem;
-    display: inline-block;
+header nav.primary ul.expanded {
+    display: block;
 }
 
 header nav.primary ul li {

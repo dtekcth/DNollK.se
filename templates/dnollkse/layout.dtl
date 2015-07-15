@@ -52,8 +52,12 @@
 
   <!-- navbar -->
   <nav class="ten columns u-pull-right primary">
-    <img src="{% static "dnollkse/images/menu.svg"  %}" alt="meny"/>
-    <p id="nav-btn">Navigation</p>
+    <div class="mobile-nav">
+      <img src="{% static "dnollkse/images/menu.svg" %}"
+           alt="meny"
+           onclick="navbarClick()" />
+      <p id="nav-btn">Navigation</p>
+    </div>
     {% block navigation %}
       <ul>
         <li><a href="#">startsida</a></li>
