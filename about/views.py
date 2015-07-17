@@ -19,5 +19,5 @@ def foreningar(request):
     
     return render(request, "about/foreningar.dtl", {'committees' : committees, 'members_dict' : f})
 
-def karen(request):
-    return HttpResponse("Kåren")
+def brage(request):
+    return render(request, "about/brage.dtl", {})

@@ -12,6 +12,6 @@ urlpatterns = patterns('',
     # Matches http://example.com/about/foreningar
     url(r'^foreningar/$', views.foreningar, name="foreningar"),
 
-    # Matches http://example.com/about/karen
-    url(r'^karen/$', views.karen, name="karen"),
+    url(r'^brage/$', views.brage, name="brage"),
+
 )
