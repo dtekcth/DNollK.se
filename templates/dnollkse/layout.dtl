@@ -9,7 +9,7 @@
 <!-- Description, shows up as a snippet in search engine results, I think
 ———————————————————————————————————————————————————————————————————————-->
 {% block description %}
-  DataNollans hem trygga hamn under mottagningen 2015 
+  DataNollans hem trygga hamn under mottagningen 2015
 {% endblock description %}
 
 <!-- Sidebar to the left of the page
