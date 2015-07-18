@@ -1,0 +1,31 @@
+.member {
+    position: relative;
+    margin-top: 3.2rem;
+    margin-left: 0;
+    margin-right: 0;
+    height: 60rem;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+}
+
+.member img {
+    width:  30rem;
+    margin: 0 auto;
+    display: block;
+    bottom: 1rem;
+    position: absolute;
+}
+
+.committee-img {
+    width: 90rem;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.committee-name {
+    font-family: "Geomancy-Extra-Bold";
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 7rem;
+}
