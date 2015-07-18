@@ -23,7 +23,7 @@ Detta projekt bygger på ramverket Django [(djangoproject.com)](http://djangopro
 #### Installera Python och Django ####
 För att komma igång med detta projekt måste man ha Python och Django installerade. Om man använder Linux så borde Python finnas i pakethanteraren och i så fall är det bara installera genom pakethanteraren. Django (och andra python-bibliotek) kan man installera med Pythons egna pakethanterare, 'pip' (eller easy_install, men det har jag inte använt så jag kommer inte täcka det) och det gör man genom att skriva:
 
-    $ pip install django
+    $ pip install -r requirements.txt
 
 För att se att django blivit installerats ordentligt kan man köra python i en terminal och skriva:
 
