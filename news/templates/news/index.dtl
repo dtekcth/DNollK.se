@@ -1,4 +1,4 @@
-{% extends 'dnollkse/layout.dtl' %}
+{% extends 'dnollkse/layout-with-sidebar.dtl' %}
 
 {% block title %} Nyheter - DNollK 2015 {% endblock title %}
 
@@ -12,7 +12,7 @@
   
   {% if posts_list %}
 
-    <section class="newssection">
+    <section class="newssection eight columns">
 
       <!-- creates an article element of every post -->
       {% for post in posts_list %}
