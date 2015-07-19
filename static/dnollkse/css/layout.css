@@ -53,13 +53,14 @@ h6 { font-size: 1.5rem; line-height: 1.8;  letter-spacing: 0; }
 
 /* Backgrounds and body styling
 —————————————————————————————————————————————————— */
-.band {
+body,
+.orange-colored {
     background: url("../images/bg_main.png"),
                 #DD5227;
 }
 
-body,
-.container  {
+.card,
+.light-colored {
     background: #f8f8f8;
 }
 
@@ -67,10 +68,22 @@ body,
    ——————————————————————————————————————————————————
    The card class, is represented by a light background 
    and sharp edges with a box shadow around.
-*/
-
-.container {
+ */
+.card {
+    box-sizing: border-box;
     box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
+
+    padding: 1.2rem;
+
+    margin: 1.2rem 0;
+}
+
+.column,
+.columns,
+.container {
+    margin: 0;
+
+    padding: 0;
 }
 
 .container h1,
@@ -85,22 +98,11 @@ body,
     margin-right: 1rem;
 }
 
-.content .columns,
-.content .column {
-    margin-top: 2.4rem;
-    margin-bottom: 2.4rem;
-    padding-top: 1.2rem;
-}
 
 /* Larger than mobile */
 @media (min-width: 400px) {
     .container {
         margin: 0 auto;
-    }
-
-    .content .columns,
-    .content .column {
-        padding: 1.2rem;
     }
 }
 
@@ -151,7 +153,6 @@ body,
 
 @media (min-width: 550px) {
     .header .image {
-        margin-top: 10px;
         display: inline-block;
     }
 }
@@ -240,7 +241,7 @@ body,
     .header nav.primary ul li {
         display: inline-block;
 
-        padding: 0px 0.8vw;
+        padding: 0px 0.6vw;
     }
 
     .header nav.primary ul li a {
@@ -258,33 +259,14 @@ body,
 Styling for the sidebar
 */
 #sidebar {
-    height: 800px;
-    
-    width: 200px;
 
-    position: absolute;
-
-    left: -250px;
 }
 
-#sidebar dl dt,
-#sidebar #important p {
-    margin-left: 1.2rem;    
-}
 
-#sidebar .card {
-    margin: 1.8rem  0;
-}
-
-#sidebar .social.card {
-    height: 15rem;
-}
-
-#sidebar .social.card a {
-    vertical-align: middle;
-    height: inherit;
-}
-
+/* Footer
+——————————————————————————————————————————————————
+Styling for the footer
+*/
 footer {
 
 }
