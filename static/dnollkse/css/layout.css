@@ -79,37 +79,55 @@ body,
 .card h1,
 .card h2,
 .card h3 {
+    font-family: "Geomancy-Extra-Bold";
+
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
-.content.container {
+.content .columns,
+.content .column {
     margin-top: 2.4rem;
     margin-bottom: 2.4rem;
     padding-top: 1.2rem;
 }
 
+/* Larger than mobile */
+@media (min-width: 400px) {
+    .container {
+        margin: 0 auto;
+    }
+
+    .content .columns,
+    .content .column {
+        padding: 1.2rem;
+    }
+}
+
 .content.row {
-    margin: 2.6rem auto;
+    margin: 1.2rem auto;
 }
 
 .container.header {
     padding: 0rem;
 }
 
+/*
+@media (min-width: 550px) {
+    .container.header {
+        width: 100%;
+    }
+}
+*/
+
 /* Header
    ——————————————————————————————————————————————————
    Styling for the header card
 */
-
 .header {
     color: #fa6607;
 
     font-weight: 600;
-}
-
-.header row {
-    padding-top: 2.4rem;
 }
 
 .header .logo {
@@ -119,11 +137,28 @@ body,
 
 .header .image {
     display: none;
-}    
+}
+
+/* Larger than phone */
+
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 400px) {
+    .header .logo {
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 550px) {
+    .header .image {
+        margin-top: 10px;
+        display: inline-block;
+    }
+}
 
 /* Navigation
 —————————————————————————————————————————————————— */
-header nav.primary .mobile-nav {
+.header nav.primary .mobile-nav {
     background: #fa6607;
     
     color: #f8f8f8;
@@ -136,21 +171,7 @@ header nav.primary .mobile-nav {
     position: relative;
 }
 
-header nav.primary p {
-    display: inline;
-    margin: 0.6rem 6.4rem;
-
-    position: absolute;
-}
-
-header nav.primary img {
-    margin: 1.2rem 1.6rem;
-    height: 2.4rem;
-
-    position: absolute;
-}
-
-header nav.primary ul {
+.header nav.primary ul {
     position: relative;
     margin: 0;
 
@@ -159,7 +180,21 @@ header nav.primary ul {
     display: none;
 }
 
-header nav.primary ul li {
+.header nav.primary p {
+    display: inline;
+    margin: 0.6rem 6.4rem;
+
+    position: absolute;
+}
+
+.header nav.primary img {
+    margin: 1.2rem 1.6rem;
+    height: 2.4rem;
+
+    position: absolute;
+}
+
+.header nav.primary ul li {
     position: relative;
     list-style: inside none none;
 
@@ -168,14 +203,54 @@ header nav.primary ul li {
     text-align: center;
 }
 
-header nav.primary ul li:hover {
-}
-
-header nav.primary ul li a {
+.header nav.primary ul li a {
     color: #fa6607;
     text-decoration: none;
 
     font-size: 2.4rem;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    .header nav.primary {
+        margin: 0;
+    }
+
+    .header nav.primary .mobile-nav {
+        background: inherit;
+        padding-top: 1.2rem;
+
+        display: none;
+    }
+
+    .header nav.primary p,
+    .header nav.primary img {
+        display: none;
+    }
+
+    .header nav.primary ul {
+        display: block;
+
+        margin: 0;
+        margin-top: 5vw;
+
+        padding: 0;
+    }
+
+    .header nav.primary ul li {
+        display: inline-block;
+
+        padding: 0px 0.8vw;
+    }
+
+    .header nav.primary ul li a {
+        display: inline-block;
+
+        font-size: 1.4vw;
+        font-family: 'Geomancy-Extra-Bold', sans-serif;
+
+        text-decoration: none;
+    }
 }
 
 /* Sidebar
@@ -217,61 +292,10 @@ footer {
 /* Media queries (responsive design)
 ——————————————————————————————————————————————————
 /* Larger than mobile */
-@media (min-width: 400px) {
-
-    .content.row {
-        margin: 1.2rem 1.2rem;
-    }
-
-}
+@media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-    .header .logo {
-        padding: 0.5rem;
-    }
-
-    .header .image {
-        margin-top: 10px;
-        display: inline-block;
-    }
-
-    .header nav.primary {
-        background: inherit;
-        padding-top: 1.2rem;
-    }
-    
-    .header nav.primary ul {
-        visibility: visible;
-        height: inherit;
-        padding-top: 0px;
-        margin-top: 0px;
-    }
-
-    .header nav.primary p,
-    .header nav.primary img {
-        visibility: hidden;
-        height: 0;
-        width: 0;
-        position: absolute;    
-    }
-    
-    nav.primary ul li {
-        display: inline;
-        float: left;
-        padding: 0px 0.6rem;
-        /*margin-top: 1.8rem;*/
-    }
-    
-    nav.primary ul li a {
-        display: inline-block;
-
-        font-size: 1.3rem;
-        font-family: 'Geomancy-Extra-Bold', sans-serif;
-
-        text-decoration: none;
-    }
-}
+@media (min-width: 550px) {}
 
 /* Larger than tablet */
 @media (min-width: 750px) {}
