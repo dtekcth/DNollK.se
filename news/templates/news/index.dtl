@@ -18,7 +18,7 @@
       {% for post in posts_list %}
 
         <!-- start of a news article / post -->
-        <article id="post-{{ post.id }}" class="post">
+        <article id="post-{{ post.id }}" class="card post"">
           <header>
             <h3 class="title">{{ post.title }}</h3>
             <p class="pub_date">{{ post.pub_date.date }}</p>
@@ -32,7 +32,9 @@
     </section> <!-- end of newssection -->
     
   {% else %}
-    <h3>Det finns inga nyheter att visa :/</h3>
+    <div class="newssection eight columns card">
+      <h3>Det finns inga nyheter att visa :/</h3>
+    </div>
   {% endif %}
 
 <!-- end of news content -->

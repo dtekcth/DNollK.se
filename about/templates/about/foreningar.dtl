@@ -9,7 +9,8 @@
 {% endblock css %}
 
 {% block content %}
-    {% for com, members in members_dict.items %}
+  {% for com, members in members_dict.items %}
+    <div class="card">
         <h1 class="committee-name">{{ com.name }}</h1>
         <div class="six columns"><p>{{ com.text }}</p></div>
 
@@ -26,5 +27,6 @@
         {% with image_url="about/img/"|add:com.image %}
             <img src="{% static image_url %}" alt="Profilbild för {{ com.name }}" class="committee-img"/>
         {% endwith %}
+    </div>
     {% endfor %}
 {% endblock content %}

@@ -108,7 +108,7 @@
    $(document).ready(function() {
 
        $('#calendar').fullCalendar({
-           googleCalendarApiKey: 'yourGoogleCalendarApiKeyHere',
+           googleCalendarApiKey: 'AIzaSyDR9uk7JlSdYhTxYuMXVePu8R3xxrCR1RQ',
 
            // Buttons on the header of the calendar
            header: {
@@ -119,10 +119,10 @@
 
            // The calendar events, here imported from a public gcal
            events: {
-               googleCalendarId: 'idOfYourPublicGoogleCalendar@group.calendar.google.com'
+               googleCalendarId: '1kkm5l6hn0qhh7c7b6mnablnk0@group.calendar.google.com'
            },
 
-           weekends: false, // will hide Saturdays and Sundays
+           weekends: true, // will hide Saturdays and Sundays
            defaultView: 'agendaDay',
            height: 500
        });

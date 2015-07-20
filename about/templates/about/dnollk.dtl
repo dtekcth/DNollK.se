@@ -9,20 +9,22 @@
 {% endblock css %}
 
 {% block content %}
-        <h1 class="committee-name">{{committee.name}}</h1>
-        <p>{{committee.text}}</p>
-        {% with image_url="about/img/"|add:committee.image %}
-            <img src="{% static image_url %}" alt="Profilbild för {{ committee.name }}" class="committee-img"/>
+  <div class="card">
+    <h1 class="committee-name">{{committee.name}}</h1>
+    <p>{{committee.text}}</p>
+    {% with image_url="about/img/"|add:committee.image %}
+      <img src="{% static image_url %}" alt="Profilbild för {{ committee.name }}" class="committee-img"/>
+    {% endwith %}
+    {% for member in members%}
+      <div class="member six columns">
+        <h3><b>{{ member.name }}</b> <br><i>{{ member.position }}</i></h3>
+        <p>{{ member.text }}</p>
+        
+        {# Concatenate 'about/img' and member.image #}
+        {% with image_url="about/img/"|add:member.image %}
+          <img src="{% static image_url %}" alt="Profilbild för {{ member.name }}"/>
         {% endwith %}
-        {% for member in members%}
-            <div class="member six columns">
-                <h3><b>{{ member.name }}</b> <br><i>{{ member.position }}</i></h3>
-                <p>{{ member.text }}</p>
-
-                {# Concatenate 'about/img' and member.image #}
-                {% with image_url="about/img/"|add:member.image %}
-                    <img src="{% static image_url %}" alt="Profilbild för {{ member.name }}"/>
-                {% endwith %}
-            </div>
-        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
 {% endblock content %}

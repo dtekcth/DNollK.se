@@ -9,7 +9,7 @@
 {% endblock css %}
 
 {% block content %}
-<div class="contact-center">
+<div class="contact-center card">
     <h1>Kontaktinformation</h1>
     <table class="contact-center">
     {% for member in members %}
