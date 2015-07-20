@@ -1,0 +1,58 @@
+{% extends "dnollkse/layout.dtl" %}
+
+{% block title %}Om DNollK 2015{% endblock title %}
+
+{% load staticfiles %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static "contact/css/style.css" %}"/>
+{% endblock css %}
+
+{% block content %}
+<div class="contact-center">
+    <h1>Kontaktinformation</h1>
+    <table class="contact-center">
+    {% for member in members %}
+        <tr>
+            <td>{{ member.name }}</td>
+            <td><i>{{ member.position }}</i></td>
+            <td>{{ member.number}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <h3>Telefon</h3>
+    <table class="contact-center">
+        <tr>
+            <td>DNollKs Jourtelefon</td>
+            <td>070-042 26 32</td>
+        </tr>
+        <tr>
+            <td>Kårens Trygghetsjour</td>
+            <td>031-772 39 27</td>
+        </tr>
+        <tr>
+            <td>Studievägledare Datateknik</td>
+            <td>031-772 15 53</td>
+        </tr>
+        <tr>
+            <td>Kurator</td>
+            <td>031-772 25 45</td>
+        </tr>
+        <tr>
+            <td>Chalmersvakten</td>
+            <td>031-772 44 99</td>
+        </tr>
+        <tr>
+            <td>Sjukvårdsrådgivning</td>
+            <td>1177</td>
+        </tr>
+        <tr>
+            <td>Akuta fall</td>
+            <td>112</td>
+        </tr>
+    </table>
+    <h3>IRC</h3>
+    <p>IRC-kanal : #dtek på irc.dtek.se</p>
+    <p>Alternativt : <a href="http://www.dtek.se/irc">www.dtek.se/irc</a></p>
+</div>
+{% endblock content %}

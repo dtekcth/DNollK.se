@@ -11,6 +11,7 @@ class Committee(models.Model):
 class Member(models.Model):
     name = models.CharField(max_length=200)
     text = models.TextField()
+    number = models.CharField(max_length=50)
     image = models.CharField(max_length=200)
     position = models.CharField(max_length=50)
     committee = models.ForeignKey(Committee)

@@ -18,7 +18,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^news/', include('news.urls')),
-    url(r'^about/', include('about.urls')),
+    url(r'^nyheter/', include('news.urls')),
+    url(r'^om/', include('about.urls')),
+    url(r'^kontakt/', include('contact.urls')),
     url(r'^$', 'dnollkse.views.home', name='home'),
 )
