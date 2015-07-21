@@ -25,42 +25,6 @@
 
 <!-- Header of the content part of the page
 ——————————————————————————————————————————————-->
-{% block header  %}
-  <!-- header container
-  ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-  <header class="u-full-width header">
-    <!-- Logo -->
-    <img class="two columns u-pull-left logo" src="{% static "dnollkse/images/logo.png" %}" alt="DNollK '15's logga">
-
-    <!-- navbar -->
-    <nav class="ten columns u-pull-right primary">
-      <div class="mobile-nav">
-        <img src="{% static "dnollkse/images/menu.svg" %}"
-             alt="meny"
-             onclick="navbarClick()" />
-        <p id="nav-btn">Navigation</p>
-      </div>
-      {% block navigation %}
-        <ul>
-          <li><a href="#">startsida</a></li>
-          <li><a href="#">nollenkät</a></li>
-          <li><a href="#">schema</a></li>
-          <li><a href="#">arr</a></li>
-          <li><a href="#">dokument</a></li>
-          <li><a href="#">länkar</a></li>
-          <li><a href="#">om...</a></li>
-          <li><a href="#">faq</a></li>
-          <li><a href="#">kontakt</a></li>
-        </ul>
-      {% endblock navigation %}
-    </nav>
-  </div> <!-- end navigation row -->
-  <div class="row">
-    <!-- Header image -->
-    <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
-  </div> <!-- end image row -->
-  </header> <!-- end header -->
-{% endblock header %}
 
 <!-- Footer of the content part of the page
 ———————————————————————————————————————-->

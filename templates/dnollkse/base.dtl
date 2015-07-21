@@ -39,11 +39,6 @@
   {% endblock base-js  %}
 </head>
 <body>
-
-
-  <!-- Left sidebar, contains links to various social networks and what not
-  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
-
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="band">
@@ -55,8 +50,39 @@
           <!-- header container
           ––––––––––––––––––––––––––––––––––––––––––––––––––-->
           <header class="u-full-width header">
+            <!-- Logo -->
+            <img class="two columns u-pull-left logo" src="{% static "dnollkse/images/logo.png" %}" alt="DNollK '15's logga">
+
+            <!-- navbar -->
+            <nav class="ten columns u-pull-right primary">
+              <div class="mobile-nav">
+                <img src="{% static "dnollkse/images/menu.svg" %}"
+                     alt="meny"
+                     onclick="navbarClick()" />
+                <p id="nav-btn">Navigation</p>
+              </div>
+              {% block navigation %}
+                <ul>
+                  <li><a href="{% url "home" %}">startsida</a></li>
+                  <li><a href="{% url "home" %}">nollenkät</a></li>
+                  <li><a href="{% url "home" %}">schema</a></li>
+                  <li><a href="{% url "home" %}">arr</a></li>
+                  <li><a href="{% url "home" %}">dokument</a></li>
+                  <li><a href="{% url "home" %}">länkar</a></li>
+                  <li><a href="#">om...</a></li>
+                  <li><a href="{% url "home" %}">faq</a></li>
+                  <li><a href="{% url "home" %}">kontakt</a></li>
+                </ul>
+              {% endblock navigation %}
+            </nav>
+      </div> <!-- end navigation row -->
+      <div class="row">
+        <!-- Header image -->
+        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
+      </div> <!-- end image row -->
           </header> <!-- end header -->
         {% endblock header %}
+
       </div> <!-- end header row -->
     </div> <!-- end container -->
 
@@ -67,6 +93,8 @@
         <section class="row content">
           {% block content %}
           {% endblock content %}
+          {% block sidebar %}
+          {% endblock sidebar %}
         </section> <!-- end content -->
       {% endblock content-row %}
     </div> <!-- end container -->
@@ -81,8 +109,8 @@
     </div> <!-- end footer -->
   </div> <!-- end band -->
 
-    <!-- End Document
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   {% block base-foot-js %}
   {% endblock base-foot-js %}
 </body>
