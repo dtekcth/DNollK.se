@@ -26,6 +26,7 @@ class PostAdmin(admin.ModelAdmin):
     model = Post
     list_display = ('title', 'pub_date', 'author', 'published')
     list_filter = ['pub_date', 'published']
+    change_form_template = 'news/admin/change_form.html'
 
 # Register the models in our admin view
 admin.site.register(Post,PostAdmin)

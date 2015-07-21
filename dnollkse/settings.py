@@ -26,7 +26,6 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -37,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_wysiwyg',
     'news',
     'about',
     'contact',
@@ -57,6 +57,8 @@ ROOT_URLCONF = 'dnollkse.urls'
 
 WSGI_APPLICATION = 'dnollkse.wsgi.application'
 
+DJANGO_WYSIWYG_FLAVOR = "ckeditor"
+DJANGO_WYSIWYG_MEDIA_URL = "/static/ckeditor/"
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
