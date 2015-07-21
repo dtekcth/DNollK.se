@@ -10,57 +10,15 @@
 /* 
  * Table of contents
  ——————————————————————————————————————————————————
- * 1. Normalize content container (and children)
- * 2. News list
- * 2.1 Posts 
+ * 1 Posts
  */
 
-/*
- * 1. Normalize content container
- * ——————————————————————————————————————————————————
- * Clears the styles from layout.css in dnollkse app.
- * Makes it easier to start from scratch in the following items
- */
-/* Clear the content container from its style */
-.content.container {
-    background: inherit;
-
-    box-shadow: none;
-
-    margin: 0px;
-    padding: 0px;
-}
-
-.content.row {
-    margin: 0px;
-}
 
 /*
- * 2. News list
- * ——————————————————————————————————————————————————
- * This is the main view in the news app, the one that displays 
- * all news in a list.
- */
-.content.container .newssection article {
-    background: #f8f8f8;
-
-    box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
-}
-
-.content.container .newssection {
-    margin-top: 2.6rem;
-}
-
-/*
- * 2.1 Posts
+ * 1 Posts
  * ——————————————————————————————————————————————————
  * This part is setting the style of the news posts.
  */
-article.post {
-    padding: 1.2rem;
-
-    margin-bottom: 2.4rem;
-}
 
 article.post header h3,
 article.post header p {
@@ -97,15 +55,4 @@ article.post .post-footer {
     color: #444;
 
     margin-bottom: 0px;
-}
-
-/* Media queries (responsive design)
-——————————————————————————————————————————————————
-/* Larger than mobile */
-@media (min-width: 400px) {
-    /* Make content container centered */
-    .content.container {
-        padding: 0px auto;
-        margin: 0px auto;
-    }
 }

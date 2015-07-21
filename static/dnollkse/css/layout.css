@@ -64,22 +64,8 @@ body,
     background: #f8f8f8;
 }
 
-/* Container styling (card)
-   ——————————————————————————————————————————————————
-   The card class, is represented by a light background 
-   and sharp edges with a box shadow around.
- */
-.card {
-    box-sizing: border-box;
-    box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
-
-    padding: 1.2rem;
-
-    margin: 1.2rem 0;
-
-    overflow: hidden;
-}
-
+/* Reset container styling
+—————————————————————————————————————————————————— */
 .column,
 .columns,
 .container {
@@ -123,6 +109,23 @@ body,
 }
 */
 
+/* Container styling (card)
+   ——————————————————————————————————————————————————
+   The card class, is represented by a light background
+   and sharp edges with a box shadow around.
+ */
+.card {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
+
+    padding: 1.2rem;
+
+    margin: 1.2rem 0;
+
+    overflow: hidden;
+}
+
+
 /* Header
    ——————————————————————————————————————————————————
    Styling for the header card
@@ -131,6 +134,8 @@ body,
     color: #fa6607;
 
     font-weight: 600;
+
+    margin: 0 auto;
 }
 
 .header .logo {
