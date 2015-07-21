@@ -24,7 +24,7 @@
             <p class="pub_date">{{ post.pub_date.date }}</p>
           </header>
           <hr class="header">
-          <p class="content">{{ post.content }}</p>
+          <p class="content">{{ post.content|safe }}</p>
           <p class="post-footer">Skrivet av {{ post.author }}, {{ post.pub_date }}</p>
         </article> <!-- end of article -->
         

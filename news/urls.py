@@ -20,7 +20,7 @@ views.item function,
 
 urlpatterns = patterns('',
     # Matches http://example.com/news
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.index, name='news'),
 
     # Matches for example http://example.com/news/4
     url(r'^(?P<post_id>\d+)/$', views.item, name="post"),
