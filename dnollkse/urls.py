@@ -21,5 +21,6 @@ urlpatterns = patterns('',
     url(r'^nyheter/', include('news.urls')),
     url(r'^om/', include('about.urls')),
     url(r'^kontakt/', include('contact.urls')),
+    url(r'^faq/', include('faq.urls')),
     url(r'^$', 'dnollkse.views.home', name='home'),
 )
