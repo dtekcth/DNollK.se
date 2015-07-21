@@ -1,19 +1,45 @@
 .member {
     position: relative;
     margin-top: 3.2rem;
-    margin-left: 0;
-    margin-right: 0;
-    height: 60rem;
+    margin-left: 2%;
+    margin-right: 2%;
     padding-right: 1.2rem;
     padding-left: 1.2rem;
 }
 
 .member img {
-    width:  30rem;
+    width: 90%;
     margin: 0 auto;
     display: block;
     bottom: 1rem;
-    position: absolute;
+    position: static;
+}
+
+@media (min-width: 550px) {
+    .member { height: 76rem; }
+
+    .member img { position: absolute; }
+}
+
+@media (min-width: 750px) { .member { height: 70rem; } }
+
+@media (min-width: 865px) {
+    .member img {
+        max-width: 30rem;
+        left: 50%;
+        margin-left: -15rem;
+    }
+}
+
+@media (min-width: 1000px) { .member { heigth: 60rem; } }
+
+@media (min-width: 1400px) {
+    .member { height: 65rem; }
+
+    .member img {
+        max-width: 40rem;
+        margin-left: -20rem;
+    }
 }
 
 .committee-img {
@@ -27,5 +53,5 @@
     font-family: "Geomancy-Extra-Bold";
     text-align: center;
     padding-top: 2rem;
-    font-size: 7rem;
+    font-size: 5rem;
 }
