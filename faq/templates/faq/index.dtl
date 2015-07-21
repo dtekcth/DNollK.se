@@ -1,0 +1,17 @@
+{% extends "dnollkse/layout-with-sidebar.dtl" %}
+
+{% block title %}Om DNollK 2015{% endblock title %}
+
+{% block content %}
+    <div class="card center eight columns">
+        <h1>FAQ</h1>
+        {% if faq %}
+            {% for f in faq %}
+                <p><strong>{{ f.question }}</strong></p>
+                <p>{{ f.answer }}</p>
+            {% endfor %}
+        {% else %}
+            <p>Inga frågor har ställts!</p>
+        {% endif %}
+    </div>
+{% endblock content %}

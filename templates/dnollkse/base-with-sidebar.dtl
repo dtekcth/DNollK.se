@@ -1,9 +1,0 @@
-{% extends 'dnollkse/base.dtl' %}
-{% block content-row %}
-  <section class="row content">
-    {% block content %}
-    {% endblock content %}
-    {% block sidebar %}
-    {% endblock sidebar %}
-  </section> <!-- end content -->
-{% endblock content-row %}

@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="{% static "dnollkse/css/layout.css" %}">
   {% block base-css %}
   {% endblock base-css %}
-  <link rel="stylesheet" href="{% static "css/shame.css" %}">
+  <link rel="stylesheet" href="{% static "css/misc.css" %}">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">

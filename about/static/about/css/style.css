@@ -9,8 +9,6 @@
 
 .member img {
     width: 90%;
-    margin: 0 auto;
-    display: block;
     bottom: 1rem;
     position: static;
 }
@@ -44,14 +42,11 @@
 
 .committee-img {
     width: 90%;
-    margin: 0 auto;
-    display: block;
     margin-bottom: 3rem;
 }
 
 .committee-name {
     font-family: "Geomancy-Extra-Bold";
-    text-align: center;
     padding-top: 2rem;
     font-size: 5rem;
 }
