@@ -2,16 +2,10 @@
 
 {% block title %}Om DNollK 2015{% endblock title %}
 
-{% load staticfiles %}
-
-{% block css %}
-    <link rel="stylesheet" type="text/css" href="{% static "contact/css/style.css" %}"/>
-{% endblock css %}
-
 {% block content %}
-<div class="contact-center card">
+<div class="center card">
     <h1>Kontaktinformation</h1>
-    <table class="contact-center">
+    <table class="center">
     {% for member in members %}
         <tr>
             <td>{{ member.name }}</td>
@@ -21,7 +15,7 @@
     {% endfor %}
     </table>
     <h3>Telefon</h3>
-    <table class="contact-center">
+    <table class="center">
         <tr>
             <td>DNollKs Jourtelefon</td>
             <td>070-042 26 32</td>
