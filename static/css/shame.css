@@ -1,0 +1,12 @@
+/* Left and right margins
+——————————————————————————————————————————————————
+Helping classes for making margins simle
+*/
+
+.left {
+    margin-left: 0px;
+}
+
+.right {
+    margin-right: 0px;
+}
