@@ -63,10 +63,12 @@
     <div class="container content">
       <!-- content container
       ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-      <section class="row content">
-        {% block content %}
-        {% endblock content %}
-      </section> <!-- end content -->
+      {% block content-row %}
+        <section class="row content">
+          {% block content %}
+          {% endblock content %}
+        </section> <!-- end content -->
+      {% endblock content-row %}
     </div> <!-- end container -->
 
     <!-- footer container

@@ -1,89 +1,9 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>
-    {% block title %}{% endblock title%}
-  </title>
-  <meta name="description"
-        content="{% block description %}
-        {% endblock description %}">
-  <meta name="author" content="human.txt">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  {% load staticfiles %}
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <link href="{% static "dnollkse/css/fonts.css" %}" rel="stylesheet">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="{% static "css/normalize.css" %}">
-  <link rel="stylesheet" href="{% static "css/skeleton.css" %}">
-  <link rel="stylesheet" href="{% static "dnollkse/css/layout.css" %}">
-  {% block base-css %}
-  {% endblock base-css %}
-  <link rel="stylesheet" href="{% static "css/shame.css" %}">
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
-
-  {% block base-js %}
-  {% endblock base-js  %}
-</head>
-<body>
-
-
-  <!-- Left sidebar, contains links to various social networks and what not
-  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="band">
-    <!-- header container -->
-    <div class="container header card">
-      <!-- header row -->
-      <div class="row">
-        {% block header %}
-          <!-- header container
-          ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-          <header class="u-full-width header">
-          </header> <!-- end header -->
-        {% endblock header %}
-      </div> <!-- end header row -->
-    </div> <!-- end container -->
-
-    <div class="container content">
-      <!-- content container
-      ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-      <section class="row content">
-        {% block content %}
-        {% endblock content %}
-        {% block sidebar %}
-        {% endblock sidebar %}
-      </section> <!-- end content -->
-    </div> <!-- end container -->
-
-    <!-- footer container
-    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-    <div class="footer">
-      <footer class="container">
-        {% block footer %}
-        {% endblock footer %}
-      </footer>
-    </div> <!-- end footer -->
-  </div> <!-- end band -->
-
-    <!-- End Document
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  {% block base-foot-js %}
-  {% endblock base-foot-js %}
-</body>
-</html>
+{% extends 'dnollkse/base.dtl' %}
+{% block content-row %}
+  <section class="row content">
+    {% block content %}
+    {% endblock content %}
+    {% block sidebar %}
+    {% endblock sidebar %}
+  </section> <!-- end content -->
+{% endblock content-row %}
