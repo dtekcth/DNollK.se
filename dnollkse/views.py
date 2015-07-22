@@ -13,3 +13,6 @@ def home(request):
     Displays a dummy page.
     """
     return render(request, "dnollkse/home.dtl", {})
+
+def nollenkat(request):
+    return render(request, "dnollkse/nollenkat.dtl", {})
