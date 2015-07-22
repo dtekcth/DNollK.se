@@ -29,7 +29,7 @@
     }
 }
 
-@media (min-width: 1000px) { .member { height: 60rem; } }
+@media (min-width: 1000px) { .member { height: 62rem; } }
 
 @media (min-width: 1400px) {
     .member { height: 65rem; }
