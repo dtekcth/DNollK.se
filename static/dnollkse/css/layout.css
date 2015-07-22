@@ -114,6 +114,7 @@ body,
    The card class, is represented by a light background
    and sharp edges with a box shadow around.
  */
+
 .card {
     box-sizing: border-box;
     box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
@@ -123,6 +124,10 @@ body,
     margin: 1.2rem 0;
 
     overflow: hidden;
+}
+
+.light.card {
+    box-shadow: 0px 0px 0.5rem 0.1rem #3e3e3e;
 }
 
 
@@ -208,13 +213,25 @@ body,
     padding: 1.2rem;
 
     text-align: center;
+
+    font-size: 2.4rem;
 }
 
 .header nav.primary ul li a {
     color: #fa6607;
     text-decoration: none;
+}
 
-    font-size: 2.4rem;
+.header nav.primary ul li.mobile-only {
+    display: block;
+}
+
+.header nav.primary ul li.desktop-only {
+    display: none;
+}
+
+ul li #about-menu {
+    display: none;
 }
 
 /* Larger than phablet (also point when grid becomes active) */
@@ -248,15 +265,38 @@ body,
         display: inline-block;
 
         padding: 0px 0.6vw;
+
+        font-size: 1.4vw;
+        font-family: 'Geomancy-Extra-Bold', sans-serif;
+
     }
 
     .header nav.primary ul li a {
         display: inline-block;
 
-        font-size: 1.4vw;
-        font-family: 'Geomancy-Extra-Bold', sans-serif;
-
         text-decoration: none;
+    }
+
+    .header nav.primary ul li.mobile-only {
+        display: none;
+    }
+
+    .header nav.primary ul li.desktop-only {
+        display: inline-block;
+    }
+
+    ul li:hover #about-menu {
+        background: #f8f8f8;
+
+        display: block;
+        position: absolute;
+
+        margin: 0;
+        margin-left: -70%;
+    }
+
+    #about-menu li {
+        margin: 1rem;
     }
 }
 

@@ -64,14 +64,21 @@
               {% block navigation %}
                 <ul>
                   <li><a href="{% url "home" %}">startsida</a></li>
-                  <li><a href="{% url "home" %}">nollenkät</a></li>
+                  <li><a href="{% url "nollenkat" %}">nollenkät</a></li>
                   <li><a href="{% url "home" %}">schema</a></li>
                   <li><a href="{% url "home" %}">arr</a></li>
                   <li><a href="{% url "home" %}">dokument</a></li>
                   <li><a href="{% url "home" %}">länkar</a></li>
-                  <li><a href="#">om...</a></li>
-                  <li><a href="{% url "home" %}">faq</a></li>
-                  <li><a href="{% url "home" %}">kontakt</a></li>
+                  <li class="mobile-only"><a href="{% url "dnollk" %}">om DNollK</a></li>
+                  <li class="mobile-only"><a href="{% url "foreningar" %}">om andra föreningar</a></li>
+                  <li class="desktop-only">om...
+                    <ul id="about-menu" class="light card">
+                      <li><a href="{% url "dnollk" %}">DNollK</a></li>
+                      <li><a href="{% url "foreningar" %}">Andra föreningar</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url "faq" %}">faq</a></li>
+                  <li><a href="{% url "contact" %}">kontakt</a></li>
                 </ul>
               {% endblock navigation %}
             </nav>
