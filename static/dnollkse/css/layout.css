@@ -291,12 +291,16 @@ ul li #about-menu {
         display: block;
         position: absolute;
 
+        width: 40rem;
+
         margin: 0;
-        margin-left: -70%;
+        margin-left: -17rem;
     }
 
     #about-menu li {
         margin: 1rem;
+
+        display: inline;
     }
 }
 
