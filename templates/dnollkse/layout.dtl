@@ -8,6 +8,7 @@
 
 {% block base-js %}
   <script src="{% static "dnollkse/js/functions.js" %}"></script>
+  <script src="{% static "dnollkse/js/jquery.min.js" %}"></script>
   {% block js %}
   {% endblock js %}
 {% endblock base-js %}
