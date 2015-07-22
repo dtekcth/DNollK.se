@@ -1,11 +1,13 @@
-{% extends "dnollkse/layout-with-sidebar.dtl" %}
+{% extends "dnollkse/layout.dtl" %}
 
 {% block title %}DNollK - Nollenkät{% endblock title %}
 
 {% block content %}
-    <div class="card center eight columns" style="min-height: 60rem">
-        <p>För att vi ska kunna placera er i bra phaddergrupper, med andra Nollan och phaddrar som ni passar bra ihop med, är det viktigt att ni fyller i <a href="tinyurl.com/datanollan">Nollenkäten</a> så vi vet mer om vilka ni är och vad ni har för intressen. Länken tar dig till en fullskärmsvariant av formuläret nedan</p>
+  <div class="card center" style="min-height: 60rem">
+    <h1><b>Nollenkät</b></h1>
+    <p style="max-width: 760px; margin: 1.2rem auto; text-align: left">För att vi ska kunna placera er i bra phaddergrupper, med andra Nollan och phaddrar som ni passar bra ihop med, är det viktigt att ni fyller i <a href="tinyurl.com/datanollan">Nollenkäten</a> så vi vet mer om vilka ni är och vad ni har för intressen. <br>
+      Länken tar dig till en fullskärmsvariant av formuläret nedan.</p>
 
-        <embed src="https://docs.google.com/forms/d/1kUvKKph9Bx0Pa1oKciRHb3WCHb6-Rl5upXMGgd0TPyE/viewform" width="760" height="3100" framborder="0" marginheight="0" marginwidth="0" />
-    </div>
+    <iframe src="https://docs.google.com/forms/d/1kUvKKph9Bx0Pa1oKciRHb3WCHb6-Rl5upXMGgd0TPyE/viewform" width="760" height="3200" framborder="0" marginheight="0" marginwidth="0" />
+  </div>
 {% endblock content %}
