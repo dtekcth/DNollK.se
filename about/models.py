@@ -9,7 +9,9 @@ class Committee(models.Model):
         return self.name
 
 class Member(models.Model):
-    name = models.CharField(max_length=200)
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    nick = models.CharField(max_length=200)
     text = models.TextField()
     number = models.CharField(max_length=50)
     image = models.CharField(max_length=200)
