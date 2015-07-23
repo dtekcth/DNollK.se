@@ -16,3 +16,6 @@ def home(request):
 
 def nollenkat(request):
     return render(request, "dnollkse/nollenkat.dtl", {})
+
+def lankar(request):
+    return render(request, "dnollkse/lankar.dtl", {})
