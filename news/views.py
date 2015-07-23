@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Our own modules
-from news.models import Author, Post
+from news.models import Post
 
 """
 news.views module.

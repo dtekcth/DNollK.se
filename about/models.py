@@ -19,7 +19,13 @@ class Member(models.Model):
     committee = models.ForeignKey(Committee)
 
     def __str__(self):
-        return self.name
+        return self.get_full_name_with_nick()
 
-    def getByCommittee(com):
+    def get_by_committee(com):
         return Member.objects.filter(committee=com)
+
+    def get_full_name(self):
+            return self.first_name +  " " + self.last_name
+
+    def get_full_name_with_nick(self):
+        return self.first_name + " \"" + self.nick + "\" " + self.last_name

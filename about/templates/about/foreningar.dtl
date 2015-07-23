@@ -18,7 +18,7 @@
         <table>
         {% for member in members %}
             <tr>
-                <td>{{ member.name }}</td>
+                <td>{{ member.get_full_name_with_nick }}</td>
                 <td>{{ member.position}}</td>
             </tr>
         {% endfor %}

@@ -2,7 +2,7 @@
 from django.contrib import admin
 
 # Our own modules
-from news.models import Post, Author
+from news.models import Post
 
 """
 news.admin module
@@ -30,4 +30,3 @@ class PostAdmin(admin.ModelAdmin):
 
 # Register the models in our admin view
 admin.site.register(Post,PostAdmin)
-admin.site.register(Author)

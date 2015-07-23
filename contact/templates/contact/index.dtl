@@ -8,7 +8,7 @@
     <table class="center">
     {% for member in members %}
         <tr>
-            <td>{{ member.name }}</td>
+            <td>{{ member.get_full_name_with_nick }}</td>
             <td><i>{{ member.position }}</i></td>
             <td>{{ member.number}}</td>
         </tr>

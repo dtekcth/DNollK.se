@@ -25,7 +25,7 @@
           </header>
           <hr class="header">
           <p class="content">{{ post.content|safe }}</p>
-          <p class="post-footer">Skrivet av {{ post.author }}, {{ post.pub_date }}</p>
+          <p class="post-footer">Skrivet av {{ post.author.nick }}, {{ post.pub_date }}</p>
         </article> <!-- end of article -->
         
       {% endfor %} <!-- ends the for each -->

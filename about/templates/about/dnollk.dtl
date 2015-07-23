@@ -10,19 +10,19 @@
 
 {% block content %}
   <div class="card">
-    <h1 class="committee-name center">{{committee.name}}</h1>
+    <h1 class="committee-name center">{{ committee.name }}</h1>
     <p>{{committee.text}}</p>
     {% with image_url="about/img/"|add:committee.image %}
       <img src="{% static image_url %}" alt="Profilbild för {{ committee.name }}" class="committee-img center"/>
     {% endwith %}
     {% for member in members%}
       <div class="member six columns {% cycle "left" "right" %}">
-        <h3><b>{{ member.name }}</b> <br><i>{{ member.position }}</i></h3>
+        <h3><b>{{ member.get_full_name_with_nick }}</b> <br><i>{{ member.position }}</i></h3>
         <p>{{ member.text }}</p>
         
         {# Concatenate 'about/img' and member.image #}
         {% with image_url="about/img/"|add:member.image %}
-          <img src="{% static image_url %}" alt="Profilbild för {{ member.name }}"/>
+          <img src="{% static image_url %}" alt="Profilbild för {{ member.get_full_name_with_nick }}"/>
         {% endwith %}
       </div>
     {% endfor %}
