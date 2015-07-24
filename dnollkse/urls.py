@@ -23,5 +23,6 @@ urlpatterns = patterns('',
     url(r'^kontakt/', include('contact.urls')),
     url(r'^faq/', include('faq.urls')),
     url(r'^nollenkat/', 'dnollkse.views.nollenkat', name='nollenkat'),
+    url(r'^schema/', 'dnollkse.views.schedule', name='schedule'),
     url(r'^$', 'dnollkse.views.home', name='home'),
 )

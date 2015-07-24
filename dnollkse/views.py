@@ -15,4 +15,13 @@ def home(request):
     return render(request, "dnollkse/home.dtl", {})
 
 def nollenkat(request):
+    """
+    Renders the page to the nollenkät.
+    """
     return render(request, "dnollkse/nollenkat.dtl", {})
+
+def schedule(request):
+    """
+    Renders schedule page.
+    """
+    return render(request, "dnollkse/schedule.dtl", {})

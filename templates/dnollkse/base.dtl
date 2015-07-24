@@ -65,7 +65,7 @@
                 <ul>
                   <li><a href="{% url "home" %}">startsida</a></li>
                   <li><a href="{% url "nollenkat" %}">nollenkät</a></li>
-                  <li><a href="{% url "home" %}">schema</a></li>
+                  <li><a href="{% url "schedule" %}">schema</a></li>
                   <li><a href="{% url "home" %}">arr</a></li>
                   <li><a href="{% url "home" %}">dokument</a></li>
                   <li><a href="{% url "home" %}">länkar</a></li>
