@@ -6,6 +6,6 @@ from about.models import Member, Committee
 
 def contact(request):
     committee = Committee.objects.get(name="DNollK")
-    members = Member.getByCommittee(committee)
+    members = Member.get_by_committee(committee)
 
     return render(request, "contact/index.dtl", {'members' : members})
