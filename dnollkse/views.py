@@ -31,3 +31,9 @@ def links(request):
     Renders page with important links and such.
     """
     return render(request, "dnollkse/lankar.dtl", {})
+
+def documents(request):
+    """
+    Renders page with links to documents.
+    """
+    return render(request, "dnollkse/documents.dtl", {})
