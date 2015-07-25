@@ -1,0 +1,16 @@
+{% extends "dnollkse/layout-with-sidebar.dtl" %}
+
+{% block title %}DNollK - Arr{% endblock title %}
+
+{% block content %}
+    <div class="card center eight columns">
+        <h1><b>Mottagningens Arrangemang</b></h1>
+    </div>
+    {% for a in arr %}
+        <div class="card center eight columns">
+            <h2><strong>{{ a.name }}</strong></h2>
+            <h5 style="margin-top:-2rem"><i>Var: {{ a.location }}, När: {{ a.date }}</i></h5>
+            <p>{{ a.text }}</p>
+            </div>
+    {% endfor %}
+{% endblock content %}
