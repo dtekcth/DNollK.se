@@ -7,11 +7,18 @@
     <div class="card center">
       <h1><b>Mottagningens Arrangemang</b></h1>
     </div>
-    {% for e in events %}
+
+    {% for event_list in events %}
       <div class="card center">
-        <h2><strong>{{ e.name }}</strong></h2>
-        <h5 style="margin-top:-2rem"><i>Var: {{ e.location }}, När: {{ e.date.date }}</i></h5>
-        <p>{{ e.text }}</p>
+        {# Please, don't even look at line below #}
+        <h2>{{ event_list.0.date.date }}</h2>
+        {% for e in event_list %}
+          <div class="event center">
+            <h3><strong>{{ e.name }}</strong></h3>
+            <h5 style="margin-top:-2rem"><i>Var: {{ e.location }}, När: {{ e.date.date }}</i></h5>
+            <p>{{ e.text }}</p>
+          </div>
+        {% endfor %}
       </div>
     {% endfor %}
   </div>
