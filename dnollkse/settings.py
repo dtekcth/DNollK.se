@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'about',
     'contact',
     'faq',
-    'arr',
+    'events',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -1,6 +1,6 @@
 from django.db import models
 
-class Arr(models.Model):
+class Event(models.Model):
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
     date = models.DateTimeField('datum')

@@ -6,11 +6,11 @@
     <div class="card center eight columns">
         <h1><b>Mottagningens Arrangemang</b></h1>
     </div>
-    {% for a in arr %}
+    {% for e in events %}
         <div class="card center eight columns">
-            <h2><strong>{{ a.name }}</strong></h2>
-            <h5 style="margin-top:-2rem"><i>Var: {{ a.location }}, När: {{ a.date }}</i></h5>
-            <p>{{ a.text }}</p>
+            <h2><strong>{{ e.name }}</strong></h2>
+            <h5 style="margin-top:-2rem"><i>Var: {{ e.location }}, När: {{ e.date }}</i></h5>
+            <p>{{ e.text }}</p>
             </div>
     {% endfor %}
 {% endblock content %}

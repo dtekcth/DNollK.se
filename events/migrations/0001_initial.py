@@ -11,10 +11,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Arr',
+            name='Event',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, verbose_name='ID', primary_key=True)),
+                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
+                ('location', models.CharField(max_length=100)),
                 ('date', models.DateTimeField(verbose_name='datum')),
                 ('text', models.TextField()),
             ],
