@@ -25,3 +25,9 @@ def schedule(request):
     Renders schedule page.
     """
     return render(request, "dnollkse/schedule.dtl", {})
+
+def links(request):
+    """
+    Renders page with important links and such.
+    """
+    return render(request, "dnollkse/lankar.dtl", {})
