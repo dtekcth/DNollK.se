@@ -7,27 +7,27 @@
         <h1><strong>Bra länkar</strong></h1>
     
         <h3>Facebook</h3>
-        <p>Se till att inte missa någon viktig information nu under sommaren genom att gillas oss på vår facebooksida. Här lägger vi upp nyheter och tips som kan vara bra att tänka på innan ni börjar.</p>
+        <p>Se till att inte missa någon viktig information nu under sommaren genom att gillas oss på vår <a href="https://www.facebook.com/Dnollk2014">facebooksida</a>. Här lägger vi upp nyheter och tips som kan vara bra att tänka på innan ni börjar.</p>
         
         <h3>Chalmers Studentportal</h3>
-        <p>Chalmers har också sammanställt information och saker som är bra att veta för nya studenter. Denna information går att nå på studentportalen och det är också här som allting som har med era framtida studier kommer stå.</p>
+        <p>Chalmers har också sammanställt information och saker som är bra att veta för nya studenter. Denna information går att nå på <a href="https://student.portal.chalmers.se/sv/chalmersstudier/nystudent/Sidor/Ny_student.aspx">studentportalen</a> och det är också här som allting som har med era framtida studier kommer stå.</p>
 
         <h3>Bostäder</h3>
-        <p>Att hitta bostad i Göteborg är svårt så se till att så tidigt som möjligt ställa er i bostadskö på Boplats.se och SGS Studentbostäder. Boplats.se är Göteborgs allmänna bostadskö och här finns både studentbostäder och vanliga lägenheter, värt att notera är att medlemskap kostar 100 kronor per år. SGS Studentbostäder har bara studentbostäder och här måste man vara student för att kunna söka lägenheter (dock funkar antagningsbeskedet).</p>
+        <p>Att hitta bostad i Göteborg är svårt så se till att så tidigt som möjligt ställa er i bostadskö på <a href="https://nya.boplats.se/">Boplats.se</a> och <a href="https://www.sgsstudentbostader.se">SGS Studentbostäder</a>. Boplats.se är Göteborgs allmänna bostadskö och här finns både studentbostäder och vanliga lägenheter, värt att notera är att medlemskap kostar 100 kronor per år. SGS Studentbostäder har bara studentbostäder och här måste man vara student för att kunna söka lägenheter (dock funkar antagningsbeskedet).</p>
         
         <h3>Chalmers</h3>
-        <p>På Chalmers startsida kan man läsa mer om alla olika utbildningar, Chalmers egna forskning och Chalmers styrkeområden. Man kan även klicka sig vidare och finna alla aktuella händelser på högskolan och ansöka om Chalmers MasterCard som har flera olika förmåner.</p> 
+        <p>På <a href="http://www.chalmers.se/">Chalmers startsida</a> kan man läsa mer om alla olika utbildningar, Chalmers egna forskning och Chalmers styrkeområden. Man kan även klicka sig vidare och finna alla aktuella händelser på högskolan och ansöka om <a href="http://www.chalmers.se/sv/om-chalmers/alumni/chalmers-mastercard/Sidor/default.aspx">Chalmers MasterCard</a> som har flera olika förmåner.</p> 
         
         <h3>Chalmers Studentkår</h3>
-        <p>Här på Chalmers har vi en stor och aktiv studentkår. Det kan ibland bli lite mycket att hålla koll på som nyantagen men till din hjälp har kåren en hemsida där du kan läsa om kårens olika kommittéer och föreningar, Chalmers lokaler som kan hyras, hur just du kan engagera dig eller tips för nya studenter. Dessutom kan man hitta den uppskattade menyn till Chalmers olika restauranger.</p>
+        <p>Här på Chalmers har vi en stor och aktiv studentkår. Det kan ibland bli lite mycket att hålla koll på som nyantagen men till din hjälp har kåren en <a href="http://www.chs.chalmers.se/">hemsida</a> där du kan läsa om kårens olika kommittéer och föreningar, Chalmers lokaler som kan hyras, hur just du kan engagera dig eller tips för nya studenter. Dessutom kan man hitta den uppskattade <a href="http://www.chs.chalmers.se/sv/lunchmenyer">menyn</a> till Chalmers olika restauranger.</p>
         
         <h3>Datateknologens Portal</h3>
-        <p>Självklart har vi en egen portal där man kan hitta många nyttiga länkar. Ibland dyker det upp jobbmöjligheter och ibland kan man själv få chansen att påverka vilka företag som ska hälsa på oss här på Chalmers.</p>
+        <p>Självklart har vi en egen <a href="https://www.dtek.se/portal">portal</a> där man kan hitta många nyttiga länkar. Ibland dyker det upp jobbmöjligheter och ibland kan man själv få chansen att påverka vilka företag som ska hälsa på oss här på Chalmers.</p>
         
         <h3>Datateknologsektionens wiki</h3>
-        <p>Vad är en datasektion utan ett egen wiki sida egentligen? Här kan man självklart själv bidra med inlägg och hitta mer information som är relaterat till just vår sektion som information om alla kommittéer och föreningar du kan tänkas vara intresserad av.</p> 
+        <p>Vad är en datasektion utan ett egen <a href="http://www.dtek.se/wiki/">wiki-sida</a> egentligen? Här kan man självklart själv bidra med inlägg och hitta mer information som är relaterat till just vår sektion som information om alla kommittéer och föreningar du kan tänkas vara intresserad av.</p> 
         
         <h3>Schemat</h3>
-        <p>På högskolan är schemat inte riktigt som under tidigare delar av utbildningen. Det kan hända ändringar rätt plötsligt och veckorna skiljer sig ofta åt utan någon förvarning, det är ditt eget ansvar att hålla koll på var du ska vara och när du ska vara där. TimeEdit kommer dock finnas där för dig som en vän i regnet och hjälpa dig igenom dessa svåra stunder.</p> 
+        <p>På högskolan är schemat inte riktigt som under tidigare delar av utbildningen. Det kan hända ändringar rätt plötsligt och veckorna skiljer sig ofta åt utan någon förvarning, det är ditt eget ansvar att hålla koll på var du ska vara och när du ska vara där. <a href="https://se.timeedit.net/web/chalmers/db1/public/ri1w7XYQ54ZZ1YQvQc07f375y5Y8457Zo1QQ.html">TimeEdit</a> kommer dock finnas där för dig som en vän i regnet och hjälpa dig igenom dessa svåra stunder.</p> 
     </div>
 {% endblock content %}
