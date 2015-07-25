@@ -3,14 +3,16 @@
 {% block title %}DNollK - Arr{% endblock title %}
 
 {% block content %}
-    <div class="card center eight columns">
-        <h1><b>Mottagningens Arrangemang</b></h1>
+  <div class="eight columns eventWrapper">
+    <div class="card center">
+      <h1><b>Mottagningens Arrangemang</b></h1>
     </div>
     {% for e in events %}
-        <div class="card center eight columns">
-            <h2><strong>{{ e.name }}</strong></h2>
-            <h5 style="margin-top:-2rem"><i>Var: {{ e.location }}, När: {{ e.date }}</i></h5>
-            <p>{{ e.text }}</p>
-            </div>
+      <div class="card center">
+        <h2><strong>{{ e.name }}</strong></h2>
+        <h5 style="margin-top:-2rem"><i>Var: {{ e.location }}, När: {{ e.date.date }}</i></h5>
+        <p>{{ e.text }}</p>
+      </div>
     {% endfor %}
+  </div>
 {% endblock content %}
