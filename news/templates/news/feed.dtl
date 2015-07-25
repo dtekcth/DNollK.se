@@ -1,0 +1,18 @@
+<rss version="2.0">
+  <channel>
+    <title>Nyheter - DNollK 2015</title>
+    <link>http://dnollk.se/nyheter</link>
+    <description>Nyheter från DNollK, Datateknologsektionens NollKommitte</description>
+    <language>Swedish</language>
+    <webMaster>dnollk@dtek.se</webMaster>
+
+    {% for post in posts %}
+      <item>
+        <title> {{ post.title }} </title>
+        <link> {% url 'news' %} </link>
+        <description> {{ post.content }} </description>
+        <pubDate> {{ post.pubDate }} </pubDate>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

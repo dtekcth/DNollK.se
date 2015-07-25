@@ -64,3 +64,10 @@ def latest(request):
         return HttpResponse("%s <br> %s" % (latestPost.title, latestPost.content))
     except Post.DoesNotExist:
         return HttpResponse("No posts yet!")
+
+def rss(request):
+    """
+    Retrieves all posts and renders them in a rss xml fashion.
+    """
+    posts = Post.publishedPosts().order_by('-pub_date')
+    return render(request, 'news/feed.dtl', { 'posts' : posts })
