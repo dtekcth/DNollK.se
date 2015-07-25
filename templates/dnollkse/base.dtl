@@ -66,11 +66,11 @@
               </div>
               {% block navigation %}
                 <ul>
-                  <li><a href="{% url "home" %}">startsida</a></li>
+                  <li><a href="{% url "news" %}">startsida</a></li>
                   <li><a href="{% url "nollenkat" %}">nollenkät</a></li>
                   <li><a href="{% url "schedule" %}">schema</a></li>
                   <li><a href="{% url "events" %}">arr</a></li>
-                  <li><a href="{% url "home" %}">dokument</a></li>
+                  <li><a href="{% url "news" %}">dokument</a></li>
                   <li><a href="{% url "links" %}">länkar</a></li>
                   <li class="mobile-only"><a href="{% url "dnollk" %}">om DNollK</a></li>
                   <li class="mobile-only"><a href="{% url "foreningar" %}">om andra föreningar</a></li>
