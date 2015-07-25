@@ -10,8 +10,10 @@
   </title>
   <meta name="description"
         content="{% block description %}
-        {% endblock description %}">
-  <meta name="author" content="human.txt">
+                 {% endblock description %}">
+
+  {% load staticfiles %}
+  <meta name="author" content="{% static 'humans.txt' %}">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -19,7 +21,6 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  {% load staticfiles %}
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link href="{% static "dnollkse/css/fonts.css" %}" rel="stylesheet">
 
@@ -50,47 +51,47 @@
       <!-- header row -->
       <div class="row">
         {% block header %}
-          <!-- header container
-          ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-          <header class="u-full-width header">
-            <!-- Logo -->
-            <img class="two columns u-pull-left logo" src="{% static "dnollkse/images/logo.png" %}" alt="DNollK '15's logga">
+        <!-- header container
+             ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+        <header class="u-full-width header">
+          <!-- Logo -->
+          <img class="two columns u-pull-left logo"
+               src="{% static "dnollkse/images/logo.png" %}" alt="DNollK '15's logga">
 
-            <!-- navbar -->
-            <nav class="ten columns u-pull-right primary">
-              <div class="mobile-nav">
-                <img src="{% static "dnollkse/images/menu.svg" %}"
-                     alt="meny"
-                     onclick="navbarClick()" />
-                <p id="nav-btn">Navigation</p>
-              </div>
-              {% block navigation %}
-                <ul>
-                  <li><a href="{% url "news" %}">startsida</a></li>
-                  <li><a href="{% url "nollenkat" %}">nollenkät</a></li>
-                  <li><a href="{% url "schedule" %}">schema</a></li>
-                  <li><a href="{% url "events" %}">arr</a></li>
-                  <li><a href="{% url "documents" %}">dokument</a></li>
-                  <li><a href="{% url "links" %}">länkar</a></li>
-                  <li class="mobile-only"><a href="{% url "dnollk" %}">om DNollK</a></li>
-                  <li class="mobile-only"><a href="{% url "foreningar" %}">om andra föreningar</a></li>
-                  <li class="desktop-only">om...
-                    <ul id="about-menu" class="light card">
-                      <li><a href="{% url "dnollk" %}">DNollK</a></li>
-                      <li><a href="{% url "foreningar" %}">Andra föreningar</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="{% url "faq" %}">faq</a></li>
-                  <li><a href="{% url "contact" %}">kontakt</a></li>
+          <!-- navbar -->
+          <nav class="ten columns u-pull-right primary">
+            <div class="mobile-nav">
+              <img src="{% static "dnollkse/images/menu.svg" %}"
+                   alt="meny"
+                   onclick="navbarClick()" />
+              <p id="nav-btn">Navigation</p>
+            </div>
+            {% block navigation %}
+            <ul>
+              <li><a href="{% url "news" %}">startsida</a></li>
+              <li><a href="{% url "nollenkat" %}">nollenkät</a></li>
+              <li><a href="{% url "schedule" %}">schema</a></li>
+              <li><a href="{% url "events" %}">arr</a></li>
+              <li><a href="{% url "documents" %}">dokument</a></li>
+              <li><a href="{% url "links" %}">länkar</a></li>
+              <li class="mobile-only"><a href="{% url "dnollk" %}">om DNollK</a></li>
+              <li class="mobile-only"><a href="{% url "foreningar" %}">om andra föreningar</a></li>
+              <li class="desktop-only">om...
+                <ul id="about-menu" class="light card">
+                  <li><a href="{% url "dnollk" %}">DNollK</a></li>
+                  <li><a href="{% url "foreningar" %}">Andra föreningar</a></li>
                 </ul>
-              {% endblock navigation %}
-            </nav>
-      </div> <!-- end navigation row -->
-      <div class="row">
-        <!-- Header image -->
-        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
-      </div> <!-- end image row -->
-          </header> <!-- end header -->
+              </li>
+              <li><a href="{% url "faq" %}">faq</a></li>
+              <li><a href="{% url "contact" %}">kontakt</a></li>
+            </ul>
+            {% endblock navigation %}
+          </nav>
+          <div class="row">
+            <!-- Header image -->
+            <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
+          </div> <!-- end image row -->
+        </header> <!-- end header -->
         {% endblock header %}
 
       </div> <!-- end header row -->
@@ -98,19 +99,19 @@
 
     <div class="container content">
       <!-- content container
-      ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+           ––––––––––––––––––––––––––––––––––––––––––––––––––-->
       {% block content-row %}
-        <section class="row content">
-          {% block content %}
-          {% endblock content %}
-          {% block sidebar %}
-          {% endblock sidebar %}
-        </section> <!-- end content -->
+      <section class="row content">
+        {% block content %}
+        {% endblock content %}
+        {% block sidebar %}
+        {% endblock sidebar %}
+      </section> <!-- end content -->
       {% endblock content-row %}
     </div> <!-- end container -->
 
     <!-- footer container
-    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
     <div class="footer">
       <footer class="container">
         {% block footer %}
