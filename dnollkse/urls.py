@@ -25,6 +25,6 @@ urlpatterns = patterns('',
     url(r'^lankar/', 'dnollkse.views.links', name='links'),
     url(r'^nollenkat/', 'dnollkse.views.nollenkat', name='nollenkat'),
     url(r'^schema/', 'dnollkse.views.schedule', name='schedule'),
-    url(r'^arr/', include('arr.urls')),
+    url(r'^arr/', include('events.urls')),
     url(r'^$', 'dnollkse.views.home', name='home'),
 )
