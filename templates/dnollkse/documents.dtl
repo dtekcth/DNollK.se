@@ -5,18 +5,18 @@
 {% load staticfiles %}
 
 {% block content %}
-  <div class="center center-text eight columns">
-    <div class="card">
+  <div class="center eight columns">
+    <div class="card center-text">
       <h1 style="margin-bottom:2rem"><strong>Dokument</strong></h1>
       <hr/>
       <h4 style="margin-top:-2rem"><i>Chalmersvisor</i></h4>
       <p>På sittningar brukar teknologerna sjunga diverse sånger tillsammans. Vi har samlat alla Chalmers-sånger som kan tas upp i en <a href="{% static "dnollkse/documents/sanghafte.pdf" %}">PDF</a>.</p>
     </div>
-    <div class="card">
+    <div class="card center-text">
       <h4><i>Nollmodul 2015</i></h4>
       <p><a href="{% static "dnollkse/documents/nollmodul.pdf" %}">Modulen</a> - Nollans utmärkta hjälpreda, finns här i digital form.</p>
     </div>
-    <div class="card">
+    <div class="card center-text">
       <h4><i>Karta över Chalmers</i></h4>
       <p>Campus är stort med många byggnader att hålla reda på. Som tur är så finns det en detaljerad <a href="{% static "dnollkse/documents/map.pdf" %}">karta</a> som visar var allt är.</p>
     </div>
