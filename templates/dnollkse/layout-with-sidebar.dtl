@@ -37,13 +37,13 @@
       <header><h2>Viktigt</h2></header>
       <dl>
         <dt>telefon</dt>
-        <dd>070 00 00 00</dd>
+        <dd>070-042 26 32</dd>
         <dt>mail</dt>
         <dd><a href="mailto://dnollk@dtek.se">dnollk@dtek.se</a></dd>
         <dt>adress</dt>
         <dd>Rännvägen 6, Göteborg</dd>
       </dl>
-      <p><a href="http://change.me">Bra länkar och viktig information</a></p>
+      <p><a href="/lankar">Bra länkar och viktig information</a></p>
     </section>
 
     <div id="calendar" class="card"></div>
