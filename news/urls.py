@@ -29,6 +29,6 @@ urlpatterns = patterns('',
     url(r'^latest/$', views.latest, name="latest"),
 
     # Matches http://example.com/news/feed.rss
-    url(r'^feed.rss$', views.rss, name="rss"),
+    url(r'^rss.xml$', views.rss, name="rss"),
 )
  
