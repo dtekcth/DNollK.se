@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from arr.models import Event
+from events.models import Event
 
 def index(request):
     events = Event.objects.all()
