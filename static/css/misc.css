@@ -43,6 +43,12 @@ h6.center,
     margin-right: auto;
 }
 
+iframe.center {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
 .center-text p {
     text-align: center;
 }

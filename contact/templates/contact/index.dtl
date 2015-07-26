@@ -3,7 +3,7 @@
 {% block title %}Om DNollK 2015{% endblock title %}
 
 {% block content %}
-<div class="center card">
+<div class="center center-text card">
     <h1>Kontaktinformation</h1>
     <table class="center">
     {% for member in members %}
