@@ -97,6 +97,20 @@ body,
     margin: 1.2rem auto;
 }
 
+
+#content {
+    position: absolute;
+    left: 0px;
+    
+    transition: all 1s ease-in-out;
+}
+
+#content.pushed {
+    position: absolute;
+    left: 450px;
+    transition: all 0.7s ease-in-out;
+}
+
 .container.header {
     padding: 0rem;
 }
@@ -329,7 +343,18 @@ ul li #about-menu {
 Styling for the sidebar
 */
 #sidebar {
+    position: absolute;
 
+    left: -450px;
+
+    transition: all 0.7s ease-in-out;
+}
+
+#sidebar.visible {
+    position: absolute;
+    left: 0px;
+
+    transition: all 1s ease-in-out;
 }
 
 .social {

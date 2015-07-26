@@ -63,7 +63,8 @@
           <nav class="ten columns u-pull-right primary">
             <div class="mobile-nav">
               <img src="{% static "dnollkse/images/menu.svg" %}"
-                   alt="meny" />
+                   alt="meny"
+                   onclick="toggleSidebar()"/>
               <p id="nav-btn"
                  onclick="navbarClick()">Navigation</p>
             </div>
@@ -98,8 +99,10 @@
     ––––––––––––––––––––––––––––––––––––––––––––––––––-->
     {% block content-row %}
       <section class="row content">
-        {% block content %}
-        {% endblock content %}
+        <div id="content">
+          {% block content %}
+          {% endblock content %}
+        </div>
         {% block sidebar %}
         {% endblock sidebar %}
       </section> <!-- end content -->
