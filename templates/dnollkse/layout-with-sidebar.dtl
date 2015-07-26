@@ -52,8 +52,11 @@
       <a href="http://facebook.com/Dnollk2014">Facebook</a>
     </div>
 
-    <div class="card social" id="twitter">
-      <a href="http://twitter.com/DNollK">Twitter</a>
+    <div class="social" id="twitter">
+      <a class="twitter-timeline"  href="https://twitter.com/DNollK" data-widget-id="625273477843521536">Tweets by @DNollK</a>
+      <script>!function(d,s,id) {
+          var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      </script>
     </div>
 
     <div class="card social" id="instagram">
@@ -71,9 +74,9 @@
 
            // Buttons on the header of the calendar
            header: {
-	       left: 'prev,next today',
+	       left: 'prev,next',
 	       center: 'title',
-	       right: 'agendaWeek,agendaDay'
+               right: 'today'
 	   },
 
            // The calendar events, here imported from a public gcal
