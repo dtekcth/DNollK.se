@@ -115,13 +115,13 @@ body,
     padding: 0rem;
 }
 
-/*
+
 @media (min-width: 550px) {
-    .container.header {
-        width: 100%;
+    #content {
+        position: static;
     }
 }
-*/
+
 
 /* Container styling (card)
    ——————————————————————————————————————————————————
@@ -381,6 +381,8 @@ Styling for the sidebar
 
 @media(min-width: 550px) {
     #sidebar {
+        position: static;
+        left: 0;
     }
 }
 

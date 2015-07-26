@@ -49,6 +49,7 @@
     <div id="calendar" class="card"></div>
 
     <div class="social card" id="facebook">
+      <div id="fb-root"></div>
       <div class="fb-page"
            data-href="https://www.facebook.com/Dnollk2014"
            data-small-header="false"
