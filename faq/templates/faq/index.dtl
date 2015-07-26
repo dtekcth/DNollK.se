@@ -7,8 +7,8 @@
         <h1>FAQ</h1>
         {% if faq %}
             {% for f in faq %}
-                <p><strong>{{ f.question }}</strong></p>
-                <p>{{ f.answer }}</p>
+                <strong>{{ f.question }}</strong>
+                {{ f.answer }}
             {% endfor %}
         {% else %}
             <p>Inga frågor har ställts!</p>

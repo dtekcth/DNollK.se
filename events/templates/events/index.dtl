@@ -16,7 +16,7 @@
           <div class="event center">
             <h3><strong>{{ e.name }}</strong></h3>
             <h5 style="margin-top:-2rem"><i>Var: {{ e.location }}</i></h5>
-            <p>{{ e.text|safe }}</p>
+            {{ e.text|safe }}
           </div>
         {% endfor %}
       </div>
