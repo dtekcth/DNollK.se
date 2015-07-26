@@ -40,7 +40,7 @@
     }
 }
 
-a {
+a, a:hover {
     color: #fa6607;
 }
 
@@ -77,6 +77,14 @@ a.committee-link {
     width: 100%
 }
 
+.top-link:hover {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+
+    text-shadow: 0 0 0.7rem #FA6607;
+}
 
 
 
