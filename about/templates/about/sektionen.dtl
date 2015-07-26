@@ -46,9 +46,7 @@
                 <img src="{% static image_url %}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
             {% endwith %}
         {% endif %}
+        <a class="top-link" href="#top"><strong>Hoppa till topp</strong></a>
     </div>
     {% endfor %}
-    <div id="go-top" class="card">
-        <a class="committee-link" href="#top"><strong>Top</strong></a>
-    </div>
 {% endblock content %}

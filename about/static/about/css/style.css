@@ -40,6 +40,10 @@
     }
 }
 
+a {
+    color: #fa6607;
+}
+
 .committee-img {
     width: 90%;
     margin-bottom: 3rem;
@@ -60,11 +64,17 @@
     margin-top: 5rem;
 }
 
-a.committee-link{
+a.committee-link {
     text-decoration:none;
-    color: #fa6607;
     font-size: 3rem;
 }
+
+.top-link {
+    text-decoration: none;
+    float: right;
+    font-size: 1rem;
+}
+
 
 
 
