@@ -8,8 +8,7 @@ from news.models import Post
 news.admin module
 
 This is the admin module for our news application.
-Here we can define admin classes for our models and customize how they appear
-in the admin interface.
+Here we can define admin classes for our models and customize how they appear in the admin interface.
 """
 
 class PostAdmin(admin.ModelAdmin):
