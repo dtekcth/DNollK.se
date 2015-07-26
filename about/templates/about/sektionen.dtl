@@ -18,15 +18,21 @@
         <table>
         {% for member in members %}
             <tr>
+            {% if member.nick == "NULL" %}
+                <td>{{ member.get_full_name }}</td>
+            {% else %}
                 <td>{{ member.get_full_name_with_nick }}</td>
+            {% endif %}
                 <td>{{ member.position}}</td>
             </tr>
         {% endfor %}
         </table>
         </div>
-        {% with image_url="about/img/"|add:com.image %}
-            <img src="{% static image_url %}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
-        {% endwith %}
+        {% if com.image != "NULL" %}
+            {% with image_url="about/img/"|add:com.image %}
+                <img src="{% static image_url %}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
+            {% endwith %}
+        {% endif %}
     </div>
     {% endfor %}
 {% endblock content %}
