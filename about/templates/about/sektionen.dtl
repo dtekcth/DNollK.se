@@ -9,8 +9,21 @@
 {% endblock css %}
 
 {% block content %}
+    
+    <div class="card center">
+        <h1>Datateknologsektionen</h1>
+        <p>Datateknologsektionen är en av teknologsektionerna, vilka tjänar ungefär samma syften som studentkåren fast ämnat åt ett visst utbildningsprogram. Liksom kåren agerar sektionen för studentens bästa genom att uppehålla kvaliteten i undervisningen, arrangera roliga fester, osv.</p>
+        <ul class="committee-link center">
+        {% for com, members in members_dict.items %}
+            <li>
+                <a style="text-decoration:none" href="#{{ com.name }}"><strong>{{ com.name }}</strong></a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
   {% for com, members in members_dict.items %}
-    <div class="card">
+    <div class="card" id={{ com.name }}>
         <h1 class="committee-name center">{{ com.name }}</h1>
         <div class="committee-text six columns">{{ com.text|safe }}</div>
 

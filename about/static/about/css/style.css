@@ -54,3 +54,9 @@
 .committee-text {
     margin-left: 4%;
 }
+
+.committee-link {
+    list-style-type: none;
+    font-size: 3rem;
+    margin-top: 5rem;
+}
