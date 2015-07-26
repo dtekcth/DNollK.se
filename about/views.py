@@ -11,13 +11,13 @@ def dnollk(request):
 def index(request):
     return render(request, "about/index.dtl", {})
 
-def foreningar(request):
+def sektionen(request):
     committees = Committee.objects.all().exclude(name="DNollK")
     f = {}
     for com in committees:
         f[com] = Member.get_by_committee(com)
     
-    return render(request, "about/foreningar.dtl", {'committees' : committees, 'members_dict' : f})
+    return render(request, "about/sektionen.dtl", {'committees' : committees, 'members_dict' : f})
 
 def brage(request):
     return render(request, "about/brage.dtl", {})
