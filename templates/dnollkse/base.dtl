@@ -50,6 +50,8 @@
     <!-- header row -->
     <div class="row">
       {% block header %}
+        <!-- Header image -->
+        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
         <!-- header container
         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
         <header class="u-full-width header">
@@ -87,8 +89,6 @@
             {% endblock navigation %}
           </nav>
         </header> <!-- end header -->
-        <!-- Header image -->
-        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
     </div> <!-- end image row -->
       {% endblock header %}
   </div> <!-- end header row -->

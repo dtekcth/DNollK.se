@@ -170,8 +170,12 @@ body,
     .header .image {
         display: inline-block;
         z-index: 10;
-        margin-top: -5rem;
         position: relative;
+    }
+
+    .header .logo {
+        margin-top: -10rem;
+        margin-left: 1rem;
     }
 }
 
@@ -263,7 +267,7 @@ ul li #about-menu {
         display: block;
 
         margin: 0;
-        margin-top: 5vw;
+        margin-top: 2vw;
 
         padding: 0;
     }
@@ -271,7 +275,7 @@ ul li #about-menu {
     .header nav.primary ul li {
         display: inline-block;
 
-        padding: 0px 0.6vw;
+        padding: 0px 1vw;
 
         font-size: 1.4vw;
         font-family: 'Geomancy-Extra-Bold', sans-serif;
