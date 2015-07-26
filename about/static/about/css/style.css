@@ -57,6 +57,14 @@
 
 .committee-link {
     list-style-type: none;
-    font-size: 3rem;
     margin-top: 5rem;
 }
+
+a.committee-link{
+    text-decoration:none;
+    color: #fa6607;
+    font-size: 3rem;
+}
+
+
+

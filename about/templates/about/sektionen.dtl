@@ -11,12 +11,12 @@
 {% block content %}
     
     <div class="card center">
-        <h1>Datateknologsektionen</h1>
+        <h1 id="top">Datateknologsektionen</h1>
         <p>Datateknologsektionen är en av teknologsektionerna, vilka tjänar ungefär samma syften som studentkåren fast ämnat åt ett visst utbildningsprogram. Liksom kåren agerar sektionen för studentens bästa genom att uppehålla kvaliteten i undervisningen, arrangera roliga fester, osv.</p>
         <ul class="committee-link center">
         {% for com, members in members_dict.items %}
             <li>
-                <a style="text-decoration:none; color: #fa6607" href="#{{ com.name }}"><strong>{{ com.name }}</strong></a>
+                <a class="committee-link" href="#{{ com.name }}"><strong>{{ com.name }}</strong></a>
             </li>
         {% endfor %}
         </ul>
@@ -48,4 +48,7 @@
         {% endif %}
     </div>
     {% endfor %}
+    <div id="go-top" class="card">
+        <a class="committee-link" href="#top"><strong>Top</strong></a>
+    </div>
 {% endblock content %}
