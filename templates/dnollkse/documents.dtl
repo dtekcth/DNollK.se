@@ -10,7 +10,7 @@
       <h1 style="margin-bottom:2rem"><strong>Dokument</strong></h1>
       <hr/>
       <h4 style="margin-top:-2rem"><i>Karta över Chalmers</i></h4>
-      <p>Biblioteket, Kemigården, HC4 -- som ny student på Chalmers kan det verka omtumlande med alla dessa byggnader och platser. Man tänker att de enda platserna man behöver känna till är Basen och NC, men inte riktigt så lätt är det. Rätt som det är säger NollK att nästa station som du ska gå till är vid Olgas trappor, och var tusan ligger det? Men Nollan behöver inte vara orolig för att inte hitta, som tur är så finns det en detaljerad <a href="{% static "sanghafte.pdf" %}">karta</a> som visar var allt är på campuset.</p>
+      <p>Biblioteket, Kemigården, HC4? Som ny student på Chalmers kan det verka omtumlande med alla dessa byggnader och platser. Man kan tänka sig att de enda platserna man behöver känna till är Basen och NC, men inte riktigt så lätt är det. Rätt som det är säger NollK att nästa station som du ska gå till är vid Olgas trappor, och var tusan ligger det? Men Nollan behöver inte vara orolig för att inte hitta, som tur är så finns det en detaljerad <a href="{% static "sanghafte.pdf" %}">karta</a> som visar var allt är på campuset.</p>
     </div>
     <div class="card center-text">
       <h4><i>Nollmodul 2015</i></h4>
