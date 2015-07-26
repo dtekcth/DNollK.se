@@ -312,6 +312,9 @@ Styling for the sidebar
 
 }
 
+.social {
+    max-width: 500px;
+}
 
 /* Footer
 ——————————————————————————————————————————————————
