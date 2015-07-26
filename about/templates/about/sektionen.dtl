@@ -16,7 +16,7 @@
         <ul class="committee-link center">
         {% for com, members in members_dict.items %}
             <li>
-                <a style="text-decoration:none" href="#{{ com.name }}"><strong>{{ com.name }}</strong></a>
+                <a style="text-decoration:none; color: #fa6607" href="#{{ com.name }}"><strong>{{ com.name }}</strong></a>
             </li>
         {% endfor %}
         </ul>
