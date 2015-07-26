@@ -332,12 +332,13 @@ Styling for the sidebar
 
 #instagram a {
     display: block;
-    margin: 0 auto;
-    text-align: center;
+    margin: 1rem auto;
 
     text-decoration: none;
     color: #141823;
+
     font-weight: 800;
+    font-size: 1.6rem;
 }
 
 #instagram a:hover {
