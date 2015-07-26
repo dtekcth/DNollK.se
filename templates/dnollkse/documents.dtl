@@ -9,16 +9,16 @@
     <div class="card center-text">
       <h1 style="margin-bottom:2rem"><strong>Dokument</strong></h1>
       <hr/>
-      <h4 style="margin-top:-2rem"><i>Chalmersvisor</i></h4>
-      <p>På sittningar brukar teknologerna sjunga diverse sånger tillsammans. Vi har samlat alla Chalmers-sånger som kan tas upp i en <a href="{% static "sanghafte.pdf" %}">PDF</a>.</p>
+      <h4 style="margin-top:-2rem"><i>Karta över Chalmers</i></h4>
+      <p>Biblioteket, Kemigården, HC4 -- som ny student på Chalmers kan det verka omtumlande med alla dessa byggnader och platser. Man tänker att de enda platserna man behöver känna till är Basen och NC, men inte riktigt så lätt är det. Rätt som det är säger NollK att nästa station som du ska gå till är vid Olgas trappor, och var tusan ligger det? Men Nollan behöver inte vara orolig för att inte hitta, som tur är så finns det en detaljerad <a href="{% static "sanghafte.pdf" %}">karta</a> som visar var allt är på campuset.</p>
     </div>
     <div class="card center-text">
       <h4><i>Nollmodul 2015</i></h4>
-      <p><a href="{% static "nollmodul.pdf" %}">Modulen</a> - Nollans utmärkta hjälpreda, finns här i digital form.</p>
+      <p>Kommer du ihåg första gången du höll den lilla, orangea boken i din hand och tänkte "This is it. Det är det här jag har väntat på hela mitt liv"? Om ja, tänk om, för nu finns din favoritbok även i en <a href="{% static "nollmodul.pdf"%}">PDF</a> som gör det ännu lättare för dig att ha den tillgänglig var du än är. Om inte, så är det nu dags att läsa modulen! Den finns här i digital form och oavsett tidigare erfarenheter med den så är den en utmärkt hjälpreda för att hålla koll på allt som rör mottagningen.</p>
     </div>
     <div class="card center-text">
-      <h4><i>Karta över Chalmers</i></h4>
-      <p>Campus är stort med många byggnader att hålla reda på. Som tur är så finns det en detaljerad <a href="{% static "map.pdf" %}">karta</a> som visar var allt är.</p>
+      <h4><i>Chalmersvisor</i></h4>
+      <p>Vad vore en sittning utan sång? Chalmerister älskar att sjunga och ännu bättre låter det om man kan texten. Vi har samlat de vanligaste sångerna som kan tas upp i en <a href="{% static "map.pdf" %}">PDF</a>, allt för att underlätta för Nollan vare sig det är för att träna på skönsång ensam hemma, eller för att sånghäftet på något mystiskt sätt försvunnit under en pågående sittning.</p>
     </div>
   </div>
 {% endblock content %}
