@@ -12,7 +12,7 @@
   {% for com, members in members_dict.items %}
     <div class="card">
         <h1 class="committee-name center">{{ com.name }}</h1>
-        <div class="committee-text six columns"><p>{{ com.text }}</p></div>
+        <div class="committee-text six columns"><p>{{ com.text|safe }}</p></div>
 
         <div class="five columns u-pull-right">
         <table>
