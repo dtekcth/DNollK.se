@@ -327,6 +327,23 @@ Styling for the sidebar
     max-width: 500px;
 }
 
+#instagram {
+}
+
+#instagram a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    text-decoration: none;
+    color: #141823;
+    font-weight: 800;
+}
+
+#instagram a:hover {
+    text-decoration: underline;
+}
+
 /* Footer
 ——————————————————————————————————————————————————
 Styling for the footer

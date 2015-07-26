@@ -73,9 +73,16 @@
         Tweets by @DNollK
       </a>
     </div>
-
     <div class="card social" id="instagram">
-      <a href="https://instagram.com/dnollk">Instagram</a>
+      <!-- INSTANSIVE WIDGET -->
+      <h5><a href="https://instagram.com/dnollk">DNollK på Instagram</a></h5>
+      <iframe src="//instansive.com/widgets/caec1a1ea7c77ad1b59c5dcea50e71b258068724.html"
+              id="instansive_caec1a1ea7"
+              name="instansive_caec1a1ea7"
+              scrolling="no"
+              allowtransparency="true"
+              class="instansive-widget"
+              style="width: 100%; border: 0; overflow: hidden;"></iframe>
     </div>
   </aside>
 {% endblock sidebar %}
@@ -127,6 +134,7 @@
    }
    (document,"script","twitter-wjs");
   </script>
+  <script src="//instansive.com/widget/js/instansive.js"></script>
   {% block foot-js %}
   {% endblock foot-js %}
 {% endblock base-foot-js %}
