@@ -63,9 +63,9 @@
           <nav class="ten columns u-pull-right primary">
             <div class="mobile-nav">
               <img src="{% static "dnollkse/images/menu.svg" %}"
-                   alt="meny"
-                   onclick="navbarClick()" />
-              <p id="nav-btn">Navigation</p>
+                   alt="meny" />
+              <p id="nav-btn"
+                 onclick="navbarClick()">Navigation</p>
             </div>
             {% block navigation %}
               <ul>
