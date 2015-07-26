@@ -24,31 +24,31 @@
 
   {% for com, members in members_dict.items %}
     <div class="card" id={{ com.name }}>
-        <h1 class="committee-name center">{{ com.name }}</h1>
-        <div class="committee-text six columns">{{ com.text|safe }}</div>
+      <h1 class="committee-name center">{{ com.name }}</h1>
+      <div class="committee-text six columns">{{ com.text|safe }}</div>
 
-        <div class="five columns u-pull-right">
+      <div class="five columns u-pull-right">
         <table>
-        {% for member in members %}
+          {% for member in members %}
             <tr>
-            {% if member.nick == "NULL" %}
+              {% if member.nick == "NULL" %}
                 <td>{{ member.get_full_name }}</td>
-            {% else %}
+              {% else %}
                 <td>{{ member.get_full_name_with_nick }}</td>
-            {% endif %}
-                <td>{{ member.position}}</td>
+              {% endif %}
+              <td>{{ member.position}}</td>
             </tr>
-        {% endfor %}
+          {% endfor %}
         </table>
-        </div>
-        {% if com.image != "NULL" %}
-            {% with image_url="about/img/"|add:com.image %}
-                <img src="{% static image_url %}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
-            {% endwith %}
-        {% endif %}
+      </div>
+      {% if com.image != "NULL" %}
+        {% with image_url="about/img/"|add:com.image %}
+          <img src="{% static image_url %}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
+        {% endwith %}
+      {% endif %}
+      <div class="linkWrapper twelve columns">
+        <a class="top-link" href="#top"><strong> &uarr; Hoppa till topp</strong></a>
+      </div>
     </div>
-    {% endfor %}
-    <div id="go-top" class="card">
-        <a class="committee-link" href="#top"><strong>Top</strong></a>
-    </div>
+  {% endfor %}
 {% endblock content %}

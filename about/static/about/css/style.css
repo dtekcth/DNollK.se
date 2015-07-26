@@ -40,6 +40,10 @@
     }
 }
 
+a, a:hover {
+    color: #fa6607;
+}
+
 .committee-img {
     width: 90%;
     margin-bottom: 3rem;
@@ -60,10 +64,26 @@
     margin-top: 5rem;
 }
 
-a.committee-link{
+a.committee-link {
     text-decoration:none;
-    color: #fa6607;
     font-size: 3rem;
+}
+
+.top-link {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%
+}
+
+.top-link:hover {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+
+    text-shadow: 0 0 0.7rem #FA6607;
 }
 
 
