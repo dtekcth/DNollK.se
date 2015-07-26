@@ -75,11 +75,11 @@
               <li><a href="{% url "documents" %}">dokument</a></li>
               <li><a href="{% url "links" %}">länkar</a></li>
               <li class="mobile-only"><a href="{% url "dnollk" %}">om DNollK</a></li>
-              <li class="mobile-only"><a href="{% url "foreningar" %}">om andra föreningar</a></li>
+              <li class="mobile-only"><a href="{% url "sektionen" %}">om sektionen</a></li>
               <li class="desktop-only">om...
                 <ul id="about-menu" class="light card">
                   <li><a href="{% url "dnollk" %}">DNollK</a></li>
-                  <li><a href="{% url "foreningar" %}">Andra föreningar</a></li>
+                  <li><a href="{% url "sektionen" %}">Sektionen</a></li>
                 </ul>
               </li>
               <li><a href="{% url "faq" %}">faq</a></li>

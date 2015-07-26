@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^dnollk/$', views.dnollk, name="dnollk"),
 
     # Matches http://example.com/about/foreningar
-    url(r'^foreningar/$', views.foreningar, name="foreningar"),
+    url(r'^sektionen/$', views.sektionen, name="sektionen"),
 
     url(r'^brage/$', views.brage, name="brage"),
 
