@@ -141,6 +141,8 @@ body,
     font-weight: 600;
 
     margin: 0 auto;
+
+    width: 100%;
 }
 
 .header .logo {
@@ -159,12 +161,17 @@ body,
 @media (min-width: 400px) {
     .header .logo {
         padding: 0.5rem;
+        z-index: 100;
+        position: relative;
     }
 }
 
 @media (min-width: 550px) {
     .header .image {
         display: inline-block;
+        z-index: 10;
+        margin-top: -5rem;
+        position: relative;
     }
 }
 
