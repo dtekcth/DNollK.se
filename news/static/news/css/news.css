@@ -1,4 +1,4 @@
-/*
+/**
  * DNollK.se Layout
  * Copyright 2015, Jacob Jonsson
  * www.github.com/Jassob/DNollK.se.git
@@ -7,17 +7,25 @@
  */
 
 
-/* 
+/**
  * Table of contents
  ——————————————————————————————————————————————————
  * 1 Posts
+ * 1.1 General styling
+ * 1.2 Post expansion
  */
 
 
-/*
+/**
  * 1 Posts
  * ——————————————————————————————————————————————————
  * This part is setting the style of the news posts.
+ */
+
+/**
+ * 1.1 General styling
+ * ——————————————————————————————————————————————————
+ * This sets the general styling of the posts and newssection items.
  */
 
 article.post header h3,
@@ -56,3 +64,28 @@ article.post .post-footer {
 
     margin-bottom: 0px;
 }
+
+/**
+ * Post expansion
+ * ——————————————————————————————————————————————————
+ * This section takes care of the styling to make expansion of posts.
+ */
+
+.post header .expandBtn,
+.post.expanded header .expandBtn {
+    background-size: 24px 24px;
+    height: 2.4rem;
+    width: 2.4rem;
+
+    margin: 1.2rem;
+
+    float: right;
+}
+
+.post header .expandBtn.hidden {
+    display: none;
+}
+
+.post header .expandBtn { background-image: url('../img/Plus.svg'); }
+.post.expanded header .expandBtn { background-image: url('../img/Minus.svg'); }
+
