@@ -7,18 +7,18 @@
 {% block title %}DNollK 2015{% endblock title %}
 
 {% block base-js %}
+  <script src="{% static "js/jquery.min.js" %}"></script>
   <script src="{% static "dnollkse/js/functions.js" %}"></script>
-  <script src="{% static "dnollkse/js/jquery.min.js" %}"></script>
-  <script src="{% static "dnollkse/js/moment.min.js" %}"></script>
-  <script src="{% static "dnollkse/js/fullcalendar.min.js" %}"></script>
-  <script src="{% static "dnollkse/js/lang/sv.js" %}"></script>
-  <script src="{% static "dnollkse/js/gcal.js" %}"></script>
+  <script src="{% static "js/moment.min.js" %}"></script>
+  <script src="{% static "js/fullcalendar.min.js" %}"></script>
+  <script src="{% static "js/lang/sv.js" %}"></script>
+  <script src="{% static "js/gcal.js" %}"></script>
   {% block js %}
   {% endblock js %}
 {% endblock base-js %}
 
 {% block base-css %}
-  <link rel="stylesheet" href="{% static "dnollkse/css/fullcalendar.min.css" %}">
+  <link rel="stylesheet" href="{% static "css/fullcalendar.min.css" %}" />
   {% block css %}
   {% endblock css %}
 {% endblock base-css %}
@@ -49,6 +49,7 @@
     <div id="calendar" class="card"></div>
 
     <div class="social card" id="facebook">
+      <div id="fb-root"></div>
       <div class="fb-page"
            data-href="https://www.facebook.com/Dnollk2014"
            data-small-header="false"

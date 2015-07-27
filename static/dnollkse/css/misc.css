@@ -1,8 +1,7 @@
 /* Left and right margins
 ——————————————————————————————————————————————————
-Helping classes for making margins simle
+Helping classes for making margins simple
 */
-
 .left {
     margin-left: 0px;
 }
@@ -51,4 +50,27 @@ iframe.center {
 
 .center-text p {
     text-align: center;
+}
+
+/* Link color */
+a, a:hover { color: #fa6607; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Top links */
+.top-link,
+.top-link a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+
+    color: #fa6607;
+}
+
+
+.top-link:hover {
+    text-shadow: 0 0 0.7rem #fa6607;
+    color: #fa6607;
 }
