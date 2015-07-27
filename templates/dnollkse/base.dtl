@@ -60,7 +60,7 @@
                src="{% static "dnollkse/images/logo.png" %}"
                alt="DNollK '15's logga">
           <!-- navbar -->
-          <nav class="ten columns u-pull-right primary">
+          <nav id="top" class="ten columns u-pull-right primary">
             <div class="mobile-nav">
               <img src="{% static "dnollkse/images/menu.svg" %}"
                    alt="meny"
