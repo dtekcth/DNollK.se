@@ -52,3 +52,19 @@ iframe.center {
 .center-text p {
     text-align: center;
 }
+
+.top-link,
+.top-link a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+
+    color: #fa6607;
+}
+
+
+.top-link:hover {
+    text-shadow: 0 0 0.7rem #fa6607;
+    color: #fa6607;
+}
