@@ -103,6 +103,8 @@ body,
     left: 0px;
     
     transition: all 1s ease-in-out;
+
+    width: 100%;
 }
 
 #content.pushed {
