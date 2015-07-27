@@ -132,7 +132,6 @@ body,
  */
 
 .card {
-    box-sizing: border-box;
     box-shadow: 0px 0px 1.0rem 0.2rem #0e0e0e;
 
     padding: 1.2rem;
@@ -197,6 +196,8 @@ body,
 
 /* Navigation
 —————————————————————————————————————————————————— */
+.header nav.primary { overflow-y: hidden; }
+
 .header nav.primary .mobile-nav {
     background: #fa6607;
     
@@ -274,6 +275,7 @@ ul li #about-menu {
 @media (min-width: 550px) {
     .header nav.primary {
         margin: 0;
+        overflow-y: visible;
     }
 
     .header nav.primary .mobile-nav {
