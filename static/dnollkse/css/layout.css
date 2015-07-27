@@ -150,7 +150,7 @@ body,
    ——————————————————————————————————————————————————
    Styling for the header card
 */
-.header {
+.container.header {
     color: #fa6607;
 
     font-weight: 600;
@@ -158,6 +158,8 @@ body,
     margin: 0 auto;
 
     width: 100%;
+
+    overflow: visible;
 }
 
 .header .logo {
@@ -323,7 +325,8 @@ ul li #about-menu {
         display: inline-block;
     }
 
-    ul li:hover #about-menu {
+    ul li:hover #about-menu,
+    ul li.hovered #about-menu {
         background: #f8f8f8;
 
         display: block;
@@ -333,6 +336,8 @@ ul li #about-menu {
 
         margin: 0;
         margin-left: -17rem;
+
+        z-index: 100;
     }
 
     #about-menu li {
