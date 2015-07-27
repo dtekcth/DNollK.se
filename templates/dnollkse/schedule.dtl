@@ -2,15 +2,15 @@
 {% load staticfiles %}
 {% block js %}
   <script src="{% static "dnollkse/js/functions.js" %}"></script>
-  <script src="{% static "dnollkse/js/jquery.min.js" %}"></script>
-  <script src="{% static "dnollkse/js/moment.min.js" %}"></script>
-  <script src="{% static "dnollkse/js/fullcalendar.min.js" %}"></script>
-  <script src="{% static "dnollkse/js/lang/sv.js" %}"></script>
-  <script src="{% static "dnollkse/js/gcal.js" %}"></script>
+  <script src="{% static "js/jquery.min.js" %}"></script>
+  <script src="{% static "js/moment.min.js" %}"></script>
+  <script src="{% static "js/fullcalendar.min.js" %}"></script>
+  <script src="{% static "js/lang/sv.js" %}"></script>
+  <script src="{% static "js/gcal.js" %}"></script>
 {% endblock js %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static "dnollkse/css/fullcalendar.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/fullcalendar.min.css" %}">
 {% endblock css %}
 
 {% block content %}
