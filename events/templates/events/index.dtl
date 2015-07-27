@@ -19,6 +19,9 @@
             {{ e.text|safe }}
           </div>
         {% endfor %}
+        <div class="linkWrapper twelve columns">
+          <a class="top-link" href="#top"><strong> &uarr; Hoppa till topp</strong></a>
+        </div>
       </div>
     {% endfor %}
   </div>
