@@ -11,7 +11,7 @@
 {% block content %}
   <div class="card">
     <h1 class="committee-name center">{{ committee.name }}</h1>
-    <p>{{committee.text}}</p>
+    <p>{{committee.text|safe}}</p>
     {% with image_url="about/img/"|add:committee.image %}
       <img src="{% static image_url %}" alt="Profilbild för {{ committee.name }}" class="committee-img center"/>
     {% endwith %}
