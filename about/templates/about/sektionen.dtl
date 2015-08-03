@@ -25,7 +25,7 @@
   </div>
 
   {% for com, members in members_dict.items %}
-    <div class="card" id={{ com.name }}>
+    <div class="card" id="{{ com.name }}">
       <h3 class="committee-name center">{{ com.name }}</h3>
       <div class="committee-text six columns">{{ com.text|safe }}</div>
 
