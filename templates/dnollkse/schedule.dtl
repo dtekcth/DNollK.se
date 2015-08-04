@@ -14,6 +14,12 @@
 {% endblock css %}
 
 {% block content %}
+  
+  <div class="card center-text">
+      <p style="font-size:2.5rem">Använd denna url om du vill prenumerera på kalendern:</p>
+      <p><strong>https://www.google.com/calendar/ical/rr6nns6n3acqaiqa149v9s5vg0%40group.calendar.google.com/public/basic.ics</strong></p>
+  </div>
+
   <div id="calendar" class="card"></div>
 {% endblock content %}
 
