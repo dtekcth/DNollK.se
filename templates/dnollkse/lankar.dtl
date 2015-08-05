@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout-with-sidebar.dtl" %}
 
-{% block title %}DNollK - Länkar{% endblock title %}
+{% block title %}Länkar - DNollK 2015{% endblock title %}
 
 {% block content %}
     <div class="card center eight columns" style="min-height: 60rem">

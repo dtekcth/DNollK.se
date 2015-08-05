@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{% static "css/fullcalendar.min.css" %}">
 {% endblock css %}
 
+{% block title %}Schema - DNollK 2015{% endblock title %}
+
 {% block content %}
   <div id="calendar" class="card"></div>
 {% endblock content %}

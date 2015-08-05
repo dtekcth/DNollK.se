@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block title %}Brage{% endblock title %}
+{% block title %}Om Brage - DNollK 2015{% endblock title %}
 
 {% load staticfiles %}
 
