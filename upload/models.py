@@ -8,3 +8,5 @@ class Upload(models.Model):
     name = models.CharField(max_length=100)
     photo = models.ImageField(storage=f_storage)
 
+    def __str__(self):
+        return self.name
