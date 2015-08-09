@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout-with-sidebar.dtl" %}
 
-{% block title %}DNollK - Arr{% endblock title %}
+{% block title %}Arrangemang - DNollK 2015{% endblock title %}
 
 {% block content %}
   <div class="eight columns eventWrapper">
