@@ -65,6 +65,10 @@ article.post .post-footer {
     margin-bottom: 0px;
 }
 
+article.post img {
+    width: 100%;
+}
+
 /**
  * Post expansion
  * ——————————————————————————————————————————————————
