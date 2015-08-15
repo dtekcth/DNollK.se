@@ -30,7 +30,7 @@ window.onload = function() {
     /* Hide post-content on rest of posts. */
     if (length > 1) {
       for (var i = 1; i < length; i++) {
-        posts.item(i).children.item(2).style = "display: none";
+        posts.item(i).children.item(2).style.display = "none";
       }
     }
   })();
