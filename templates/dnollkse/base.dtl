@@ -66,7 +66,7 @@
                    alt="meny"
                    onclick="toggleSidebar()"/>
               <p id="nav-btn"
-                 onclick="navbarClick()">Navigation</p>
+                 onclick="navbarClick()">Navigation ▼</p>
             </div>
             {% block navigation %}
               <ul>

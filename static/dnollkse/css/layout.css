@@ -231,7 +231,7 @@ body,
 
 .header nav.primary p {
     display: block;
-    width: 30%;
+    width: 70%;
 
     position: relative;
     top: 0.4rem;
@@ -244,8 +244,8 @@ body,
 }
 
 .header nav.primary img {
-    margin: 1.2rem 1.6rem;
-    height: 2.4rem;
+    margin: 1.4rem 1.4rem;
+    height: 1.8rem;
 
     position: absolute;
 
