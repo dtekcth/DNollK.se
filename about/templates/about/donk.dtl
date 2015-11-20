@@ -1,0 +1,63 @@
+{% extends "dnollkse/layout.dtl" %}
+
+{% block title %}Om Donk - DNollK 2015{% endblock title %}
+
+{% load staticfiles %}
+{% load about_tags %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static "about/css/style.css" %}"/>
+{% endblock css %}
+
+{% block content %}
+    <div class="card center">
+        <header>
+            <h2>DNollK tidigare år</h2>
+            <p class="header-text">DNollK har en lång och anrik tradition av att arrangera de första fyra veckorna i Datateknologernas Chalmersliv. Under denna tid läggs ofantliga mängder kärlek och arbete ned för
+            att varje teknolog ska få det bästa välkomnande till vår sektion som möjligt. Som i alla andra kommittéer
+            byts dessa eldsjälar ut varje år, men för att ära de som äras bör finns denna Hall of Fame.</p>
+            <p class="header-text">Här följer några av tidigare års DNollK:</p>
+            <hr />
+        </header>
+
+        <ul class="committee-link center">
+      {% for com, members in members_dict.items %}
+        <li>
+          <a class="committee-link" href="#{{ com.name }}"><strong>{{ com.name|get_year }}</strong></a>
+        </li>
+      {% endfor %}
+    </ul>
+    </div>
+
+        <ul class="committee-link center">
+        {% for com, members in members_dict.items %}
+            <div class="card" id="{{ com.name }}">
+                <div class="donk-name seven columns center-text"><p>{{ com.name|get_year }}</p></div>
+                
+
+                <div class="five columns u-pull-right">
+                    <table>
+                    {% for member in members %}
+                        <tr>
+                        {% if member.nick == "NULL" %}
+                            <td>{{ member.get_full_name }}</td>
+                        {% else %}
+                            <td>{{ member.get_full_name_with_nick }}</td>
+                        {% endif %}
+                            <td>{{ member.position}}</td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </div>
+                {% if com.image != "NULL" %}
+                {% with image_url="about/img/"|add:com.image %}
+                    <img src="{% static image_url %}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
+                {% endwith %}
+                {% endif %}
+                <div class="linkWrapper twelve columns">
+                    <a class="top-link" href="#top"><strong> &uarr; Hoppa till topp</strong></a>
+                </div>
+            </div>
+        {% endfor %}
+        </ul>
+{% endblock content %}

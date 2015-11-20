@@ -13,7 +13,8 @@
   <div class="card center">
     <header>
       <h2>Datateknologsektionen</h2>
-      <p>Datateknologsektionen är en av teknologsektionerna, vilka tjänar ungefär samma syften som studentkåren fast ämnat åt ett visst utbildningsprogram. Liksom kåren agerar sektionen för studentens bästa genom att uppehålla kvaliteten i undervisningen, arrangera roliga fester, osv.</p>
+      <p class="header-text">Datateknologsektionen är en av teknologsektionerna, vilka tjänar ungefär samma syften som studentkåren fast ämnat åt ett visst utbildningsprogram. Liksom kåren agerar sektionen för studentens bästa genom att uppehålla kvaliteten i undervisningen, arrangera roliga fester, osv.</p>
+      <hr />
     </header>
     <ul class="committee-link center">
       {% for com, members in members_dict.items %}

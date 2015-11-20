@@ -12,7 +12,7 @@ def index(request):
     return render(request, "about/index.dtl", {})
 
 def sektionen(request):
-    committees = Committee.objects.all().exclude(name="DNollK")
+    committees = Committee.objects.all().exclude(name__startswith="DNollK")
     f = {}
     for com in committees:
         f[com] = Member.get_by_committee(com)
@@ -21,3 +21,11 @@ def sektionen(request):
 
 def brage(request):
     return render(request, "about/brage.dtl", {})
+
+def donk(request):
+    committees = Committee.objects.filter(name__startswith="DNollK-")
+    f = {}
+    for com in committees:
+        f[com] = Member.get_by_committee(com)
+    
+    return render(request, "about/donk.dtl", {'committees' : committees, 'members_dict' : f})

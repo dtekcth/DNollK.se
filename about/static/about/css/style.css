@@ -13,6 +13,17 @@
     position: static;
 }
 
+#donk-header {
+    margin: 0;
+}
+
+#donk-header h1,
+#donk-header h2,
+#donk-header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 @media (min-width: 550px) {
     .member { height: 76rem; }
 
@@ -45,6 +56,10 @@ header h2 {
     font-size: 2.4rem;
 }
 
+p.header-text {
+    font-size: 1.8rem;
+}
+
 .committee-img {
     width: 90%;
     margin-bottom: 3rem;
@@ -54,6 +69,13 @@ header h2 {
     font-family: "Geomancy-Extra-Bold";
     padding-top: 2rem;
     font-size: 3rem;
+}
+
+.donk-name {
+    font-family: "Geomancy-Extra-Bold";
+    font-size:20rem;
+    padding-top: 3rem;
+    padding-left: 2rem;
 }
 
 @media(min-width: 550px) {
@@ -74,6 +96,10 @@ header h2 {
         margin-left: auto;
         margin-right: auto;
         display: block;
+    }
+
+    header hr {
+        width: 80%;
     }
 }
 

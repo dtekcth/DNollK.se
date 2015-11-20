@@ -14,4 +14,6 @@ urlpatterns = patterns('',
 
     url(r'^brage/$', views.brage, name="brage"),
 
+    url(r'^donk/$', views.donk, name="donk"),
+
 )
