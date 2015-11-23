@@ -23,7 +23,7 @@ def brage(request):
     return render(request, "about/brage.dtl", {})
 
 def donk(request):
-    committees = Committee.objects.filter(name__startswith="DNollK-")
+    committees = Committee.objects.filter(name__startswith="DNollK-").order_by("-name")
     f = {}
     for com in committees:
         f[com] = Member.get_by_committee(com)
