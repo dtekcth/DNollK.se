@@ -30,6 +30,6 @@ def donk(request):
     for com in committees:
         f[com] = Member.get_by_committee(com)
 
-    d = collections.OrderedDict(reversed(sorted(f.items(),key=lambda t: str(t[0]))))
+    d = collections.OrderedDict(sorted(f.items(),key=lambda t: str(t[0]), reverse=True))
     
     return render(request, "about/donk.dtl", {'committees' : committees, 'members_dict' : d})
