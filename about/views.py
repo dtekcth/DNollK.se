@@ -3,6 +3,8 @@ from django.http import HttpResponse
 
 from about.models import Committee, Member
 
+import collections
+
 def dnollk(request):
     committee = Committee.objects.get(name="DNollK")
     members = Member.get_by_committee(committee)
@@ -27,5 +29,7 @@ def donk(request):
     f = {}
     for com in committees:
         f[com] = Member.get_by_committee(com)
+
+    d = collections.OrderedDict(reversed(sorted(f.items(),key=lambda t: str(t[0]))))
     
-    return render(request, "about/donk.dtl", {'committees' : committees, 'members_dict' : f})
+    return render(request, "about/donk.dtl", {'committees' : committees, 'members_dict' : d})
