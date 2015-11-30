@@ -256,7 +256,7 @@ body,
     position: relative;
     list-style: inside none none;
 
-    padding: 1.2rem;
+    padding: 0.8rem;
 
     text-align: center;
 
@@ -348,7 +348,6 @@ ul li #about-menu {
     }
 
     #about-menu li {
-        margin: 1rem;
 
         display: inline;
     }
