@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+# A list of all the people who get code error notifications.
+# Each item in the list should be a tuple of (Full name, email address).
+ADMINS = []
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -22,11 +25,28 @@ SECRET_KEY = 'j!7qm-oh$k7g4w_-ahu*&!+ig8d%l%-lxibllw68no-5$7nmt)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
 
 # Application definition
+################################################################################
+# Tells Django to look for DjangoTemplates inside templates/
+# (both in the main directory and inside every app)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS':  [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': ["django.contrib.auth.context_processors.auth",
+                                   "django.template.context_processors.debug",
+                                   "django.template.context_processors.i18n",
+                                   "django.template.context_processors.media",
+                                   "django.template.context_processors.static",
+                                   "django.template.context_processors.tz",
+                                   "django.contrib.messages.context_processors.messages"]
+        },
+    }
+]
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -96,5 +116,3 @@ STATIC_ROOT = '/absolute/path/in/file-system/to/static/dir/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
