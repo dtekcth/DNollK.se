@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 # Our own modules
 from news import views
@@ -18,7 +18,7 @@ will capture the element between news and the last / and sending that to the
 views.item function,
 """
 
-urlpatterns = patterns('',
+urlpatterns = [
     # Matches http://example.com/news
     url(r'^$', views.index, name='news'),
 
@@ -30,5 +30,5 @@ urlpatterns = patterns('',
 
     # Matches http://example.com/news/feed.rss
     url(r'^rss.xml$', views.rss, name="rss"),
-)
+]
  

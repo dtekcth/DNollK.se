@@ -1,8 +1,7 @@
-Django==1.8.3
-distribute==0.6.24
+Django==1.9.1
 django-wysiwyg==0.7.1
+Pillow==3.1.0
 psycopg2==2.6.1
-pytz==2015.4
-uWSGI==2.0.11
-wsgiref==0.1.2
-Pillow==2.9.0
+pytz==2015.7
+uWSGI==2.0.12
+wheel==0.24.0
