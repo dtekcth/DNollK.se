@@ -196,6 +196,13 @@ body,
     }
 }
 
+@media (min-width: 750px) {
+    .header .logo {
+        margin-top: -14rem;
+        margin-left: 1rem;
+    }
+}
+
 /* Navigation
 —————————————————————————————————————————————————— */
 .header nav.primary { overflow-y: hidden; }
@@ -224,7 +231,7 @@ body,
 
 .header nav.primary p {
     display: block;
-    width: 30%;
+    width: 70%;
 
     position: relative;
     top: 0.4rem;
@@ -237,8 +244,8 @@ body,
 }
 
 .header nav.primary img {
-    margin: 1.2rem 1.6rem;
-    height: 2.4rem;
+    margin: 1.4rem 1.4rem;
+    height: 1.8rem;
 
     position: absolute;
 
@@ -249,7 +256,7 @@ body,
     position: relative;
     list-style: inside none none;
 
-    padding: 1.2rem;
+    padding: 0.8rem;
 
     text-align: center;
 
@@ -341,7 +348,6 @@ ul li #about-menu {
     }
 
     #about-menu li {
-        margin: 1rem;
 
         display: inline;
     }
