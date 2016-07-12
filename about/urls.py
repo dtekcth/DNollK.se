@@ -1,8 +1,8 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from about import views
 
-urlpatterns = patterns('',
+urlpatterns = [
     # Matches http://example.com/about
     url(r'^$', views.index, name='index'),
 
@@ -13,5 +13,4 @@ urlpatterns = patterns('',
     url(r'^sektionen/$', views.sektionen, name="sektionen"),
 
     url(r'^brage/$', views.brage, name="brage"),
-
-)
+]
