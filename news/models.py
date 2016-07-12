@@ -48,6 +48,7 @@ class Post(models.Model):
      # Whether the post is published or not
     published = models.BooleanField(default=False)
 
+    @staticmethod
     def publishedPosts():
         """
         Retrieves all published posts
