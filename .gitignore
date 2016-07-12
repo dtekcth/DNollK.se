@@ -22,3 +22,6 @@ db.*
 
 # Misc files
 *.sh
+
+# Uploaded files
+/uploads
