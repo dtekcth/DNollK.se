@@ -6,7 +6,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>
-    {% block title %}{% endblock title%}
+      {% block title %}
+          {% block page %}EDIT PAGE VARIABLE{% endblock page %} - DNollK {% now "Y" %}
+      {% endblock title%}
   </title>
   <meta name="description"
         content="{% block description %}

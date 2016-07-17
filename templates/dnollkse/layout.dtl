@@ -4,7 +4,6 @@
 
 <!-- Site
 ————————————————————————————————————————————————-->
-{% block title %}DNollK 2015{% endblock title %}
 
 {% block base-js %}
   <script src="{% static "dnollkse/js/functions.js" %}"></script>

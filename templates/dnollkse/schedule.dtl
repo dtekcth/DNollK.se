@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static "css/fullcalendar.min.css" %}">
 {% endblock css %}
 
-{% block title %}Schema - DNollK 2015{% endblock title %}
+{% block page %}Schema{% endblock page %}
 
 {% block content %}
   <div class="card center">
@@ -52,4 +52,3 @@
   {% block foot-js %}
   {% endblock foot-js %}
 {% endblock base-foot-js %}
-

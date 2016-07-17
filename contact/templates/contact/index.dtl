@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block title %}Kontakt - DNollK 2015{% endblock title %}
+{% block page %}Kontakt{% endblock page %}
 
 {% block content %}
 <div class="center center-text card">

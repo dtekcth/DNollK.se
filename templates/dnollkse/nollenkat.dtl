@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block title %}Nollenkät - DNollK 2015{% endblock title %}
+{% block page %}Nollenkät{% endblock page %}
 
 {% block content %}
   <div class="card center" style="min-height: 60rem">

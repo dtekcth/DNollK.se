@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block title %}Om Sektionen - DNollK 2015{% endblock title %}
+{% block page %}Om Sektionen{% endblock page %}
 
 {% load staticfiles %}
 
