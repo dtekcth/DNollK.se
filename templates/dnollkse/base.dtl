@@ -5,14 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>
-      {% block title %}
-          {% block page %}EDIT PAGE VARIABLE{% endblock page %} - DNollK {% now "Y" %}
-      {% endblock title%}
-  </title>
-  <meta name="description"
-        content="{% block description %}
-                 {% endblock description %}">
+  <title>{% block title %}{% block page %}EDIT PAGE VARIABLE{% endblock page %} - DNollK {% now "Y" %}{% endblock title%}</title>
+  <meta name="description" content="{% block description %}{% endblock description %}">
 
   {% load staticfiles %}
   <meta name="author" content="{% static 'humans.txt' %}">
