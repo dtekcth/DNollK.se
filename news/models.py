@@ -48,15 +48,19 @@ class Post(models.Model):
      # Whether the post is published or not
     published = models.BooleanField(default=False)
 
-    def publishedPosts():
+    def published_posts():
         """
         Retrieves all published posts
 
         All it does is filters out the unpublished posts.
         """
+        year = datetime.now().year
+        return Post.objects.filter(published=True).filter(pub_date__year=year)
+
+    def all_published_posts():
         return Post.objects.filter(published=True)
 
-    def byMonth(month):
+    def by_month(month):
         """
         Retrieve all posts published during a month.
 
@@ -83,7 +87,7 @@ class Post(models.Model):
             return Post.publishedPosts().filter(
                 pub_date__range=(first_day, last_day))
 
-    def byDay(month, day):
+    def by_day(month, day):
         """
         Retrieves the posts published during a day in a month.
 

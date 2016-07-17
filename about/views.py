@@ -1,12 +1,12 @@
+from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
-
 from about.models import Committee, Member
 
 import collections
 
 def dnollk(request):
-    committee = Committee.objects.get(name="DNollK")
+    committee = Committee.objects.filter(name__startswith="DNollK").order_by('-name')[0]
     members = Member.get_by_committee(committee)
     return render(request, "about/dnollk.dtl", {'committee' : committee, 'members' : members})
 
@@ -18,7 +18,7 @@ def sektionen(request):
     f = {}
     for com in committees:
         f[com] = Member.get_by_committee(com)
-    
+
     return render(request, "about/sektionen.dtl", {'committees' : committees, 'members_dict' : f})
 
 def brage(request):
@@ -31,5 +31,5 @@ def donk(request):
         f[com] = Member.get_by_committee(com)
 
     d = collections.OrderedDict(sorted(f.items(),key=lambda t: str(t[0]), reverse=True))
-    
+
     return render(request, "about/donk.dtl", {'committees' : committees, 'members_dict' : d})
