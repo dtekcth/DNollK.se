@@ -58,6 +58,11 @@ class Post(models.Model):
         return Post.objects.filter(published=True).filter(pub_date__year=year)
 
     def all_published_posts():
+        """
+        Retrieves all published posts
+
+        All it does is filters out the unpublished posts.
+        """
         return Post.objects.filter(published=True)
 
     def by_month(month):
