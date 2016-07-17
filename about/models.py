@@ -2,7 +2,7 @@ from django.db import models
 
 class Committee(models.Model):
     name = models.CharField(max_length=100)
-    image = models.CharField(max_length=200)
+    image = models.FileField(upload_to='%Y') # Upload to subfolder of %MEDIA_ROOT named after current year
     text = models.TextField()
 
     def __str__(self):
@@ -15,7 +15,7 @@ class Member(models.Model):
     nick = models.CharField(max_length=200)
     text = models.TextField()
     number = models.CharField(max_length=50)
-    image = models.CharField(max_length=200)
+    image = models.FileField(upload_to='%Y')  # Upload to subfolder of %MEDIA_ROOT named after current year
     position = models.CharField(max_length=50)
     committee = models.ForeignKey(Committee)
 

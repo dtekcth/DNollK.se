@@ -1,6 +1,8 @@
 # Django modules
-from django.conf.urls import include, url
+from django.conf.urls import include, url, patterns
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 # Import dnollkse views
 from . import views
@@ -47,4 +49,9 @@ urlpatterns = [
     url(r'^dokument/', views.documents, name='documents'),
     url(r'^arr/', include('events.urls')),
     url(r'^', include('news.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^uploads/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes':True}),
+)
