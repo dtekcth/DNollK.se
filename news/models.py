@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import timedelta, date
 from pytz import timezone
 
 # Django models
@@ -48,15 +48,22 @@ class Post(models.Model):
      # Whether the post is published or not
     published = models.BooleanField(default=False)
 
+    @staticmethod
     def published_posts():
         """
-        Retrieves all published posts
-
-        All it does is filters out the unpublished posts.
+        Retrieves all published posts from the current year.
         """
-        year = datetime.now().year
-        return Post.objects.filter(published=True).filter(pub_date__year=year)
+        year = date.today().year
+        return Post.published_posts_by_year(year)
 
+    @staticmethod
+    def published_posts_by_year(year):
+        """
+        Retrieves all published posts from a specified year.
+        """
+        return Post.all_published_posts().filter(pub_date__year=int(year))
+
+    @staticmethod
     def all_published_posts():
         """
         Retrieves all published posts
@@ -65,48 +72,36 @@ class Post(models.Model):
         """
         return Post.objects.filter(published=True)
 
-    def by_month(month):
+    @staticmethod
+    def by_month(year, month):
         """
         Retrieve all posts published during a month.
 
         To get the last day in the month a little hack is used,
-        we get the date of the first day in next month (right before midnight)
-        and then we subtract one second from the date.
-        This gives us the date and time for the last second in the month so
-        that we retrieve every post even from the last day.
+        we get the date of the first day in next month and then we
+        subtract one day from the date. This gives us the date for
+        the last day in the month so that we retrieve every post
+        in a month without knowing the number of days in that month.
 
         Raises a ValueError if month is out of bounds.
         """
-        # Create our timezone
-        sthlm = timezone("Europe/Stockholm")
-        year = datetime.now().year
-        first_day = sthlm.localize(datetime(year, month, 1, 00, 00, 00))
+        first_day = date(int(year), int(month), 1)
 
-        if month == 12:
-            # If we are in december we know the last day
-            last_day= sthlm.localize(datetime(year, 12, 31, 23, 59, 59))
-        else:
-            # Otherwise, last day = first day in next month - 1 second
-            tmp_day = sthlm.localize(datetime(year, month+1, 1, 00, 00, 00))
-            last_day = tmp_day - timedelta(seconds=1)
-            return Post.publishedPosts().filter(
-                pub_date__range=(first_day, last_day))
+        # last day = first day in next month - 1 day
+        last_day = date(int(year), int(month)+1, 1) - timedelta(days=1)
+        return Post.published_posts().filter(pub_date__date__range=(first_day, last_day))
 
-    def by_day(month, day):
+    @staticmethod
+    def by_day(year, month, day):
         """
         Retrieves the posts published during a day in a month.
 
-        Not really sure what use we could have of this functions, but convenience functions are always nice.
-
         Raises a ValueError if month or day are out of bounds.
         """
-        posts_in_month = Post.byMonth(month)
         sthlm = timezone("Europe/Stockholm")
-        year = datetime.now().year
 
-        start_time = sthlm.localize(datetime(year, month, day, 00, 00, 00))
-        end_time = sthlm.localize(datetime(year, month, day, 23, 59, 59))
-        return posts_in_month.filter(pub_date__range=(start_time, end_time))
+        date = date(int(year), int(month), int(day))
+        return Post.published_posts().filter(pub_date__date=date)
 
     def publish(self):
         """
