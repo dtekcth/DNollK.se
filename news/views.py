@@ -23,10 +23,23 @@ def index(request):
 
     TODO: Use a template to presents the posts
     """
-
     published_posts = Post.published_posts().order_by('-pub_date')[:10]
     context = {'posts_list' : published_posts}
     return render(request, 'news/index.dtl', context)
+
+def index_from_year(request, year):
+    """
+    Shows the posts from the year specified in the year parameter.
+    """
+    published_posts = Post.published_posts_by_year(year)[:10]
+    return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
+
+def index_from_date(request, year, month):
+    """
+    Shows the posts from a specific day.
+    """
+    published_posts = Post.by_month(year, month)[:10]
+    return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
 
 def item(request, post_id):
     """
@@ -40,7 +53,6 @@ def item(request, post_id):
 
     TODO: Use a template to present the post
     """
-
     try:
         post = Post.published_posts().get(id=post_id)
         content = "Posts article: %s<br> %s"
@@ -58,7 +70,6 @@ def latest(request):
 
     TODO: Use a template to display the latest post
     """
-
     try:
         latest_post = Post.published_posts().latest('pub_date')
         return HttpResponse("%s <br> %s" % (latest_post.title, latest_post.content))
