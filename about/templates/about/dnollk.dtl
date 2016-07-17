@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block page %}Om DNollK}{% endblock page %}
+{% block page %}Om DNollK{% endblock page %}
 
 {% load staticfiles %}
 
