@@ -2,6 +2,7 @@ from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
 from about.models import Committee, Member
+from django.template import RequestContext
 
 import collections
 
