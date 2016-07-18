@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = '/home/taira/Code/DNollK/'
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # A list of all the people who get code error notifications.
 # Each item in the list should be a tuple of (Full name, email address).
@@ -109,9 +109,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static-files/'
+STATIC_URL = '/static/'
 
-STATIC_ROOT = '/home/taira/Code/DNollK/static-files'
+STATIC_ROOT = '/absolute/path/in/file-system/to/static/dir/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
