@@ -45,7 +45,7 @@
         </table>
       </div>
       {% if com.image != "NULL" %}
-          <img src="{% static com.image %}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
+          <img src="{{ com.image.url }}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
       {% endif %}
       <div class="linkWrapper twelve columns">
           <a class="top-link" href="#top"><strong> &uarr; Hoppa till topp</strong></a>
