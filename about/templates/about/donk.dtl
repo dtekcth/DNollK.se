@@ -39,7 +39,7 @@
                     <table>
                     {% for member in members %}
                         <tr>
-                        {% if member.nick == "NULL" %}
+                        {% if not member.nick %}
                             <td>{{ member.get_full_name }}</td>
                         {% else %}
                             <td>{{ member.get_full_name_with_nick }}</td>
@@ -49,7 +49,7 @@
                     {% endfor %}
                     </table>
                 </div>
-                {% if com.image != "NULL" %}
+                {% if com.image %}
                     <img src="{{ com.image.url }}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
                 {% endif %}
                 <div class="linkWrapper twelve columns">

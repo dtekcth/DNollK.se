@@ -14,11 +14,11 @@ class Committee(models.Model):
 
 class Member(models.Model):
     """
-    The db model for a member of a committee. Optional field are description text, phone number and image.
+    The db model for a member of a committee. Optional fields are description text, phone number, nickname and image.
     """
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
-    nick = models.CharField(max_length=200)
+    nick = models.CharField(max_length=200, blank=True)
     text = models.TextField(blank=True)
     number = models.CharField(max_length=50, blank=True)
     image = models.FileField(upload_to='%Y', blank=True)  # Upload to subfolder of %MEDIA_ROOT named after current year
