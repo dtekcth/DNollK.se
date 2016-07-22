@@ -303,15 +303,14 @@ ul li #about-menu {
         display: block;
 
         margin: 0;
-        margin-top: 2vw;
-
         padding: 0;
     }
 
     .header nav.primary ul li {
         display: inline-block;
 
-        padding: 0px 1vw;
+        padding: 1vw;
+        margin: 0;
 
         font-size: 1.4vw;
         font-family: 'Geomancy-Extra-Bold', sans-serif;
@@ -339,17 +338,17 @@ ul li #about-menu {
         display: block;
         position: absolute;
 
-        width: 40rem;
-
-        margin: 0;
-        margin-left: -17rem;
+        margin: 1rem -3rem;
 
         z-index: 100;
     }
 
     #about-menu li {
+        display: block;
 
-        display: inline;
+        margin: 0;
+
+        padding: 1vw;
     }
 }
 
