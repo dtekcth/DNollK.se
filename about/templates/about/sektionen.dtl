@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block title %}Om Sektionen - DNollK 2015{% endblock title %}
+{% block page %}Om Sektionen{% endblock page %}
 
 {% load staticfiles %}
 
@@ -34,7 +34,7 @@
         <table>
           {% for member in members %}
             <tr>
-              {% if member.nick == "NULL" %}
+              {% if not member.nick %}
                 <td>{{ member.get_full_name }}</td>
               {% else %}
                 <td>{{ member.get_full_name_with_nick }}</td>
@@ -44,8 +44,8 @@
           {% endfor %}
         </table>
       </div>
-      {% if com.image != "NULL" %}
-          <img src="{% static com.image %}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
+      {% if com.image %}
+          <img src="{{ com.image.url }}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
       {% endif %}
       <div class="linkWrapper twelve columns">
           <a class="top-link" href="#top"><strong> &uarr; Hoppa till topp</strong></a>

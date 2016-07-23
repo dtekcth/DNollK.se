@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout-with-sidebar.dtl" %}
 
-{% block title %}Dokument - DNollK 2015{% endblock title %}
+{% block page %}Dokument{% endblock page %}
 
 {% load staticfiles %}
 

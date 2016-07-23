@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import timedelta, date
 from pytz import timezone
 
 # Django models
@@ -11,15 +11,15 @@ from about.models import Member, Committee
 news.models module.
 
 In this module we define the models for our Object-Relational Mapping (ORM) that
-allows us to map python objects to a database which allows seamless database 
+allows us to map python objects to a database which allows seamless database
 interaction.
 """
 class Post(models.Model):
     """
     Post model.
-    
+
     This is the actual news post model, and contains a title, the post content,
-    a published date, a post author and an option to not publish the post 
+    a published date, a post author and an option to not publish the post
     immediately.
 
     To interact with this object, make sure that it is imported, one can simply
@@ -29,14 +29,14 @@ class Post(models.Model):
     >>> from news.models import Post
     # Imports the object
 
-    >>> allPosts = Post.objects.all() 
+    >>> allPosts = Post.objects.all()
     # Gets all posts
-    >>> allPublished = Post.objects.filter(published=True) 
+    >>> allPublished = Post.objects.filter(published=True)
     # Gets all published posts
     >>> post14 = Post.objects.get(id=14)
-    # Gets the fourteenth post                                             
+    # Gets the fourteenth post
     """
-    
+
     # Title of post
     title = models.CharField(max_length=100)
     # Content of post, could be html or anything
@@ -49,7 +49,22 @@ class Post(models.Model):
     published = models.BooleanField(default=False)
 
     @staticmethod
-    def publishedPosts():
+    def published_posts():
+        """
+        Retrieves all published posts from the current year.
+        """
+        year = date.today().year
+        return Post.published_posts_by_year(year)
+
+    @staticmethod
+    def published_posts_by_year(year):
+        """
+        Retrieves all published posts from a specified year.
+        """
+        return Post.all_published_posts().filter(pub_date__year=int(year))
+
+    @staticmethod
+    def all_published_posts():
         """
         Retrieves all published posts
 
@@ -57,54 +72,42 @@ class Post(models.Model):
         """
         return Post.objects.filter(published=True)
 
-    def byMonth(month):
+    @staticmethod
+    def by_month(year, month):
         """
         Retrieve all posts published during a month.
 
-        To get the last day in the month a little hack is used, 
-        we get the date of the first day in next month (right before midnight)
-        and then we subtract one second from the date. 
-        This gives us the date and time for the last second in the month so
-        that we retrieve every post even from the last day.
+        To get the last day in the month a little hack is used,
+        we get the date of the first day in next month and then we
+        subtract one day from the date. This gives us the date for
+        the last day in the month so that we retrieve every post
+        in a month without knowing the number of days in that month.
 
         Raises a ValueError if month is out of bounds.
         """
-        # Create our timezone
-        sthlm = timezone("Europe/Stockholm")
-        year = datetime.now().year            
-        first_day = sthlm.localize(datetime(year, month, 1, 00, 00, 00))
-        
-        if month == 12:
-            # If we are in december we know the last day
-            last_day= sthlm.localize(datetime(year, 12, 31, 23, 59, 59))
-        else:
-            # Otherwise, last day = first day in next month - 1 second
-            tmp_day = sthlm.localize(datetime(year, month+1, 1, 00, 00, 00))
-            last_day = tmp_day - timedelta(seconds=1)
-            return Post.publishedPosts().filter(
-                pub_date__range=(first_day, last_day))
-        
-    def byDay(month, day):
+        first_day = date(int(year), int(month), 1)
+
+        # last day = first day in next month - 1 day
+        last_day = date(int(year), int(month)+1, 1) - timedelta(days=1)
+        return Post.published_posts().filter(pub_date__date__range=(first_day, last_day))
+
+    @staticmethod
+    def by_day(year, month, day):
         """
         Retrieves the posts published during a day in a month.
-        
-        Not really sure what use we could have of this functions, but convinience functions are always nice.
-        
+
         Raises a ValueError if month or day are out of bounds.
         """
-        posts_in_month = Post.byMonth(month)
         sthlm = timezone("Europe/Stockholm")
-        year = datetime.now().year            
-        
-        start_time = sthlm.localize(datetime(year, month, day, 00, 00, 00))
-        end_time = sthlm.localize(datetime(year, month, day, 23, 59, 59))
-        return posts_in_month.filter(pub_date__range=(start_time, end_time))
-        
+
+        date = date(int(year), int(month), int(day))
+        return Post.published_posts().filter(pub_date__date=date)
+
     def publish(self):
         """
         Publishes a post.
-        
-        This function will publish a post and then save it, 
+
+        This function will publish a post and then save it,
         if the post already is published nothing happens.
 
         >>> p = Post(title="T", content="Some text", author=0)
@@ -116,10 +119,10 @@ class Post(models.Model):
             self.published = True
             self.save()
         # If self is published, nothing will happen
-        
+
 
     def unpublish(self):
-        """ 
+        """
         Unpublishes a post.
 
         This function will unpublish a post and then save it,
@@ -139,11 +142,10 @@ class Post(models.Model):
 
     def __str__(self):
         """
-        To string function. 
+        To string function.
         This function is called when Python is trying to display a Post in text.
-        
-        With this function every time a post is displayed in a textual 
+
+        With this function every time a post is displayed in a textual
         representation it is now called <Post: $title> or something like that.
         """
         return self.title
-

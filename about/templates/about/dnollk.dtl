@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block title %}Om DNollK - DNollK 2015{% endblock title %}
+{% block page %}Om DNollK{% endblock page %}
 
 {% load staticfiles %}
 
@@ -12,12 +12,12 @@
     <div class="card">
         <h1 class="committee-name center">{{ committee.name }}</h1>
         <p>{{committee.text|safe}}</p>
-        <img src="{% static committee.image %}" alt="Profilbild för {{ committee.name }}" class="committee-img center"/>
+        <img src="{{ committee.image.url }}" alt="Profilbild för {{ committee.name }}" class="committee-img center"/>
         {% for member in members%}
             <div class="member six columns {% cycle "left" "right" %}">
                 <h3><b>{{ member.get_full_name_with_nick }}</b> <br><i>{{ member.position }}</i></h3>
                 <p>{{ member.text }}</p>
-                <img src="{% static member.image %}" alt="Profilbild för {{ member.get_full_name_with_nick }}"/>
+                <img src="{{ member.image.url }}" alt="Profilbild för {{ member.get_full_name_with_nick }}"/>
             </div>
         {% endfor %}
     </div>

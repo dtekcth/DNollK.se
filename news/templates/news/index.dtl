@@ -1,6 +1,6 @@
 {% extends 'dnollkse/layout-with-sidebar.dtl' %}
 
-{% block title %} Nyheter - DNollK 2015 {% endblock title %}
+{% block page %}Nyheter{% endblock page %}
 
 {% load staticfiles %}
 {% block css %}
@@ -13,7 +13,7 @@
 
 {% block content %}
   <!-- Start of news content -->
-  
+
   {% if posts_list %}
 
     <section class="newssection eight columns">
@@ -32,10 +32,10 @@
           <div class="post-content">{{ post.content|safe }}</div>
           <p class="post-footer">Skrivet av {{ post.author.nick }}, {{ post.pub_date }}</p>
         </article> <!-- end of article -->
-        
+
       {% endfor %} <!-- ends the for each -->
     </section> <!-- end of newssection -->
-    
+
   {% else %}
     <div class="newssection eight columns card">
       <h3>Det finns inga nyheter att visa :/</h3>

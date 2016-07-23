@@ -5,12 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>
-    {% block title %}{% endblock title%}
-  </title>
-  <meta name="description"
-        content="{% block description %}
-                 {% endblock description %}">
+  <title>{% block title %}{% block page %}EDIT PAGE VARIABLE{% endblock page %} - DNollK {% now "Y" %}{% endblock title%}</title>
+  <meta name="description" content="{% block description %}{% endblock description %}">
 
   {% load staticfiles %}
   <meta name="author" content="{% static 'humans.txt' %}">
@@ -71,7 +67,7 @@
             {% block navigation %}
               <ul>
                 <li><a href="{% url "news" %}">startsida</a></li>
-                <li><a href="{% url "nollenkat" %}">nollenkät</a></li>
+                <li><a href="{% url "nollenkat" %}">nolldeklaration</a></li>
                 <li><a href="{% url "schedule" %}">schema</a></li>
                 <li><a href="{% url "events" %}">arr</a></li>
                 <li><a href="{% url "documents" %}">dokument</a></li>
