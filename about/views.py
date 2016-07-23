@@ -57,7 +57,7 @@ def donk(request):
     These committees and their members are then used as parameters to
     "about/donk.dtl template".
     """
-    committees = Committee.objects.filter(name__startswith="DNollK-").order_by("-name")
+    committees = Committee.objects.filter(name__startswith="DNollK-").order_by("-name")[1:]
     f = {}
     for com in committees:
         f[com] = Member.get_by_committee(com)
