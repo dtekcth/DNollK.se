@@ -44,7 +44,7 @@ urlpatterns = [
     url(r'^kontakt/', include('contact.urls')),
     url(r'^faq/', include('faq.urls')),
     url(r'^lankar/', views.links, name='links'),
-    url(r'^nollenkat/', views.nollenkat, name='nollenkat'),
+    url(r'^nolldeklaration/', views.nollenkat, name='nollenkat'),
     url(r'^schema/', views.schedule, name='schedule'),
     url(r'^dokument/', views.documents, name='documents'),
     url(r'^arr/', include('events.urls')),
