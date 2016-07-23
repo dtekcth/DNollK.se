@@ -67,7 +67,7 @@
             {% block navigation %}
               <ul>
                 <li><a href="{% url "news" %}">startsida</a></li>
-                <li><a href="{% url "nollenkat" %}">nollenkät</a></li>
+                <li><a href="{% url "nollenkat" %}">nolldeklaration</a></li>
                 <li><a href="{% url "schedule" %}">schema</a></li>
                 <li><a href="{% url "events" %}">arr</a></li>
                 <li><a href="{% url "documents" %}">dokument</a></li>
