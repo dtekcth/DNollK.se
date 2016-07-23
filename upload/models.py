@@ -21,14 +21,14 @@ def setFilePath(instance, filename):
     year = date.today().year
     ext = instance.name.split('.')[-1]
 
-    return '/'.join([settings.STATIC_ROOT, 'uploads', str(year), filename])
+    return '/'.join([str(year), filename])
 
 class Upload(models.Model):
     """
     Upload model.
 
     Represents an uploaded image with a name and image field.
-    The image is stored on disk as STATIC_ROOT/uploads/YYYY/name.ext.
+    The image is stored on disk as /uploads/YYYY/name.ext.
     """
     name = models.CharField(max_length=100)
     photo = models.ImageField(upload_to=setFilePath)
@@ -49,6 +49,12 @@ class Upload(models.Model):
         ext = fileName.split('.')[-1]
         self.photo.name = self.name + '.' + ext
         super(Upload, self).save(*args, **kwargs)
+
+    def url(self, *args, **kwargs):
+        """
+        Returns the URL to the uploaded photo.
+        """
+        return '/uploads/' + self.photo.name
 
     @staticmethod
     def route(uploadName):
