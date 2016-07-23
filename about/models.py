@@ -7,8 +7,7 @@ class Committee(models.Model):
     The db model for a Committee. Choosing an image and description text is optional.
     """
     name = models.CharField(max_length=100)
-    image = models.FileField(upload_to='%Y', blank=True) # Upload to subfolder of %MEDIA_ROOT named after current year
-    image_id = models.ForeignKey(Upload, models.SET_NULL, blank=True, null=True)
+    image = models.ForeignKey(Upload, models.SET_NULL, blank=True, null=True)
     text = models.TextField(blank=True)
 
     def __str__(self):
@@ -24,8 +23,7 @@ class Member(models.Model):
     nick = models.CharField(max_length=200, blank=True)
     text = models.TextField(blank=True)
     number = models.CharField(max_length=50, blank=True)
-    image = models.FileField(upload_to='%Y', blank=True)  # Upload to subfolder of %MEDIA_ROOT named after current year
-    image_id = models.ForeignKey(Upload, models.SET_NULL, blank=True, null=True)
+    image = models.ForeignKey(Upload, models.SET_NULL, blank=True, null=True)
     position = models.CharField(max_length=50)
     committee = models.ForeignKey(Committee)
 
