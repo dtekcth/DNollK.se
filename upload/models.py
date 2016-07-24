@@ -92,3 +92,14 @@ class Upload(models.Model):
         """
         u = Upload.objects.get(name=uploadName)
         return u.photo.name
+
+# Receive the pre_delete signal and delete the file
+# associated with the model instance.
+from django.db.models.signals import post_delete
+from django.dispatch.dispatcher import receiver
+
+@receiver(post_delete, sender=Upload)
+def upload_delete(sender, instance, **kwargs):
+    # Pass false so FileField doesn't save the model.
+    if instance.photo != None:
+        instance.photo.delete(False)
