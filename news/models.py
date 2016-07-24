@@ -49,7 +49,7 @@ class Post(models.Model):
     # Whether the post is published or not
     published = models.BooleanField(default=False)
     # An image linked to the post
-    image = models.ForeignKey(Upload, blank=True, default=None)
+    image = models.ForeignKey(Upload, blank=True, null=True, default=None)
 
     @staticmethod
     def published_posts():
