@@ -27,11 +27,12 @@ class Upload(models.Model):
     """
     Upload model.
 
-    Represents an uploaded image with a name and image field.
+    Represents an uploaded image with a name, image field and alt text.
     The image is stored on disk as /uploads/YYYY/name.ext.
     """
     name = models.CharField(max_length=100)
     photo = models.ImageField(upload_to=setFilePath)
+    alt = models.TextField(blank=True)
     date_uploaded = models.DateField(default=date.today)
 
     def __str__(self):
