@@ -32,6 +32,7 @@ class Upload(models.Model):
     """
     name = models.CharField(max_length=100)
     photo = models.ImageField(upload_to=setFilePath)
+    date_uploaded = models.DateField(default=date.today)
 
     def __str__(self):
         """
