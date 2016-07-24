@@ -58,6 +58,30 @@ class Upload(models.Model):
         """
         return '/uploads/' + self.photo.name
 
+    def render(self, **kwargs):
+        """
+        Returns an HTML img element with the uploaded image.
+        Accepts positional arguments id, cls and style for setting the id,
+        class and style of the rendered upload.
+        """
+        iId = kwargs.get('id')
+        iClass = kwargs.get('cls')
+        iStyle = kwargs.get('style')
+        elemId = ''
+        elemClass = ''
+        elemStyle = ''
+
+        if iId != None:
+            elemId = 'id="' + iId + '"'
+
+        if iClass != None:
+            elemClass = 'class="' + iClass + '"'
+
+        if iStyle != None:
+            elemStyle = 'style="' + iStyle + '"'
+
+        return '<img src="' + self.url() + '" alt="' + self.alt +'" ' + elemId + ' ' + elemClass + elemStyle + '/>'
+
     @staticmethod
     def route(uploadName):
         """
