@@ -6,6 +6,7 @@ from django.db import models
 
 # Our own models
 from about.models import Member, Committee
+from upload.models import Upload
 
 """
 news.models module.
@@ -45,8 +46,10 @@ class Post(models.Model):
     pub_date = models.DateTimeField('date published')
     # Link to the author that published the post
     author = models.ForeignKey(Member)
-     # Whether the post is published or not
+    # Whether the post is published or not
     published = models.BooleanField(default=False)
+    # An image linked to the post
+    image = models.ForeignKey(Upload, blank=True, default=None)
 
     @staticmethod
     def published_posts():
