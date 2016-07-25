@@ -1,6 +1,7 @@
 # Django modules
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.http import HttpResponse, HttpRequest, QueryDict
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Our own modules
 from news.models import Post
@@ -23,22 +24,48 @@ def index(request):
 
     TODO: Use a template to presents the posts
     """
-    published_posts = Post.published_posts().order_by('-pub_date')[:10]
-    context = {'posts_list' : published_posts}
-    return render(request, 'news/index.dtl', context)
+    posts = Post.published_posts().order_by('-pub_date')
+
+    # Render paginated page
+    return paginated_index(request, posts)
 
 def index_from_year(request, year):
     """
     Shows the posts from the year specified in the year parameter.
     """
-    published_posts = Post.published_posts_by_year(year)[:10]
-    return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
+    posts = Post.published_posts_by_year(year)
+
+    # Render paginated page
+    return paginated_index(request, post)
+
+def paginated_index(request, posts):
+    """
+    Paginated index function, this is called by the / pattern from news.urls.
+
+    This function expects a list of posts and a QueryDict connected to the
+    request object and will attempt to create a paginated page of the posts.
+    """
+    # Take parameters from querystring we're interested in.
+    count = request.GET.get('antal', 10)
+    page = request.GET.get('sida', 1)
+
+    paginator = Paginator(posts, count)
+
+    # Try set the context to a paginated page.
+    try:
+        context = { 'posts_list' : paginator.page(page) }
+    except PageNotAnInteger:
+        context = { 'posts_list' : paginator.page(1) }
+    except EmptyPage:
+        context = { 'posts_list' : paginator.page(paginator.num_pages) }
+
+    return render(request, 'news/index.dtl', context)
 
 def index_from_date(request, year, month):
     """
     Shows the posts from a specific day.
     """
-    published_posts = Post.by_month(year, month)[:10]
+    published_posts = Post.by_month(year, month)
     return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
 
 def item(request, post_id):
