@@ -1,11 +1,11 @@
 ################################################################################
-# Copyright (c) 2015, DNollK
+# Copyright (c) 2016, DNollK
 #
 # This project is created by members and former members in the Reception
 # Committee at Computer Science program at Chalmers University.
 #
 # This project is released open source and available to everyone at
-# http://github.com/Jassob/DNollK.se.
+# http://github.com/dtekcth/DNollK.se.
 ################################################################################
 
 # TEAM

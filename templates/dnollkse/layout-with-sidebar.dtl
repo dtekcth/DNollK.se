@@ -4,7 +4,6 @@
 
 <!-- Site
 ————————————————————————————————————————————————-->
-{% block title %}DNollK 2015{% endblock title %}
 
 {% block base-js %}
   <script src="{% static "js/jquery.min.js" %}"></script>
@@ -81,9 +80,6 @@
       <iframe src="http://snapwidget.com/in/?u=ZG5vbGxrfGlufDEyNXwzfDN8fHllc3w1fG5vbmV8b25TdGFydHx5ZXN8eWVz&ve=260715"
               title="Instagram Widget"
               class="snapwidget-widget"
-              allowTransparency="true"
-              frameborder="0"
-              scrolling="no"
               style="border:none; overflow:hidden; width:100%;">
       </iframe>
     </div>

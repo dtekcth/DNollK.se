@@ -4,7 +4,6 @@
 
 <!-- Site
 ————————————————————————————————————————————————-->
-{% block title %}DNollK 2015{% endblock title %}
 
 {% block base-js %}
   <script src="{% static "dnollkse/js/functions.js" %}"></script>
@@ -20,9 +19,7 @@
 
 <!-- Description, shows up as a snippet in search engine results, I think
 ———————————————————————————————————————————————————————————————————————-->
-{% block description %}
-  DataNollans hem trygga hamn under mottagningen 2015
-{% endblock description %}
+{% block description %}DataNollans hem trygga hamn under mottagningen {% now "Y" %}{% endblock description %}
 
 <!-- Header of the content part of the page
 ——————————————————————————————————————————————-->

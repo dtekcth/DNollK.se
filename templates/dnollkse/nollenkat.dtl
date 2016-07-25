@@ -1,13 +1,12 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block title %}Nollenkät - DNollK 2015{% endblock title %}
+{% block page %}Nolldeklaration{% endblock page %}
 
 {% block content %}
   <div class="card center" style="min-height: 60rem">
-    <h1><b>Nollenkät</b></h1>
-    <p style="max-width: 760px; margin: 1.2rem auto; text-align: left">För att vi ska kunna placera er i bra phaddergrupper, med andra Nollan och phaddrar som ni passar bra ihop med, är det viktigt att ni fyller i <a href="http://www.tinyurl.com/datanollan">Nollenkäten</a> så vi vet mer om vilka ni är och vad ni har för intressen. <br>
-      Länken tar dig till en fullskärmsvariant av formuläret nedan.</p>
+    <h1><b>Nolldeklaration</b></h1>
+    <p>För att vi ska kunna placera er i bra phaddergrupper, med andra Nollan och phaddrar som ni passar bra ihop med, är det viktigt att ni fyller i <a href="http://www.tinyurl.com/datanollan16">Nolldeklarationen</a> så vi vet mer om vilka ni är och vad ni har för intressen. Länken tar dig till en fullskärmsvariant av formuläret nedan.</p>
 
-    <iframe class="center" src="https://docs.google.com/forms/d/1kUvKKph9Bx0Pa1oKciRHb3WCHb6-Rl5upXMGgd0TPyE/viewform" width="760" height="3200" framborder="0" marginheight="0" marginwidth="0" />
+    <iframe style="width: 100%; height: 800px;" class="center" src="http://tinyurl.com/datanollan16" framborder="0" marginheight="0" marginwidth="0" width="100%"/>
   </div>
 {% endblock content %}

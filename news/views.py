@@ -23,10 +23,23 @@ def index(request):
 
     TODO: Use a template to presents the posts
     """
-
-    allPublishedPosts = Post.publishedPosts().order_by('-pub_date')[:10]
-    context = {'posts_list' : allPublishedPosts}
+    published_posts = Post.published_posts().order_by('-pub_date')[:10]
+    context = {'posts_list' : published_posts}
     return render(request, 'news/index.dtl', context)
+
+def index_from_year(request, year):
+    """
+    Shows the posts from the year specified in the year parameter.
+    """
+    published_posts = Post.published_posts_by_year(year)[:10]
+    return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
+
+def index_from_date(request, year, month):
+    """
+    Shows the posts from a specific day.
+    """
+    published_posts = Post.by_month(year, month)[:10]
+    return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
 
 def item(request, post_id):
     """
@@ -40,9 +53,8 @@ def item(request, post_id):
 
     TODO: Use a template to present the post
     """
-
     try:
-        post = Post.publishedPosts().get(id=post_id)
+        post = Post.published_posts().get(id=post_id)
         content = "Posts article: %s<br> %s"
         return HttpResponse(content % (post_id,post.content))
     except Post.DoesNotExist:
@@ -58,10 +70,9 @@ def latest(request):
 
     TODO: Use a template to display the latest post
     """
-
     try:
-        latestPost = Post.publishedPosts().latest('pub_date')
-        return HttpResponse("%s <br> %s" % (latestPost.title, latestPost.content))
+        latest_post = Post.published_posts().latest('pub_date')
+        return HttpResponse("%s <br> %s" % (latest_post.title, latest_post.content))
     except Post.DoesNotExist:
         return HttpResponse("No posts yet!")
 
@@ -69,5 +80,5 @@ def rss(request):
     """
     Retrieves all posts and renders them in a rss xml fashion.
     """
-    posts = Post.publishedPosts().order_by('-pub_date')
+    posts = Post.published_posts().order_by('-pub_date')
     return render(request, 'news/feed.dtl', { 'posts' : posts })

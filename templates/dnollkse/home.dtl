@@ -1,6 +1,6 @@
 {% extends "dnollkse/layout-with-sidebar.dtl" %}
 
-{% block title %}Start - DNollK 2015{% endblock title %}
+{% block page%}Start{% endblock page %}
 
 {% block content %}
   <div class="eight columns">
