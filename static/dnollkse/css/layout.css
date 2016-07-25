@@ -109,8 +109,7 @@ body,
 
 #content.pushed {
     position: absolute;
-    left: 115%;
-    left: translate3d(115%, 0, 0);/*115%;*/
+    left: translate3d(115%, 0, 0);
     transition: all 0.7s ease-in-out;
 }
 
