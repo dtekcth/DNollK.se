@@ -36,7 +36,7 @@ def index_from_year(request, year):
     posts = Post.published_posts_by_year(year)
 
     # Render paginated page
-    return paginated_index(request, post)
+    return paginated_index(request, posts)
 
 def paginated_index(request, posts):
     """
