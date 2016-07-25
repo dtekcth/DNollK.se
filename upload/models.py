@@ -52,12 +52,6 @@ class Upload(models.Model):
         self.photo.name = self.name + '.' + ext
         super(Upload, self).save(*args, **kwargs)
 
-    def url(self, *args, **kwargs):
-        """
-        Returns the URL to the uploaded photo.
-        """
-        return settings.MEDIA_URL + self.photo.name
-
     def render(self, **kwargs):
         """
         Returns an HTML img element with the uploaded image.
@@ -80,7 +74,7 @@ class Upload(models.Model):
         if iStyle != None:
             elemStyle = 'style="' + iStyle + '"'
 
-        return '<img src="' + self.url() + '" alt="' + self.alt +'" ' + elemId + ' ' + elemClass + elemStyle + '/>'
+        return '<img src="' + self.photo.url + '" alt="' + self.alt +'" ' + elemId + ' ' + elemClass + elemStyle + '/>'
 
     @staticmethod
     def route(uploadName):
