@@ -115,7 +115,6 @@
       {% endblock footer %}
     </footer>
   </div> <!-- end footer -->
-  </div> <!-- end band -->
 
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

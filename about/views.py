@@ -1,10 +1,13 @@
-from datetime import datetime
-from django.shortcuts import render
+# System modules
 from django.http import HttpResponse
-from about.models import Committee, Member
+from django.shortcuts import render
 from django.template import RequestContext
-
+from datetime import datetime
 import collections
+
+# Our models
+from about.models import Committee, Member
+from upload.models import Upload
 
 def dnollk(request):
     """
@@ -47,7 +50,7 @@ def brage(request):
     """
     Presents Brage in all his glory and might!
     """
-    return render(request, "about/brage.dtl", {})
+    return render(request, "about/brage.dtl", { 'brage' : Upload.objects.get(name='brage') })
 
 def donk(request):
     """
@@ -57,7 +60,7 @@ def donk(request):
     These committees and their members are then used as parameters to
     "about/donk.dtl template".
     """
-    committees = Committee.objects.filter(name__startswith="DNollK-").order_by("-name")
+    committees = Committee.objects.filter(name__startswith="DNollK-").order_by("-name")[1:]
     f = {}
     for com in committees:
         f[com] = Member.get_by_committee(com)

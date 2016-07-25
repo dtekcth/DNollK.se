@@ -3,6 +3,8 @@
 {% block page %}Nyheter{% endblock page %}
 
 {% load staticfiles %}
+{% load upload_tags %}
+
 {% block css %}
   <link href="{% static "news/css/news.css" %}" rel="stylesheet">
 {% endblock css %}
@@ -29,7 +31,13 @@
             <p class="pub_date">{{ post.pub_date.date }}</p>
           </header>
           <hr class="header">
-          <div class="post-content">{{ post.content|safe }}</div>
+          <div class="post-content">
+	      {{ post.content|safe }}
+
+	      {% if post.image %}
+		  {% render_image post.image %}
+	      {% endif %}
+	  </div>
           <p class="post-footer">Skrivet av {{ post.author.nick }}, {{ post.pub_date }}</p>
         </article> <!-- end of article -->
 

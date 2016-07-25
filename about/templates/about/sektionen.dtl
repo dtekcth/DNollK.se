@@ -3,6 +3,7 @@
 {% block page %}Om Sektionen{% endblock page %}
 
 {% load staticfiles %}
+{% load upload_tags %}
 
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static "about/css/style.css" %}"/>
@@ -45,7 +46,7 @@
         </table>
       </div>
       {% if com.image %}
-          <img src="{{ com.image.url }}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
+	  {% render_image com.image cls='committee-img center' %}
       {% endif %}
       <div class="linkWrapper twelve columns">
           <a class="top-link" href="#top"><strong> &uarr; Hoppa till topp</strong></a>
