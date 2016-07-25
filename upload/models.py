@@ -56,7 +56,7 @@ class Upload(models.Model):
         """
         Returns the URL to the uploaded photo.
         """
-        return '/uploads/' + self.photo.name
+        return settings.MEDIA_URL + self.photo.name
 
     def render(self, **kwargs):
         """
