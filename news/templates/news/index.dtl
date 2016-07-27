@@ -42,6 +42,22 @@
         </article> <!-- end of article -->
 
       {% endfor %} <!-- ends the for each -->
+      <footer>
+	  {% if posts_list.has_previous %}
+	  <div class="btn u-pull-left page navigation">
+	      <a href="?sida={{ posts_list.previous_page_number }}&antal="{{ count }}">
+		  <img src="{% static "news/img/previous.png" %}">
+	      </a>
+	  </div>
+	  {% endif %}
+	  {% if posts_list.has_next %}
+	  <div class="btn u-pull-right page navigation">
+	      <a href="?sida={{ posts_list.next_previous_page_number }}&antal={{ count }}">
+		  <img src="{% static "news/img/next.png" %}">
+	      </a>
+	  {% endif %}
+	  </div>
+      </footer>
     </section> <!-- end of newssection -->
 
   {% else %}
