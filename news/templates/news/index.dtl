@@ -55,8 +55,8 @@
 	      <a href="?sida={{ posts_list.next_previous_page_number }}&antal={{ count }}">
 		  <img src="{% static "news/img/next.png" %}">
 	      </a>
-	  {% endif %}
 	  </div>
+	  {% endif %}
       </footer>
     </section> <!-- end of newssection -->
 
