@@ -45,7 +45,7 @@ def index_from_date(request, year, month):
     Shows the posts from a specific day.
     """
     published_posts = Post.by_month(year, month)
-    return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
+    return render(request, 'news/index.dtl', { 'items' : published_posts })
 
 def paginated_news_index(request, posts):
     """
