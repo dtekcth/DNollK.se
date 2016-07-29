@@ -19,6 +19,7 @@ class EventAdmin(admin.ModelAdmin):
     """
     model = Event
     change_form_template = 'events/admin/change_form.html'
+    list_filter = ['date']
 
 # Register the models in our admin view
 admin.site.register(Event, EventAdmin)
