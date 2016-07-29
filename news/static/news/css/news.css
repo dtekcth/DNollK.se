@@ -69,6 +69,17 @@ article.post img {
     width: 100%;
 }
 
+/* Mobile version */
+.page.navigation {
+    width: 50%;
+}
+
+@media (min-width: 550px) {
+    .page.navigation {
+	width: 25%;
+    }
+}
+
 .page.navigation img {
     width: 100%;
 }
