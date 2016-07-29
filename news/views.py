@@ -1,10 +1,12 @@
 # Django modules
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.http import HttpResponse, HttpRequest, QueryDict
+from django.http import HttpResponse
 from django.shortcuts import render
 
 # Our own modules
 from news.models import Post
+
+# Import our paginated_index
+from dnollkse.views import paginated_index
 
 """
 news.views module.
@@ -27,7 +29,7 @@ def index(request):
     posts = Post.published_posts().order_by('-pub_date')
 
     # Render paginated page
-    return paginated_index(request, posts)
+    return paginated_news_index(request, posts)
 
 def index_from_year(request, year):
     """
@@ -36,30 +38,7 @@ def index_from_year(request, year):
     posts = Post.published_posts_by_year(year)
 
     # Render paginated page
-    return paginated_index(request, posts)
-
-def paginated_index(request, posts):
-    """
-    Paginated index function, this is called by the / pattern from news.urls.
-
-    This function expects a list of posts and a QueryDict connected to the
-    request object and will attempt to create a paginated page of the posts.
-    """
-    # Take parameters from querystring we're interested in.
-    count = request.GET.get('antal', 10)
-    page = request.GET.get('sida', 1)
-
-    paginator = Paginator(posts, count)
-
-    # Try set the context to a paginated page.
-    try:
-        context = { 'posts_list' : paginator.page(page) }
-    except PageNotAnInteger:
-        context = { 'posts_list' : paginator.page(1) }
-    except EmptyPage:
-        context = { 'posts_list' : paginator.page(paginator.num_pages) }
-
-    return render(request, 'news/index.dtl', context)
+    return paginated_news_index(request, posts)
 
 def index_from_date(request, year, month):
     """
@@ -67,6 +46,12 @@ def index_from_date(request, year, month):
     """
     published_posts = Post.by_month(year, month)
     return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
+
+def paginated_news_index(request, posts):
+    """
+    Wraps the generic dnollkse.views.paginated_index to a news-specific function.
+    """
+    return paginated_index(request, posts, 'news/index.dtl', 'items')
 
 def item(request, post_id):
     """
@@ -108,4 +93,4 @@ def rss(request):
     Retrieves all posts and renders them in a rss xml fashion.
     """
     posts = Post.published_posts().order_by('-pub_date')
-    return render(request, 'news/feed.dtl', { 'posts' : posts })
+    return render(request, 'news/feed.dtl', { 'items' : posts })
