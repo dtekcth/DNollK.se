@@ -1,0 +1,27 @@
+{% extends "dnollkse/layout-with-sidebar.dtl" %}
+
+{% load static %}
+
+{% block content %}
+    <div id="page" class="eight columns">
+	{% block paginated_content %}
+	{% endblock paginated_content %}
+
+	<nav>
+	    {% if items.has_previous %}
+		<div class="u-pull-left page navigation">
+		    <a href="?sida={{ items.previous_page_number }}&antal={{ items.object_list|length }}">
+			<img src="{% static "dnollkse/images/previous.png" %}">
+		    </a>
+		</div>
+	    {% endif %}
+	    {% if items.has_next %}
+		<div class="u-pull-right page navigation">
+		    <a href="?sida={{ items.next_page_number }}&antal={{ items.object_list|length }}">
+			<img src="{% static "dnollkse/images/next.png" %}">
+		    </a>
+		</div>
+	    {% endif %}
+	</nav>
+    </div>
+{% endblock content %}

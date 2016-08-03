@@ -1,4 +1,4 @@
-{% extends 'dnollkse/layout-with-sidebar.dtl' %}
+{% extends 'dnollkse/paginated-layout-with-sidebar.dtl' %}
 
 {% block page %}Nyheter{% endblock page %}
 
@@ -13,15 +13,15 @@
   <script src="{% static "news/js/posts.js" %}"></script>
 {% endblock js %}
 
-{% block content %}
+{% block paginated_content %}
   <!-- Start of news content -->
 
-  {% if posts_list %}
+  {% if items %}
 
-    <section class="newssection eight columns">
+    <section class="newssection">
 
       <!-- creates an article element of every post -->
-      {% for post in posts_list %}
+      {% for post in items %}
 
         <!-- start of a news article / post -->
         <article id="post-{{ post.id }}" class="card post">
@@ -45,10 +45,10 @@
     </section> <!-- end of newssection -->
 
   {% else %}
-    <div class="newssection eight columns card">
+    <div class="newssection card">
       <h3>Det finns inga nyheter att visa :/</h3>
     </div>
   {% endif %}
 
 <!-- end of news content -->
-{% endblock content %}
+{% endblock paginated_content %}

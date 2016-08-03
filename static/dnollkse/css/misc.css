@@ -74,3 +74,18 @@ a:hover { text-decoration: underline; }
     text-shadow: 0 0 0.7rem #fa6607;
     color: #fa6607;
 }
+
+/* Mobile version */
+.page.navigation {
+    width: 50%;
+}
+
+@media (min-width: 550px) {
+    .page.navigation {
+	width: 25%;
+    }
+}
+
+.page.navigation img {
+    width: 100%;
+}

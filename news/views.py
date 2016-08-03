@@ -1,9 +1,12 @@
 # Django modules
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
 
 # Our own modules
 from news.models import Post
+
+# Import our paginated_index
+from dnollkse.views import paginated_index
 
 """
 news.views module.
@@ -23,23 +26,32 @@ def index(request):
 
     TODO: Use a template to presents the posts
     """
-    published_posts = Post.published_posts().order_by('-pub_date')[:10]
-    context = {'posts_list' : published_posts}
-    return render(request, 'news/index.dtl', context)
+    posts = Post.published_posts().order_by('-pub_date')
+
+    # Render paginated page
+    return paginated_news_index(request, posts)
 
 def index_from_year(request, year):
     """
     Shows the posts from the year specified in the year parameter.
     """
-    published_posts = Post.published_posts_by_year(year)[:10]
-    return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
+    posts = Post.published_posts_by_year(year)
+
+    # Render paginated page
+    return paginated_news_index(request, posts)
 
 def index_from_date(request, year, month):
     """
     Shows the posts from a specific day.
     """
-    published_posts = Post.by_month(year, month)[:10]
-    return render(request, 'news/index.dtl', { 'posts_list' : published_posts })
+    published_posts = Post.by_month(year, month)
+    return render(request, 'news/index.dtl', { 'items' : published_posts })
+
+def paginated_news_index(request, posts):
+    """
+    Wraps the generic dnollkse.views.paginated_index to a news-specific function.
+    """
+    return paginated_index(request, posts, 'news/index.dtl', 'items')
 
 def item(request, post_id):
     """
@@ -81,4 +93,4 @@ def rss(request):
     Retrieves all posts and renders them in a rss xml fashion.
     """
     posts = Post.published_posts().order_by('-pub_date')
-    return render(request, 'news/feed.dtl', { 'posts' : posts })
+    return render(request, 'news/feed.dtl', { 'items' : posts })
