@@ -57,7 +57,7 @@ class Post(models.Model):
         Retrieves all published posts from the current year.
         """
         year = date.today().year
-        return Post.published_posts_by_year(year).reverse()
+        return Post.published_posts_by_year(year)
 
     @staticmethod
     def published_posts_by_year(year):
@@ -73,7 +73,7 @@ class Post(models.Model):
 
         All it does is filters out the unpublished posts.
         """
-        return Post.objects.filter(published=True).order_by("pub_date")
+        return Post.objects.filter(published=True).order_by("-pub_date")
 
     @staticmethod
     def by_month(year, month):
