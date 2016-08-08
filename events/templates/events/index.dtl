@@ -2,6 +2,9 @@
 
 {% block page %}Arrangemang{% endblock page %}
 
+{% block next_page_text %}Nästa sida{% endblock next_page_text %}
+{% block previous_page_text %}Föregående sida{% endblock previous_page_text %}
+
 {% block paginated_content %}
   <div class="eventWrapper">
     <div class="card center">
