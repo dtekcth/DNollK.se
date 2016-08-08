@@ -75,17 +75,11 @@ a:hover { text-decoration: underline; }
     color: #fa6607;
 }
 
-/* Mobile version */
-.page.navigation {
-    width: 50%;
+.page.navigation .page.link span {
+    text-decoration: none;
+    color: #1e1e1e;
 }
 
-@media (min-width: 550px) {
-    .page.navigation {
-	width: 25%;
-    }
-}
-
-.page.navigation img {
-    width: 100%;
+.page.navigation .page.link svg {
+    vertical-align: middle;
 }
