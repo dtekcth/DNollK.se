@@ -15,11 +15,24 @@ function toggleSidebar() {
 
 $( document ).ready(function() {
 
-  // We like haskell! :D
+  // Calculate the height of the mobile navigation menu.
   var h = $('.primary > ul').height();
 
-  $('.primary > ul').get(0).style.height = "0rem";
+  /*
+   * If viewport width is less than 550 pixels,
+   * we are in mobile view and we would like to hide
+   * the navbar.
+   */
+  if (document.documentElement.clientWidth < 550) {
+    $('.primary > ul').get(0).style.height = "0rem"
+  };
 
+  /*
+   * Click handler for #nav-btn.
+   * Toggles the mobile navigation menu by changing the height.
+   * Thanks to changing from and to a fixed value we can use CSS
+   * transitions.
+   */
   $('#nav-btn').click(function() {
     if ($('.primary > ul').get(0).style.height == "0rem") {
       setTimeout(function() {
