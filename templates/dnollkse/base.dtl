@@ -61,8 +61,7 @@
               <img src="{% static "dnollkse/images/menu.svg" %}"
                    alt="meny"
                    onclick="toggleSidebar()"/>
-              <p id="nav-btn"
-                 onclick="navbarClick()">Navigation ▼</p>
+              <p id="nav-btn">Navigation ▼</p>
             </div>
             {% block navigation %}
               <ul>
