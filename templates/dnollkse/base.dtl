@@ -47,7 +47,7 @@
     <div class="row">
       {% block header %}
         <!-- Header image -->
-        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
+        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK'16 och deras leenden">
         <!-- header container
         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
         <header class="u-full-width header">
