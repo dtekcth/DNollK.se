@@ -1,11 +1,12 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block title %}Om Brage - DNollK 2015{% endblock title %}
+{% block page %}Om Brage{% endblock page %}
 
 {% load staticfiles %}
+{% load upload_tags %}
 
 {% block content %}
   <div class="card">
-    <img src="{% static 'about/img/brage.gif' %}" alt="BRAGE" style="margin: 0 auto; display:block; width: 30rem;"/>
+    {% render_image brage style='margin: 0 auto; display: block; width: 30rem;' %}
   </div>
 {% endblock content %}

@@ -2,9 +2,9 @@ from django.contrib import admin
 
 from .models import Member, Committee
 
-class MemberInline(admin.TabularInline):
+class MemberInline(admin.StackedInline):
     model = Member
-    extra = 6
+    extra = 1
 
 class CommitteeAdmin(admin.ModelAdmin):
     """

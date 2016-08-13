@@ -5,12 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>
-    {% block title %}{% endblock title%}
-  </title>
-  <meta name="description"
-        content="{% block description %}
-                 {% endblock description %}">
+  <title>{% block title %}{% block page %}EDIT PAGE VARIABLE{% endblock page %} - DNollK {% now "Y" %}{% endblock title%}</title>
+  <meta name="description" content="{% block description %}{% endblock description %}">
 
   {% load staticfiles %}
   <meta name="author" content="{% static 'humans.txt' %}">
@@ -51,7 +47,7 @@
     <div class="row">
       {% block header %}
         <!-- Header image -->
-        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK' 15 och deras ryggar">
+        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK'16 och deras leenden">
         <!-- header container
         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
         <header class="u-full-width header">
@@ -65,13 +61,12 @@
               <img src="{% static "dnollkse/images/menu.svg" %}"
                    alt="meny"
                    onclick="toggleSidebar()"/>
-              <p id="nav-btn"
-                 onclick="navbarClick()">Navigation ▼</p>
+              <p id="nav-btn">Navigation ▼</p>
             </div>
             {% block navigation %}
               <ul>
                 <li><a href="{% url "news" %}">startsida</a></li>
-                <li><a href="{% url "nollenkat" %}">nollenkät</a></li>
+                <li><a href="{% url "nollenkat" %}">nolldeklaration</a></li>
                 <li><a href="{% url "schedule" %}">schema</a></li>
                 <li><a href="{% url "events" %}">arr</a></li>
                 <li><a href="{% url "documents" %}">dokument</a></li>
@@ -119,7 +114,6 @@
       {% endblock footer %}
     </footer>
   </div> <!-- end footer -->
-  </div> <!-- end band -->
 
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -100,16 +100,16 @@ body,
 
 #content {
     position: absolute;
-    left: 0px;
+    left: translate3d(0, 0, 0);
     
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out 0.1s;
 
     width: 100%;
 }
 
 #content.pushed {
     position: absolute;
-    left: 450px;
+    left: translate3d(115%, 0, 0);
     transition: all 0.7s ease-in-out;
 }
 
@@ -191,14 +191,14 @@ body,
     }
 
     .header .logo {
-        margin-top: -10rem;
+        margin-top: -10.2vw;
         margin-left: 1rem;
     }
 }
 
 @media (min-width: 750px) {
     .header .logo {
-        margin-top: -14rem;
+        margin-top: -10.2vw;
         margin-left: 1rem;
     }
 }
@@ -224,9 +224,7 @@ body,
     position: relative;
     margin: 0;
 
-    padding: 1.2rem;
-
-    display: none;
+    transition: all 0.4s ease-in-out;
 }
 
 .header nav.primary p {
@@ -359,7 +357,7 @@ Styling for the sidebar
 #sidebar {
     position: absolute;
 
-    left: -450px;
+    left: -115%;
 
     transition: all 0.7s ease-in-out;
 }
@@ -368,7 +366,7 @@ Styling for the sidebar
     position: absolute;
     left: 0px;
 
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out 0.1s;
 }
 
 .social {
