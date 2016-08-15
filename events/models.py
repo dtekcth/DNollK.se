@@ -23,13 +23,13 @@ class Event(models.Model):
         creates a singleton list with that event.
         """
         if year == None:
-            events = Event.objects.order_by('date')
+            events = Event.objects.all
         elif len(year) != 4:
             raise ValueError("year must be of form YYYY")
         else:
             events = Event.objects.filter(date__year=year)
 
-        return Event.group_by_date(events)
+        return Event.group_by_date(events.order_by('date'))
 
     @staticmethod
     def get_grouped_by_date():
