@@ -7,11 +7,11 @@
 
 {% block base-js %}
   <script src="{% static "js/jquery.min.js" %}"></script>
-  <script src="{% static "dnollkse/js/functions.js" %}"></script>
   <script src="{% static "js/moment.min.js" %}"></script>
   <script src="{% static "js/fullcalendar.min.js" %}"></script>
   <script src="{% static "js/lang/sv.js" %}"></script>
   <script src="{% static "js/gcal.js" %}"></script>
+  <script src="{% static "dnollkse/js/functions.js" %}"></script>
   {% block js %}
   {% endblock js %}
 {% endblock base-js %}
