@@ -1,6 +1,6 @@
 <rss version="2.0">
   <channel>
-    <title>Nyheter - DNollK 2015</title>
+    <title>Nyheter - DNollK {% now "Y" %}</title>
     <link>http://dnollk.se/nyheter</link>
     <description>Nyheter från DNollK, Datateknologsektionens NollKommitte</description>
     <language>Swedish</language>

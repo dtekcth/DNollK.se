@@ -1,15 +1,16 @@
 {% extends "dnollkse/layout.dtl" %}
 
-{% block title %}Om Sektionen - DNollK 2015{% endblock title %}
+{% block page %}Om Sektionen{% endblock page %}
 
 {% load staticfiles %}
+{% load upload_tags %}
 
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static "about/css/style.css" %}"/>
 {% endblock css %}
 
 {% block content %}
-    
+
   <div class="card center">
     <header>
       <h2>Datateknologsektionen</h2>
@@ -34,7 +35,7 @@
         <table>
           {% for member in members %}
             <tr>
-              {% if member.nick == "NULL" %}
+              {% if not member.nick %}
                 <td>{{ member.get_full_name }}</td>
               {% else %}
                 <td>{{ member.get_full_name_with_nick }}</td>
@@ -44,13 +45,11 @@
           {% endfor %}
         </table>
       </div>
-      {% if com.image != "NULL" %}
-        {% with image_url="about/img/"|add:com.image %}
-          <img src="{% static image_url %}" alt="Profilbild för {{ com.name }}" class="committee-img center"/>
-        {% endwith %}
+      {% if com.image %}
+	  {% render_image com.image cls='committee-img center' %}
       {% endif %}
       <div class="linkWrapper twelve columns">
-        <a class="top-link" href="#top"><strong> &uarr; Hoppa till topp</strong></a>
+          <a class="top-link" href="#top"><strong> &uarr; Hoppa till topp</strong></a>
       </div>
     </div>
   {% endfor %}

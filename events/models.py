@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 import itertools
 
@@ -11,17 +12,60 @@ class Event(models.Model):
     def __str__(self):
         return self.name
 
+    @staticmethod
+    def get_grouped_by_date_and_year(year):
+        """
+        Retrieves all events grouped by date from the given year.
+
+        Iterates all events and checks if the date of that event exists in
+        grouped_events.
+        If that is the case it appends the event to that list, otherwise it
+        creates a singleton list with that event.
+        """
+        if year == None:
+            events = Event.objects.all
+        elif len(year) != 4:
+            raise ValueError("year must be of form YYYY")
+        else:
+            events = Event.objects.filter(date__year=year)
+
+        return Event.group_by_date(events.order_by('date'))
+
+    @staticmethod
     def get_grouped_by_date():
+        """
+        Retrieves all events grouped by date from the current year.
+
+        Iterates all events and checks if the date of that event exists in
+        grouped_events.
+        If that is the case it appends the event to that list, otherwise it
+        creates a singleton list with that event.
+        """
+        year = str(datetime.now().year)
+        return Event.get_grouped_by_date_and_year(year)
+
+    @staticmethod
+    def get_all_grouped_by_date():
         """
         Retrieves all events grouped by date.
 
-        Iterates all events and checks if the date of that event exists in grouped_events.
-        If that is the case it appends the event to that list, otherwise it creates a singleton
-        list with that event.
+        Iterates all events and checks if the date of that event exists in
+        grouped_events.
+        If that is the case it appends the event to that list, otherwise it
+        creates a singleton list with that event.
         """
-        grouped_events = []
-        all_events = Event.objects.order_by('date')
+        return Event.get_grouped_by_date_and_year(None)
 
-        for date, event_list in itertools.groupby(all_events, lambda e: e.date.date()):
-            grouped_events.append(list(event_list))
-        return grouped_events
+    @staticmethod
+    def group_by_date(es):
+        """
+        Groups a list of event by date.
+        The returned structure is a list of list of events where every list of
+        events contains events from one date.
+        """
+        eList = []
+
+        for d, es_by_date in itertools.groupby(es, lambda e: e.date.date()):
+            eList.append(list(es_by_date))
+
+        return eList
