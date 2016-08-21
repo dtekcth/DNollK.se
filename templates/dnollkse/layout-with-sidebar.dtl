@@ -22,11 +22,6 @@
   {% endblock css %}
 {% endblock base-css %}
 
-<!-- Description, shows up as a snippet in search engine results, I think
-———————————————————————————————————————————————————————————————————————-->
-{% block description %}
-  DataNollans hem trygga hamn under mottagningen 2015
-{% endblock description %}
 {% block sidebar-button %}
    	<img src="{% static "dnollkse/images/menu.svg" %}"
 	     alt="meny" onclick="toggleSidebar()"/>

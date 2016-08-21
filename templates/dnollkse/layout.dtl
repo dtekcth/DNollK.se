@@ -17,10 +17,6 @@
   {% endblock css %}
 {% endblock base-css %}
 
-<!-- Description, shows up as a snippet in search engine results, I think
-———————————————————————————————————————————————————————————————————————-->
-{% block description %}DataNollans hem trygga hamn under mottagningen {% now "Y" %}{% endblock description %}
-
 <!-- Header of the content part of the page
 ——————————————————————————————————————————————-->
 

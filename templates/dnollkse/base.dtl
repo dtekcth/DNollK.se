@@ -6,7 +6,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>{% block title %}{% block page %}EDIT PAGE VARIABLE{% endblock page %} - DNollK {% now "Y" %}{% endblock title%}</title>
-  <meta name="description" content="{% block description %}{% endblock description %}">
+  <meta name="description" content="{% block description %}DataNollans hem trygga hamn under mottagningen {% now "Y" %}{% endblock description %}">
 
   {% load staticfiles %}
   <meta name="author" content="{% static 'humans.txt' %}">
@@ -54,7 +54,7 @@
           <!-- Logo -->
           <img class="two columns u-pull-left logo"
                src="{% static "dnollkse/images/logo.png" %}"
-               alt="DNollK '15's logga">
+               alt="DNollKs logga">
           <!-- navbar -->
           <nav id="top" class="ten columns u-pull-right primary">
 	    <div class="mobile-nav">
