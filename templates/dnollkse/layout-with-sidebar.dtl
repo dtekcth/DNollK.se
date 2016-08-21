@@ -4,15 +4,14 @@
 
 <!-- Site
 ————————————————————————————————————————————————-->
-{% block title %}DNollK 2015{% endblock title %}
 
 {% block base-js %}
   <script src="{% static "js/jquery.min.js" %}"></script>
-  <script src="{% static "dnollkse/js/functions.js" %}"></script>
   <script src="{% static "js/moment.min.js" %}"></script>
   <script src="{% static "js/fullcalendar.min.js" %}"></script>
   <script src="{% static "js/lang/sv.js" %}"></script>
   <script src="{% static "js/gcal.js" %}"></script>
+  <script src="{% static "dnollkse/js/functions.js" %}"></script>
   {% block js %}
   {% endblock js %}
 {% endblock base-js %}
@@ -23,11 +22,10 @@
   {% endblock css %}
 {% endblock base-css %}
 
-<!-- Description, shows up as a snippet in search engine results, I think
-———————————————————————————————————————————————————————————————————————-->
-{% block description %}
-  DataNollans hem trygga hamn under mottagningen 2015
-{% endblock description %}
+{% block sidebar-button %}
+   	<img src="{% static "dnollkse/images/menu.svg" %}"
+	     alt="meny" onclick="toggleSidebar()"/>
+{% endblock sidebar-button %}
 
 <!-- Sidebar to the left of the page
 ——————————————————————————————————————————————-->
@@ -81,9 +79,6 @@
       <iframe src="http://snapwidget.com/in/?u=ZG5vbGxrfGlufDEyNXwzfDN8fHllc3w1fG5vbmV8b25TdGFydHx5ZXN8eWVz&ve=260715"
               title="Instagram Widget"
               class="snapwidget-widget"
-              allowTransparency="true"
-              frameborder="0"
-              scrolling="no"
               style="border:none; overflow:hidden; width:100%;">
       </iframe>
     </div>

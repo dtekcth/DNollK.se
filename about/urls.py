@@ -13,4 +13,6 @@ urlpatterns = [
     url(r'^sektionen/$', views.sektionen, name="sektionen"),
 
     url(r'^brage/$', views.brage, name="brage"),
+
+    url(r'^donk/$', views.donk, name="donk"),
 ]

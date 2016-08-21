@@ -1,19 +1,19 @@
 {% extends 'dnollkse/layout.dtl' %}
 {% load staticfiles %}
 {% block js %}
-  <script src="{% static "dnollkse/js/functions.js" %}"></script>
   <script src="{% static "js/jquery.min.js" %}"></script>
   <script src="{% static "js/moment.min.js" %}"></script>
   <script src="{% static "js/fullcalendar.min.js" %}"></script>
   <script src="{% static "js/lang/sv.js" %}"></script>
   <script src="{% static "js/gcal.js" %}"></script>
+  <script src="{% static "dnollkse/js/functions.js" %}"></script>
 {% endblock js %}
 
 {% block css %}
     <link rel="stylesheet" href="{% static "css/fullcalendar.min.css" %}">
 {% endblock css %}
 
-{% block title %}Schema - DNollK 2015{% endblock title %}
+{% block page %}Schema{% endblock page %}
 
 {% block content %}
   <div class="card center">
@@ -52,4 +52,3 @@
   {% block foot-js %}
   {% endblock foot-js %}
 {% endblock base-foot-js %}
-

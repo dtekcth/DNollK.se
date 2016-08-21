@@ -100,16 +100,16 @@ body,
 
 #content {
     position: absolute;
-    left: 0px;
+    left: translate3d(0, 0, 0);
     
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out 0.1s;
 
     width: 100%;
 }
 
 #content.pushed {
     position: absolute;
-    left: 450px;
+    left: translate3d(115%, 0, 0);
     transition: all 0.7s ease-in-out;
 }
 
@@ -191,7 +191,14 @@ body,
     }
 
     .header .logo {
-        margin-top: -10rem;
+        margin-top: -10.2vw;
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 750px) {
+    .header .logo {
+        margin-top: -10.2vw;
         margin-left: 1rem;
     }
 }
@@ -217,14 +224,12 @@ body,
     position: relative;
     margin: 0;
 
-    padding: 1.2rem;
-
-    display: none;
+    transition: all 0.4s ease-in-out;
 }
 
 .header nav.primary p {
     display: block;
-    width: 30%;
+    width: 70%;
 
     position: relative;
     top: 0.4rem;
@@ -237,8 +242,8 @@ body,
 }
 
 .header nav.primary img {
-    margin: 1.2rem 1.6rem;
-    height: 2.4rem;
+    margin: 1.4rem 1.4rem;
+    height: 1.8rem;
 
     position: absolute;
 
@@ -249,7 +254,7 @@ body,
     position: relative;
     list-style: inside none none;
 
-    padding: 1.2rem;
+    padding: 0.8rem;
 
     text-align: center;
 
@@ -296,15 +301,14 @@ ul li #about-menu {
         display: block;
 
         margin: 0;
-        margin-top: 2vw;
-
         padding: 0;
     }
 
     .header nav.primary ul li {
         display: inline-block;
 
-        padding: 0px 1vw;
+        padding: 1vw;
+        margin: 0;
 
         font-size: 1.4vw;
         font-family: 'Geomancy-Extra-Bold', sans-serif;
@@ -332,18 +336,17 @@ ul li #about-menu {
         display: block;
         position: absolute;
 
-        width: 40rem;
-
-        margin: 0;
-        margin-left: -17rem;
+        margin: 1rem -3rem;
 
         z-index: 100;
     }
 
     #about-menu li {
-        margin: 1rem;
+        display: block;
 
-        display: inline;
+        margin: 0;
+
+        padding: 1vw;
     }
 }
 
@@ -354,7 +357,7 @@ Styling for the sidebar
 #sidebar {
     position: absolute;
 
-    left: -450px;
+    left: -115%;
 
     transition: all 0.7s ease-in-out;
 }
@@ -363,7 +366,7 @@ Styling for the sidebar
     position: absolute;
     left: 0px;
 
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out 0.1s;
 }
 
 .social {

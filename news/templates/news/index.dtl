@@ -1,8 +1,10 @@
-{% extends 'dnollkse/layout-with-sidebar.dtl' %}
+{% extends 'dnollkse/paginated-layout-with-sidebar.dtl' %}
 
-{% block title %} Nyheter - DNollK 2015 {% endblock title %}
+{% block page %}Nyheter{% endblock page %}
 
 {% load staticfiles %}
+{% load upload_tags %}
+
 {% block css %}
   <link href="{% static "news/css/news.css" %}" rel="stylesheet">
 {% endblock css %}
@@ -11,15 +13,15 @@
   <script src="{% static "news/js/posts.js" %}"></script>
 {% endblock js %}
 
-{% block content %}
+{% block paginated_content %}
   <!-- Start of news content -->
-  
-  {% if posts_list %}
 
-    <section class="newssection eight columns">
+  {% if items %}
+
+    <section class="newssection">
 
       <!-- creates an article element of every post -->
-      {% for post in posts_list %}
+      {% for post in items %}
 
         <!-- start of a news article / post -->
         <article id="post-{{ post.id }}" class="card post">
@@ -29,18 +31,24 @@
             <p class="pub_date">{{ post.pub_date.date }}</p>
           </header>
           <hr class="header">
-          <div class="post-content">{{ post.content|safe }}</div>
+          <div class="post-content">
+	      {{ post.content|safe }}
+
+	      {% if post.image %}
+		  {% render_image post.image %}
+	      {% endif %}
+	  </div>
           <p class="post-footer">Skrivet av {{ post.author.nick }}, {{ post.pub_date }}</p>
         </article> <!-- end of article -->
-        
+
       {% endfor %} <!-- ends the for each -->
     </section> <!-- end of newssection -->
-    
+
   {% else %}
-    <div class="newssection eight columns card">
+    <div class="newssection card">
       <h3>Det finns inga nyheter att visa :/</h3>
     </div>
   {% endif %}
 
 <!-- end of news content -->
-{% endblock content %}
+{% endblock paginated_content %}
