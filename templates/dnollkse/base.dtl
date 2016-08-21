@@ -57,12 +57,11 @@
                alt="DNollK '15's logga">
           <!-- navbar -->
           <nav id="top" class="ten columns u-pull-right primary">
-            <div class="mobile-nav">
-              <img src="{% static "dnollkse/images/menu.svg" %}"
-                   alt="meny"
-                   onclick="toggleSidebar()"/>
-              <p id="nav-btn">Navigation ▼</p>
-            </div>
+	    <div class="mobile-nav">
+	      {% block sidebar-button %}
+	      {% endblock sidebar-button %}
+	      <p id="nav-btn">Navigation ▼</p>
+	    </div>
             {% block navigation %}
               <ul>
                 <li><a href="{% url "news" %}">startsida</a></li>

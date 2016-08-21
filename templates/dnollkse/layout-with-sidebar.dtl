@@ -27,6 +27,10 @@
 {% block description %}
   DataNollans hem trygga hamn under mottagningen 2015
 {% endblock description %}
+{% block sidebar-button %}
+   	<img src="{% static "dnollkse/images/menu.svg" %}"
+	     alt="meny" onclick="toggleSidebar()"/>
+{% endblock sidebar-button %}
 
 <!-- Sidebar to the left of the page
 ——————————————————————————————————————————————-->
