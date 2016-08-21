@@ -6,8 +6,8 @@
 ————————————————————————————————————————————————-->
 
 {% block base-js %}
-  <script src="{% static "dnollkse/js/functions.js" %}"></script>
   <script src="{% static "js/jquery.min.js" %}"></script>
+  <script src="{% static "dnollkse/js/functions.js" %}"></script>
   {% block js %}
   {% endblock js %}
 {% endblock base-js %}
@@ -16,10 +16,6 @@
   {% block css %}
   {% endblock css %}
 {% endblock base-css %}
-
-<!-- Description, shows up as a snippet in search engine results, I think
-———————————————————————————————————————————————————————————————————————-->
-{% block description %}DataNollans hem trygga hamn under mottagningen {% now "Y" %}{% endblock description %}
 
 <!-- Header of the content part of the page
 ——————————————————————————————————————————————-->
