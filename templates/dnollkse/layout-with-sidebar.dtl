@@ -76,7 +76,7 @@
       <!-- INSTANSIVE WIDGET -->
       <!-- SnapWidget -->
       <a href="http://instagram.com/dnollk">Instagram</a>
-      <iframe src="http://snapwidget.com/in/?u=ZG5vbGxrfGlufDEyNXwzfDN8fHllc3w1fG5vbmV8b25TdGFydHx5ZXN8eWVz&ve=260715"
+      <iframe src="https://snapwidget.com/in/?u=ZG5vbGxrfGlufDEyNXwzfDN8fHllc3w1fG5vbmV8b25TdGFydHx5ZXN8eWVz&ve=260715"
               title="Instagram Widget"
               class="snapwidget-widget"
               style="border:none; overflow:hidden; width:100%;">
@@ -132,7 +132,7 @@
    }
    (document,"script","twitter-wjs");
   </script>
-  <script src="http://snapwidget.com/js/snapwidget.js"></script>
+  <script src="https://snapwidget.com/js/snapwidget.js"></script>
   {% block foot-js %}
   {% endblock foot-js %}
 {% endblock base-foot-js %}
