@@ -76,11 +76,12 @@
       <!-- INSTANSIVE WIDGET -->
       <!-- SnapWidget -->
       <a href="http://instagram.com/dnollk">Instagram</a>
-      <iframe src="https://snapwidget.com/in/?u=ZG5vbGxrfGlufDEyNXwzfDN8fHllc3w1fG5vbmV8b25TdGFydHx5ZXN8eWVz&ve=260715"
-              title="Instagram Widget"
-              class="snapwidget-widget"
-              style="border:none; overflow:hidden; width:100%;">
-      </iframe>
+      <iframe src="https://snapwidget.com/embed/251713" 
+              class="snapwidget-widget" 
+              allowTransparency="true" 
+              frameborder="0" 
+              scrolling="no" 
+              style="border:none; overflow:hidden; width:100%; "></iframe>
     </div>
   </aside>
 {% endblock sidebar %}
