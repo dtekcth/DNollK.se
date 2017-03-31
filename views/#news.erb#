@@ -1,0 +1,21 @@
+<div class="jumbotron">
+	<% @news.each_with_index do |newsitem, n | %>
+		<% if n % 3 == 0 %>
+			<div class="row">
+		<% end %>
+   	<a href="/news/<%=newsitem.id%>" class="news">
+		<div class="col-sm-4">
+			<article class="newsitem">
+				<header>
+					<h2><%= newsitem.heading.gsub(/_/, " ") %></h2>
+					<h3 class="date"><%= newsitem.date.strftime("%-e/%-m")%></h3>
+				</header>
+				<p><%= h newsitem.data[0, [newsitem.data.length, 100].min] %></p>
+			</article>
+		</div>
+	</a>
+	<% if n % 3 == 2 %>
+			</div>
+	<% end # end if %>
+	<% end # end loop %>
+</div>

@@ -1,0 +1,20 @@
+nav > a {
+	display:block;
+	background-repeat:no-repeat;
+	background-size: 7em 1.3em;
+	position:relative;
+	width:8em;
+	color: white;
+	text-decoration: none;
+	font-size: 1.7em;
+	font-family: 'Times New Roman', serif;
+	text-transform:uppercase;
+	padding-left: 0.5em;
+	margin-bottom: 1em;
+}
+
+nav a:hover {
+	left:-0.5em;
+	text-decoration: none;
+	color: white;
+}

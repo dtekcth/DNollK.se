@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/menustyle">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <title><%= "#{Config::SITE_TITLE} - #{@title}" %></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js">
+    </script>
+  </head>
+  <body>
+	  <div id="page" class="container">
+		  <header>
+			  <img src="/img/header.png"
+				  alt="Hacke Hackspett, sektionshelgon">
+		  </header>
+		  <aside>
+			  <nav>
+				  <a id="news" href="/news">Nyheter</a>
+				  <a id="schedule" href="/schedule">Schema</a>
+				  <a id="contact" href="/contact">Kontakt</a>
+				  <a id="about" href="/about">Om oss</a>
+			  </nav>
+		  </aside>
+		  <section id="content">
+			  <% if flash[:error] %>
+				  <p class="error"><%= flash[:error] %></p>
+			  <% end %>
+			  <% if flash[:notice] %>
+				  <p class="notice"><%= flash[:notice] %></p>
+			  <% end %>
+			  <%= yield %>
+		  </section>
+		  <footer>
+			  <hr>
+			  <a href="mailto://dnollk@dtek.se">Datateknologssektionens Mottagningskommitté <%= Time.now.year %></a>
+		  </footer>
+	  </div>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

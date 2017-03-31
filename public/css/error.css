@@ -1,0 +1,11 @@
+#error{
+	background-color:white;
+	background-image:url("../img/background_white.png");
+	padding:30px;
+	min-height:500px;
+	margin-right:40px;
+	margin-left:40px;
+	margin-top:10px;
+	border-radius:5px;
+	box-shadow:5px 5px 10px 0px #888888;
+}

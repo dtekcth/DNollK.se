@@ -1,0 +1,18 @@
+#contact {
+	left: -0.5em;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0em;
+}
+
+td {
+	padding-left:1em;
+	padding-right: 1em;
+	width: 50%;
+}
+
+th {
+	text-align: left;
+}
