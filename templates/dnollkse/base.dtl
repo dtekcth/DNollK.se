@@ -33,7 +33,7 @@
   <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
 
   <link rel="alternate" type="application/rss+xml"
-        href="/nyheter/rss.xml" title="Nyheter - DNollK 2015">
+        href="/nyheter/rss.xml" title="Nyheter - DNollK 2017">
 
   {% block base-js %}
   {% endblock base-js  %}
@@ -47,7 +47,7 @@
     <div class="row">
       {% block header %}
         <!-- Header image -->
-        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.png" %}" alt="DNollK'16 och deras leenden">
+        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.jpg" %}" alt="DNollK i deras bästa år">
         <!-- header container
         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
         <header class="u-full-width header">
