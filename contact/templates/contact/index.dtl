@@ -47,6 +47,6 @@
     </table>
     <h3>IRC</h3>
     <p>IRC-kanal : #dtek på irc.dtek.se</p>
-    <p>Alternativt : <a href="http://www.dtek.se/irc">www.dtek.se/irc</a></p>
+    <p>Alternativt : <a href="https://irc.dtek.se/">https://irc.dtek.se/</a></p>
 </div>
 {% endblock content %}
