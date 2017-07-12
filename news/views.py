@@ -19,6 +19,7 @@ module, or used in such functions.
 TODO: Use templates
 """
 
+
 def index(request):
     """
     Index function, this is called by the / pattern from news.urls
@@ -31,6 +32,7 @@ def index(request):
     # Render paginated page
     return paginated_news_index(request, posts)
 
+
 def index_from_year(request, year):
     """
     Shows the posts from the year specified in the year parameter.
@@ -40,18 +42,22 @@ def index_from_year(request, year):
     # Render paginated page
     return paginated_news_index(request, posts)
 
+
 def index_from_date(request, year, month):
     """
     Shows the posts from a specific day.
     """
     published_posts = Post.by_month(year, month)
-    return render(request, 'news/index.dtl', { 'items' : published_posts })
+    return render(request, 'news/index.dtl', {'items': published_posts})
+
 
 def paginated_news_index(request, posts):
     """
-    Wraps the generic dnollkse.views.paginated_index to a news-specific function.
+    Wraps the generic dnollkse.views.paginated_index to a news-specific
+    function.
     """
     return paginated_index(request, posts, 'news/index.dtl', 'items')
+
 
 def item(request, post_id):
     """
@@ -68,9 +74,10 @@ def item(request, post_id):
     try:
         post = Post.published_posts().get(id=post_id)
         content = "Posts article: %s<br> %s"
-        return HttpResponse(content % (post_id,post.content))
+        return HttpResponse(content % (post_id, post.content))
     except Post.DoesNotExist:
         return HttpResponse("No such post")
+
 
 def latest(request):
     """
@@ -84,13 +91,15 @@ def latest(request):
     """
     try:
         latest_post = Post.published_posts().latest('pub_date')
-        return HttpResponse("%s <br> %s" % (latest_post.title, latest_post.content))
+        return HttpResponse("%s <br> %s" % (latest_post.title,
+                                            latest_post.content))
     except Post.DoesNotExist:
         return HttpResponse("No posts yet!")
+
 
 def rss(request):
     """
     Retrieves all posts and renders them in a rss xml fashion.
     """
     posts = Post.published_posts().order_by('-pub_date')
-    return render(request, 'news/feed.dtl', { 'items' : posts })
+    return render(request, 'news/feed.dtl', {'items': posts})
