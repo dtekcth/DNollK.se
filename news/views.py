@@ -1,12 +1,12 @@
 # Django modules
 from django.http import HttpResponse
-from django.shortcuts import render
 
 # Our own modules
 from news.models import Post
 
 # Import our paginated_index
 from dnollkse.views import paginated_index
+from dnollkse.viewHelper import render
 
 """
 news.views module.

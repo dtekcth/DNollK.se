@@ -1,13 +1,12 @@
 # System modules
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.template import RequestContext
-from datetime import datetime
 import collections
 
 # Our models
 from about.models import Committee, Member
 from upload.models import Upload
+
+from dnollkse.viewHelper import render
+
 
 def dnollk(request):
     """
