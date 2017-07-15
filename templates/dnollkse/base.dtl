@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>{% block title %}{% block page %}EDIT PAGE VARIABLE{% endblock page %} - DNollK {% now "Y" %}{% endblock title%}</title>
+  <title>{% block title %}{% block page %}EDIT PAGE VARIABLE{% endblock page %} - DNollK {{ config.year }}{% endblock title%}</title>
   <meta name="description" content="{% block description %}DataNollans hem trygga hamn under mottagningen {% now "Y" %}{% endblock description %}">
 
   {% load staticfiles %}
@@ -30,10 +30,10 @@
   <link rel="stylesheet" href="{% static "dnollkse/css/misc.css" %}">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
+  <link rel="icon" type="image/png" href="{{ config.favicon_url }}">
 
   <link rel="alternate" type="application/rss+xml"
-        href="/nyheter/rss.xml" title="Nyheter - DNollK 2017">
+        href="/nyheter/rss.xml" title="Nyheter - DNollK {{ config.year }}">
 
   {% block base-js %}
   {% endblock base-js  %}
@@ -47,13 +47,13 @@
     <div class="row">
       {% block header %}
         <!-- Header image -->
-        <img class="u-max-full-width image" src="{% static "dnollkse/images/header.jpg" %}" alt="DNollK i deras bästa år">
+        <img class="u-max-full-width image" src="{{ config.header_url }}" alt="DNollK i deras bästa år">
         <!-- header container
         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
         <header class="u-full-width header">
           <!-- Logo -->
           <img class="two columns u-pull-left logo"
-               src="{% static "dnollkse/images/logo.png" %}"
+               src="{{ config.logo_url }}"
                alt="DNollKs logga">
           <!-- navbar -->
           <nav id="top" class="ten columns u-pull-right primary">

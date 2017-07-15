@@ -26,21 +26,46 @@ class Config(models.Model):
     twitter_widget_id = models.TextField()
 
     # Calendar
-    gcal_api_key = models.TextField()
-    gcal_dnollk_calendar_id = models.TextField()
-    gcal_dnollk_calendar_url = models.TextField()
-    gcal_timeedit_calendar_id = models.TextField()
-    gcal_asp_calendar_id = models.TextField()
-
-    enable_dnollk_calendar = models.BooleanField()
-    enable_timeedit_calendar = models.BooleanField()
-    enable_asp_calendar = models.BooleanField()
+    gcal_api_key = models.TextField(null=True)
+    gcal_dnollk_calendar_id = models.TextField(null=True)
+    gcal_dnollk_calendar_url = models.TextField(null=True)
+    gcal_timeedit_calendar_id = models.TextField(null=True)
+    gcal_asp_calendar_id = models.TextField(null=True)
 
     # Form
-    gform_link = models.TextField()
-    gform_embed_link = models.TextField()
+    gform_link = models.TextField(null=True)
+    gform_embed_link = models.TextField(null=True)
 
     enable_form = models.BooleanField()
+
+    # Logos and headers
+    logo_url = models.TextField(default="/static/dnollkse/images/logo.png")
+    header_url = models.TextField(default="/static/dnollkse/images/header.jpg")
+    favicon_url = models.TextField(null=True)
+
+    year = models.CharField(max_length=4, default="2017")
+
+    def is_dnollk_calendar_enabled(self):
+        """
+        Returns whether the dnollk calendar is enabled
+        """
+        return self.gcal_api_key is not None \
+            and self.gcal_dnollk_calendar_id is not None \
+            and self.gcal_dnollk_calendar_url is not None
+
+    def is_timeedit_calendar_enabled(self):
+        """
+        Returns whether the timeedit (school) calendar is enabled
+        """
+        return self.gcal_api_key is not None \
+            and self.gcal_timeedit_calendar_id is not None
+
+    def is_asp_calendar_enabled(self):
+        """
+        Returns whether the asp calendar is enabled
+        """
+        return self.gcal_api_key is not None \
+            and self.gcal_asp_calendar_id is not None
 
     def calEventSources(self):
         """
