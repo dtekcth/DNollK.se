@@ -9,10 +9,9 @@
 {% endblock css %}
 
 {% block content %}
-    <h1 style="margin-bottom:2rem"><strong>Dokument</strong></h1>
-    <hr />
     <div class="center eight columns">
-
+	<h1 style="margin-bottom:2rem"><strong>Dokument</strong></h1>
+	<hr />
 	{% if items %}
 
 	    {% for doc in items %}
