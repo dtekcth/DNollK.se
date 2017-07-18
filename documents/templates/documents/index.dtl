@@ -1,0 +1,31 @@
+{% extends 'dnollkse/layout-with-sidebar.dtl' %}
+
+{% block page %}Dokument{% endblock page %}
+
+{% load staticfiles %}
+
+{% block css %}
+    <link href="{% static "documents/css/documents.css" %}" rel="stylesheet">
+{% endblock css %}
+
+{% block content %}
+
+    <div class="center eight columns">
+
+	{% if items %}
+
+	    {% for doc in items %}
+
+		{{ doc.render|safe }}
+
+	    {% endfor %}
+
+	{% else %}
+
+	    <p>
+		Det verkar inte finnas några dokument tillgängliga,
+		kontakta DNollK på <a href="mailto://{{ config.email }}">{{ config.email  }}</a> om du vill sätta lite eld i baken på dem.
+	    </p>
+	{% endif %}
+    </div>
+{% endblock content %}
