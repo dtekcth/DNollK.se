@@ -42,6 +42,11 @@
         <dd>Rännvägen 6, Göteborg</dd>
       </dl>
       <p><a href="/lankar">Bra länkar och viktig information</a></p>
+      <hr>
+      <p><i>Vill du prata med andra datateknologer och veta mer om
+	  programmet, Chalmers eller studentkåren? Hoppa in på
+	  <a href="irc.dtek.se">irc.dtek.se</a> och presentera dig!</i>
+      </p>
     </section>
 
     <div id="calendar" class="card"></div>
