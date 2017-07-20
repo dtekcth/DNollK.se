@@ -1,4 +1,5 @@
-[![Stories in Ready](https://badge.waffle.io/Jassob/DNollK.se.png?label=ready&title=Ready)](https://waffle.io/Jassob/DNollK.se)
+[![Stories in Ready](https://badge.waffle.io/dtekcth/DNollK.se.svg?label=ready&title=Ready)](http://waffle.io/dtekcth/DNollK.se)
+
 
 # DNollK.se #
 
