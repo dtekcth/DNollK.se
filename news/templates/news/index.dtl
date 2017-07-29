@@ -46,7 +46,20 @@
 
   {% else %}
     <div class="newssection card">
-      <h3>Det finns inga nyheter att visa :/</h3>
+	<h3>Här finns det inget att se :/</h3>
+	<p>
+	    DNollK har ännu inte lagt upp några nyheter, men återkom om
+	    ett tag för att se om något har hänt eller skicka iväg ett
+	    mail till <a href="mailto://{{ contact.mail }}">{{ contact.mail }}</a> för
+	    att sätta lite fart på dem.
+	</p>
+	<p>
+	    Tills det dyker upp mer information är du mer än välkommen
+	    att titta in på vår trevliga chatt på <a href="https://irc.dtek.se">irc.dtek.se</a>.
+	    Där kan du få svar på allt som har med programmet,
+	    Chalmers eller Studentkåren att göra eller bara hänga med
+	    oss som redan pluggar här, välkommen!
+	</p>
     </div>
   {% endif %}
 

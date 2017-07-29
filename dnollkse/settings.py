@@ -59,6 +59,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_wysiwyg',
     'dnollkse',
+    'documents',
     'news',
     'about',
     'contact',

@@ -2,7 +2,7 @@
 from django.contrib import admin
 
 # Our own models
-from dnollkse.models import Config, Document
+from dnollkse.models import Config
 
 """
 dnollkse.admin module
@@ -20,16 +20,4 @@ class ConfigAdmin(admin.ModelAdmin):
     """
     model = Config
 
-
-class DocumentAdmin(admin.ModelAdmin):
-    """
-    Document admin class.
-
-    TODO: Maybe move Documents out of dnollkse and into its own module?
-    """
-    model = Document
-    list_display = ('title', 'body')
-
-
 admin.site.register(Config, ConfigAdmin)
-admin.site.register(Document, DocumentAdmin)

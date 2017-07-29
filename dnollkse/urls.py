@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 
 # Import dnollkse views
 from . import views
+from documents import views as document_views
 
 """
 dnollkse.urls module
@@ -46,7 +47,7 @@ urlpatterns = [
     url(r'^lankar/', views.links, name='links'),
     url(r'^nolldeklaration/', views.nollenkat, name='nollenkat'),
     url(r'^schema/', views.schedule, name='schedule'),
-    url(r'^dokument/', views.documents, name='documents'),
+    url(r'^dokument/', document_views.index, name='documents'),
     url(r'^arr/', include('events.urls')),
     url(r'^', include('news.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
