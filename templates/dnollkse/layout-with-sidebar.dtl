@@ -35,11 +35,11 @@
       <header><h2>Viktigt</h2></header>
       <dl>
         <dt>telefon</dt>
-        <dd>070-042 26 32</dd>
+        <dd>{{ contact.phone }}</dd>
         <dt>mail</dt>
-        <dd><a href="mailto://dnollk@dtek.se">dnollk@dtek.se</a></dd>
+        <dd><a href="mailto://{{ contact.mail }}">{{ contact.mail }}</a></dd>
         <dt>adress</dt>
-        <dd>Rännvägen 6, Göteborg</dd>
+        <dd>{{ contact.address }}</dd>
       </dl>
       <p><a href="/lankar">Bra länkar och viktig information</a></p>
       <hr>
@@ -72,7 +72,7 @@
     <div class="social card" id="twitter">
       <a class="twitter-timeline"
          href="https://twitter.com/DNollK"
-         data-widget-id="625273477843521536"
+         data-widget-id="{{ config.twitter_widget_id }}"
          data-chrome="noborders transparent">
         Tweets by @DNollK
       </a>
@@ -81,7 +81,7 @@
       <!-- INSTANSIVE WIDGET -->
       <!-- SnapWidget -->
       <a href="http://instagram.com/dnollk">Instagram</a>
-      <iframe src="https://snapwidget.com/embed/251713" 
+      <iframe src="{{ config.instagram_widget_url }}"
               class="snapwidget-widget" 
               allowTransparency="true" 
               frameborder="0" 
@@ -92,30 +92,14 @@
 {% endblock sidebar %}
 
 {% block base-foot-js %}
-  <script type="text/javascript">
-   $(document).ready(function() {
+    <script type="text/javascript">
+     $(document).ready(function() {
 
-       $('#calendar').fullCalendar({
-           googleCalendarApiKey: 'AIzaSyDR9uk7JlSdYhTxYuMXVePu8R3xxrCR1RQ',
-
-           // Buttons on the header of the calendar
-           header: {
-	       left: 'prev,next',
-	       center: 'title',
-               right: 'today'
-	   },
-
-           // The calendar events, here imported from a public gcal
-           events: {
-               googleCalendarId: '1kkm5l6hn0qhh7c7b6mnablnk0@group.calendar.google.com'
-           },
-
-           weekends: true, // will hide Saturdays and Sundays
-           defaultView: 'agendaDay',
-           height: 500
-       });
-   });
-  </script>
+         $('#calendar').fullCalendar(
+             {{ config.smallCalendarConf|safe }}
+         );
+     });
+    </script>
   <script>
    (function(d, s, id) {
        var js, fjs = d.getElementsByTagName(s)[0];

@@ -1,13 +1,12 @@
 # System modules
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.template import RequestContext
-from datetime import datetime
 import collections
 
 # Our models
 from about.models import Committee, Member
 from upload.models import Upload
+
+from dnollkse.viewHelper import render
+
 
 def dnollk(request):
     """
@@ -19,15 +18,19 @@ def dnollk(request):
     In this case it will retrieve DNollK-2015 as its name is considered as
     "bigger" than DNollK-2014.
     """
-    committee = Committee.objects.filter(name__startswith="DNollK").order_by('-name')[0]
+    committee = Committee.objects.filter(
+        name__startswith="DNollK").order_by('-name')[0]
     members = Member.get_by_committee(committee)
-    return render(request, "about/dnollk.dtl", {'committee' : committee, 'members' : members})
+    return render(request, "about/dnollk.dtl",
+                  {'committee': committee, 'members': members})
+
 
 def index(request):
     """
     Renders the index template without any paramters.
     """
     return render(request, "about/index.dtl", {})
+
 
 def sektionen(request):
     """
@@ -44,13 +47,17 @@ def sektionen(request):
     for com in committees:
         f[com] = Member.get_by_committee(com)
 
-    return render(request, "about/sektionen.dtl", {'committees' : committees, 'members_dict' : f})
+    return render(request, "about/sektionen.dtl",
+                  {'committees': committees, 'members_dict': f})
+
 
 def brage(request):
     """
     Presents Brage in all his glory and might!
     """
-    return render(request, "about/brage.dtl", { 'brage' : Upload.objects.get(name='brage') })
+    return render(request, "about/brage.dtl",
+                  {'brage': Upload.objects.get(name='brage')})
+
 
 def donk(request):
     """
@@ -60,11 +67,14 @@ def donk(request):
     These committees and their members are then used as parameters to
     "about/donk.dtl template".
     """
-    committees = Committee.objects.filter(name__startswith="DNollK-").order_by("-name")[1:]
+    committees = Committee.objects.filter(
+        name__startswith="DNollK-").order_by("-name")[1:]
     f = {}
     for com in committees:
         f[com] = Member.get_by_committee(com)
 
-    d = collections.OrderedDict(sorted(f.items(),key=lambda t: str(t[0]), reverse=True))
+    d = collections.OrderedDict(sorted(f.items(),
+                                       key=lambda t: str(t[0]), reverse=True))
 
-    return render(request, "about/donk.dtl", {'committees' : committees, 'members_dict' : d})
+    return render(request, "about/donk.dtl",
+                  {'committees': committees, 'members_dict': d})

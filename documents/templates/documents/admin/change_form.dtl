@@ -1,0 +1,47 @@
+{% extends "admin/change_form.html" %}
+
+{% load wysiwyg %}
+
+{% block extrahead %}
+
+    {{ block.super }}
+
+    {% wysiwyg_setup %}
+
+{% endblock %}
+
+{% block extrastyle %}
+
+    {{ block.super }}
+
+    <style type="text/css">
+     /* CKEditor: */
+     .cke_skin_kama {
+	 /* Un-comment one line or the other: */
+	 /* width: 85%; float: right; display: block; */
+	 clear: left;
+     }
+
+     .cke_reset {
+	 width: 100% !important;
+	 float: right;
+     }
+
+     /* YUI Editor: */
+     .yui-editor-container {
+	 /* IBID: */
+	 /*float: left; display: inline;*/
+	 /*clear: left;*/
+     }
+
+     -->
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    {{ block.super }}
+
+    {% wysiwyg_editor "id_body" %}
+
+{% endblock content %}

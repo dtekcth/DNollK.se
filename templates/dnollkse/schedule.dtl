@@ -19,7 +19,7 @@
   <div class="card center">
     <h1><strong>Schema</strong></h1>
     <p>På högskolan är schemat inte riktigt som under tidigare delar av utbildningen. Det kan hända ändringar rätt plötsligt och veckorna skiljer sig ofta åt utan någon förvarning, det är ditt eget ansvar att hålla koll på var du ska vara och när du ska vara där. <a href="https://se.timeedit.net/web/chalmers/db1/public/ri1w7XYQ54ZZ1YQvQc07f375y5Y8457Zo1QQ.html">TimeEdit</a> kommer dock finnas där för dig som en vän i regnet och hjälpa dig igenom dessa svåra stunder. Schemat nedan innehåller både skolschemat och mottaningnsschemat.</p>
-    <p>Om du vill prenumerera på mottagningskalendern så finns denna <a href="https://www.google.com/calendar/embed?src=rr6nns6n3acqaiqa149v9s5vg0%40group.calendar.google.com&ctz=Europe/Stockholm">länk</a>. Klicka på plusset i nedre högra hörnet.</p>
+    <p>Om du vill prenumerera på mottagningskalendern så finns denna <a href="{{ config.gcal_dnollk_calendar_url }}">länk</a>. Klicka på plusset i nedre högra hörnet.</p>
   </div>
   <div id="calendar" class="card"></div>
 {% endblock content %}
@@ -28,25 +28,9 @@
   <script type="text/javascript">
    $(document).ready(function() {
 
-       $('#calendar').fullCalendar({
-           googleCalendarApiKey: 'yourGoogleCalendarApiKey',
-
-           // Buttons on the header of the calendar
-           header: {
-	       left: 'prev,next today',
-	       center: 'title',
-	       right: 'agendaWeek,agendaDay'
-	   },
-
-           // The calendar events, here imported from a public gcal
-           events: {
-               googleCalendarId: 'googleCalendarId@group.calendar.google.com'
-           },
-
-           weekends: true, // will hide Saturdays and Sundays
-           defaultView: 'agendaWeek',
-           height: 800
-       });
+       $('#calendar').fullCalendar(
+           {{ config.bigCalendarConf|safe }}
+       );
    });
   </script>
   {% block foot-js %}

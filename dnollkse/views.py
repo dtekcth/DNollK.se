@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.http import HttpResponse, HttpRequest
-from django.shortcuts import render
+
+from dnollkse.viewHelper import render
 
 """
 dnollkse.views module
@@ -9,6 +9,7 @@ This is the project-wide views module.
 It contains views that are not placed in their own applications yet.
 """
 
+
 def home(request):
     """
     Index function of the project.
@@ -16,29 +17,19 @@ def home(request):
     """
     return render(request, "dnollkse/home.dtl", {})
 
+
 def nollenkat(request):
     """
     Renders the page to the nollenkät.
     """
     return render(request, "dnollkse/nollenkat.dtl", {})
 
+
 def schedule(request):
     """
     Renders schedule page.
     """
     return render(request, "dnollkse/schedule.dtl", {})
-
-def links(request):
-    """
-    Renders page with important links and such.
-    """
-    return render(request, "dnollkse/lankar.dtl", {})
-
-def documents(request):
-    """
-    Renders page with links to documents.
-    """
-    return render(request, "dnollkse/documents.dtl", {})
 
 
 def paginated_index(request, items, template, items_name):
@@ -59,10 +50,10 @@ def paginated_index(request, items, template, items_name):
 
     # Try set the context to a paginated page.
     try:
-        context = { items_name : paginator.page(page) }
+        context = {items_name: paginator.page(page)}
     except PageNotAnInteger:
-        context = { items_name : paginator.page(1) }
+        context = {items_name: paginator.page(1)}
     except EmptyPage:
-        context = { items_name : paginator.page(paginator.num_pages) }
+        context = {items_name: paginator.page(paginator.num_pages)}
 
     return render(request, template, context)

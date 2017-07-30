@@ -5,16 +5,18 @@ from pytz import timezone
 from django.db import models
 
 # Our own models
-from about.models import Member, Committee
+from about.models import Member
 from upload.models import Upload
 
 """
 news.models module.
 
-In this module we define the models for our Object-Relational Mapping (ORM) that
-allows us to map python objects to a database which allows seamless database
-interaction.
+In this module we define the models for our Object-Relational Mapping (ORM)
+that allows us to map python objects to a database which allows seamless
+database interaction.
 """
+
+
 class Post(models.Model):
     """
     Post model.
@@ -92,7 +94,8 @@ class Post(models.Model):
 
         # last day = first day in next month - 1 day
         last_day = date(int(year), int(month)+1, 1) - timedelta(days=1)
-        return Post.published_posts().filter(pub_date__date__range=(first_day, last_day))
+        return Post.published_posts().filter(pub_date__date__range=(first_day,
+                                                                    last_day))
 
     @staticmethod
     def by_day(year, month, day):
@@ -101,10 +104,9 @@ class Post(models.Model):
 
         Raises a ValueError if month or day are out of bounds.
         """
-        sthlm = timezone("Europe/Stockholm")
 
-        date = date(int(year), int(month), int(day))
-        return Post.published_posts().filter(pub_date__date=date)
+        filterDate = date(int(year), int(month), int(day))
+        return Post.published_posts().filter(pub_date__date=filterDate)
 
     def publish(self):
         """
@@ -122,7 +124,6 @@ class Post(models.Model):
             self.published = True
             self.save()
         # If self is published, nothing will happen
-
 
     def unpublish(self):
         """
@@ -145,8 +146,8 @@ class Post(models.Model):
 
     def __str__(self):
         """
-        To string function.
-        This function is called when Python is trying to display a Post in text.
+        To string function. This function is called when Python is trying to display
+        a Post in text.
 
         With this function every time a post is displayed in a textual
         representation it is now called <Post: $title> or something like that.

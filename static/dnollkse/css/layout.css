@@ -23,7 +23,7 @@
 /* Box sizing
 ——————————————————————————————————————————————————
 Fixing some box size things.
-Now borders and paddings are counted 
+Now borders and paddings are counted
 inwards and does not manipulate the box size
 */
 
@@ -79,12 +79,12 @@ body,
 .container h3,
 .card h1,
 .card h2,
-.card h3 {
+.card h3,
+.card p {
 
     margin-left: 1rem;
     margin-right: 1rem;
 }
-
 
 /* Larger than mobile */
 @media (min-width: 400px) {
@@ -101,7 +101,7 @@ body,
 #content {
     position: absolute;
     left: translate3d(0, 0, 0);
-    
+
     transition: all 0.7s ease-in-out 0.1s;
 
     width: 100%;
@@ -210,7 +210,7 @@ body,
 
 .header nav.primary .mobile-nav {
     background: #fa6607;
-    
+
     color: #f8f8f8;
 
     height: 4.8rem;

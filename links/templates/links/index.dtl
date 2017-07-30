@@ -1,0 +1,22 @@
+{% extends "dnollkse/layout-with-sidebar.dtl" %}
+
+{% block title %}Länkar - DNollK {{ config.year }}{% endblock title %}
+
+{% block content %}
+    <div class="center eight columns">
+	{% if items %}
+
+	    {{ first_item.render_with_heading|safe }}
+
+	    {% for link in items %}
+		{{ link.render|safe }}
+	    {% endfor  %}
+
+	{% else %}
+	    <div class="card">
+		<h1>Bra länkar</h1>
+		<p>Det verkar inte finnas några bra länkar.</p>
+	    </div>
+	{% endif %}
+    </div>
+{% endblock content %}
