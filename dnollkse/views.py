@@ -32,20 +32,6 @@ def schedule(request):
     return render(request, "dnollkse/schedule.dtl", {})
 
 
-def links(request):
-    """
-    Renders page with important links and such.
-    """
-    return render(request, "dnollkse/lankar.dtl", {})
-
-
-def documents(request):
-    """
-    Renders page with links to documents.
-    """
-    return render(request, "dnollkse/documents.dtl", {})
-
-
 def paginated_index(request, items, template, items_name):
     """
     Paginated index function, this is called by other views to create a
