@@ -10,7 +10,7 @@ class LinkForm(ModelForm):
     """
     class Meta:
         model = Link
-        fields = ('title', 'body')
+        fields = ('title', 'body', 'order')
         widgets = {'title': TextInput}
 
 

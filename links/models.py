@@ -5,6 +5,7 @@ from django.db import models
 class Link(models.Model):
     title = models.TextField()
     body = models.TextField()
+    order = models.IntegerField(null=True, blank=True)
 
     def _render_base(self, isFirst):
         html = ["<div class=\"card center-text\">",
