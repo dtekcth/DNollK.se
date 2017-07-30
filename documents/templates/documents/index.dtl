@@ -10,12 +10,11 @@
 
 {% block content %}
     <div class="center eight columns">
-	<h1 style="margin-bottom:2rem"><strong>Dokument</strong></h1>
-	<hr />
 	{% if items %}
 
-	    {% for doc in items %}
+	    {{  first_item.render_with_heading|safe }}
 
+	    {% for doc in items %}
 		{{ doc.render|safe }}
 
 	    {% endfor %}
