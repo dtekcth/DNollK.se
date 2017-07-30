@@ -10,7 +10,7 @@ class DocumentForm(ModelForm):
     """
     class Meta:
         model = Document
-        fields = ('title', 'body')
+        fields = ('title', 'body', 'ordering')
         widgets = {
             'title': TextInput
         }

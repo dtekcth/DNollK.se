@@ -1,8 +1,10 @@
 from django.db import models
 
+
 class Document(models.Model):
     title = models.TextField()
     body = models.TextField()
+    ordering = models.IntegerField(blank=True, null=True)
 
     def _render_base(self, isFirst):
         html = ["<div class=\"card center-text\">",
