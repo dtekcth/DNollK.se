@@ -83,3 +83,7 @@ a:hover { text-decoration: underline; }
 .page.navigation .page.link svg {
     vertical-align: middle;
 }
+
+hr {
+    margin-bottom: 2rem;
+}
