@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.forms import ModelForm, TextInput, Textarea
+from django.forms import ModelForm, TextInput
 from documents.models import Document
 
 
@@ -22,5 +22,6 @@ class DocumentAdmin(admin.ModelAdmin):
     """
     form = DocumentForm
     change_form_template = 'documents/admin/change_form.dtl'
+
 
 admin.site.register(Document, DocumentAdmin)

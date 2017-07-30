@@ -2,6 +2,7 @@ from dnollkse.viewHelper import render
 
 from documents.models import Document
 
+
 # Create your views here.
 def index(request):
     """
@@ -9,6 +10,7 @@ def index(request):
     """
     documents = Document.objects.all()
     if len(documents) > 0:
-        return render(request, "documents/index.dtl", {'first_item': documents[0], 'items': documents[1:]})
+        return render(request, "documents/index.dtl",
+                      {'first_item': documents[0], 'items': documents[1:]})
     else:
-        return render(request, "documents/index.dtl", {'items' : None })
+        return render(request, "documents/index.dtl", {'items': None})
