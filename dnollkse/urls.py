@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 # Import dnollkse views
 from . import views
 from documents import views as document_views
+from links import views as links_views
 
 """
 dnollkse.urls module
@@ -25,7 +26,7 @@ contact: ->   http://example.com/kontakt
 faq:     ->   http://example.com/faq
 events:  ->   http://example.com/arr
 
-In the url objects we see that we include the url modules from every app and 
+In the url objects we see that we include the url modules from every app and
 this is where we define each app-specific route.
 
 Beside the apps there are url objects where the second field starts with views
@@ -44,7 +45,7 @@ urlpatterns = [
     url(r'^om/', include('about.urls')),
     url(r'^kontakt/', include('contact.urls')),
     url(r'^faq/', include('faq.urls')),
-    url(r'^lankar/', views.links, name='links'),
+    url(r'^lankar/', links_views.index, name='links'),
     url(r'^nolldeklaration/', views.nollenkat, name='nollenkat'),
     url(r'^schema/', views.schedule, name='schedule'),
     url(r'^dokument/', document_views.index, name='documents'),

@@ -60,6 +60,7 @@ INSTALLED_APPS = (
     'django_wysiwyg',
     'dnollkse',
     'documents',
+    'links',
     'news',
     'about',
     'contact',
