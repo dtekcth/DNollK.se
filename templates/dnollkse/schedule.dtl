@@ -18,7 +18,7 @@
 {% block content %}
   <div class="card center">
     <h1><strong>Schema</strong></h1>
-    <p>På högskolan är schemat inte riktigt som under tidigare delar av utbildningen. Det kan hända ändringar rätt plötsligt och veckorna skiljer sig ofta åt utan någon förvarning, det är ditt eget ansvar att hålla koll på var du ska vara och när du ska vara där. <a href="https://se.timeedit.net/web/chalmers/db1/public/ri1w7XYQ54ZZ1YQvQc07f375y5Y8457Zo1QQ.html">TimeEdit</a> kommer dock finnas där för dig som en vän i regnet och hjälpa dig igenom dessa svåra stunder. Schemat nedan innehåller både skolschemat och mottaningnsschemat.</p>
+    <p>På högskolan är schemat inte riktigt som under tidigare delar av utbildningen. Det kan hända ändringar rätt plötsligt och veckorna skiljer sig ofta åt utan någon förvarning, det är ditt eget ansvar att hålla koll på var du ska vara och när du ska vara där. <a href="https://se.timeedit.net/web/chalmers/db1/public/ri1w7XYQ54ZZ1YQvQc07f375y5Y8457Zo1QQ.html">TimeEdit</a> kommer dock finnas där för dig som en vän i regnet och hjälpa dig igenom dessa svåra stunder. Schemat nedan innehåller både skolschemat och mottagningsschemat.</p>
     <p>Om du vill prenumerera på mottagningskalendern så finns denna <a href="{{ config.gcal_dnollk_calendar_url }}">länk</a>. Klicka på plusset i nedre högra hörnet.</p>
   </div>
   <div id="calendar" class="card"></div>
