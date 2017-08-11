@@ -1,15 +1,11 @@
-# Django models
-from django.contrib import admin
-
-# Our own modules
-from news.models import Post
-
 """
 news.admin module
 
 This is the admin module for our news application. Here we can define admin
 classes for our models and customize how they appear in the admin interface.
 """
+from django.contrib import admin
+from news.models import Post
 
 
 class PostAdmin(admin.ModelAdmin):

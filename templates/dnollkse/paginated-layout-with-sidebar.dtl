@@ -8,20 +8,6 @@
         {% endblock paginated_content %}
 
         <nav>
-            {% if items.has_next %}
-                <div class="u-pull-left page navigation">
-                    <a href="?sida={{ items.next_page_number }}&antal={{ items.object_list|length }}">
-                        <div class="next page link card">
-			    <svg width="25px" height="30px">
-                                <polygon points="20,26 16,30 0,15 16,0 20,4 8,15" id="leftarrow" />
-                            </svg>
-                            <span>
-				{% block next_page_text %}Äldre inlägg{% endblock next_page_text %}
-			    </span>
-                        </div>
-                    </a>
-                </div>
-            {% endif %}
 	    {% if items.has_previous %}
                 <div class="u-pull-right page navigation">
                     <a href="?sida={{ items.previous_page_number }}&antal={{ items.object_list|length }}">
@@ -36,6 +22,21 @@
                     </a>
                 </div>
             {% endif %}
+	    {% if items.has_next %}
+                <div class="u-pull-left page navigation">
+                    <a href="?sida={{ items.next_page_number }}&antal={{ items.object_list|length }}">
+                        <div class="next page link card">
+			    <svg width="25px" height="30px">
+                                <polygon points="20,26 16,30 0,15 16,0 20,4 8,15" id="leftarrow" />
+                            </svg>
+                            <span>
+				{% block next_page_text %}Äldre inlägg{% endblock next_page_text %}
+			    </span>
+                        </div>
+                    </a>
+                </div>
+            {% endif %}
+
         </nav>
     </div>
 {% endblock content %}
