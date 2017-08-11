@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from dnollkse.viewHelper import render
 
 from faq.models import Faq
 
