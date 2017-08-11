@@ -12,12 +12,12 @@
                 <div class="u-pull-left page navigation">
                     <a href="?sida={{ items.previous_page_number }}&antal={{ items.object_list|length }}">
                         <div class="previous page link card">
-			    <span>
-				{% block previous_page_text %}Nyare inlägg{% endblock previous_page_text %}
-			    </span>
 			    <svg width="25px" height="30px">
                                 <polygon points="20,26 16,30 0,15 16,0 20,4 8,15" id="leftarrow" />
                             </svg>
+			    <span>
+				{% block previous_page_text %}Nyare inlägg{% endblock previous_page_text %}
+			    </span>
                         </div>
                     </a>
                 </div>
@@ -26,12 +26,12 @@
                 <div class="u-pull-right page navigation">
                     <a href="?sida={{ items.next_page_number }}&antal={{ items.object_list|length }}">
                         <div class="next page link card">
+			    <span>
+				{% block next_page_text %}Äldre inlägg{% endblock next_page_text %}
+			    </span>
 			    <svg width="25px" height="30px">
                                 <polygon points="5,26 9,30 25,15 9,0 5,4 17,15" id="right-arrow" />
                             </svg>
-                            <span>
-				{% block next_page_text %}Äldre inlägg{% endblock next_page_text %}
-			    </span>
                         </div>
                     </a>
                 </div>
