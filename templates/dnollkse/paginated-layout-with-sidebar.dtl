@@ -9,7 +9,7 @@
 
         <nav>
 	    {% if items.has_previous %}
-                <div class="u-pull-right page navigation">
+                <div class="u-pull-left page navigation">
                     <a href="?sida={{ items.previous_page_number }}&antal={{ items.object_list|length }}">
                         <div class="previous page link card">
 			    <span>
@@ -23,7 +23,7 @@
                 </div>
             {% endif %}
 	    {% if items.has_next %}
-                <div class="u-pull-left page navigation">
+                <div class="u-pull-right page navigation">
                     <a href="?sida={{ items.next_page_number }}&antal={{ items.object_list|length }}">
                         <div class="next page link card">
 			    <svg width="25px" height="30px">
