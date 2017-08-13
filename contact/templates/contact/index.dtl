@@ -13,38 +13,40 @@
             <td>{{ member.number}}</td>
         </tr>
     {% endfor %}
+    {% if contact %}
     </table>
     <h3>Telefon</h3>
     <table class="center">
         <tr>
             <td>DNollKs Jourtelefon</td>
-            <td>070-042 26 32</td>
+            <td>{{ contact.phone }}</td>
         </tr>
         <tr>
             <td>Kårens Trygghetsjour (MK)</td>
-            <td>031-772 39 27</td>
+            <td>{{ contact.union_phone }}</td>
         </tr>
         <tr>
             <td>Studievägledare Datateknik</td>
-            <td>031-772 11 35</td>
+            <td>{{ contact.student_counselor_dtek }}</td>
         </tr>
         <tr>
             <td>Kurator</td>
-            <td>031-772 25 45</td>
+            <td>{{ contact.curator }}</td>
         </tr>
         <tr>
             <td>Chalmersvakten</td>
-            <td>031-772 44 99</td>
+            <td>{{ contact.chalmers_ward }}</td>
         </tr>
         <tr>
             <td>Sjukvårdsrådgivning</td>
-            <td>1177</td>
+            <td>{{ contact.healthcare_info }}</td>
         </tr>
         <tr>
             <td>Akuta fall</td>
-            <td>112</td>
+            <td>{{ contact.emergency_info }}</td>
         </tr>
     </table>
+    {% endif %}
     <h3>IRC</h3>
     <p>IRC-kanal : #dtek på irc.dtek.se</p>
     <p>Alternativt : <a href="https://irc.dtek.se/">https://irc.dtek.se/</a></p>
